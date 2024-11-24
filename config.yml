@@ -4,3 +4,9 @@ subTitle: 收录学习过程中的优质网站，项目，插件等
 menu:
     - name: 网站
       path: index
+
+# 关于网站SEO
+SEO:
+    author: 小哲
+    keywords: 网站，插件，软件，项目
+    description: 收集优质网站，项目，插件等

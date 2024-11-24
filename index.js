@@ -67,6 +67,28 @@ const copyFileToDist = async (sourcePath, destPath) => {
 	}
 };
 
+// 递归复制目录
+const copyDirectory = async (sourceDir, targetDir) => {
+	try {
+		await createDistDir(targetDir);
+		const entries = await readdir(sourceDir, { withFileTypes: true });
+
+		for (const entry of entries) {
+			const sourcePath = path.join(sourceDir, entry.name);
+			const targetPath = path.join(targetDir, entry.name);
+
+			if (entry.isDirectory()) {
+				await copyDirectory(sourcePath, targetPath);
+			} else {
+				await copyFileToDist(sourcePath, targetPath);
+			}
+		}
+	} catch (error) {
+		console.error(`Error copying directory: ${error.message}`);
+		throw error;
+	}
+};
+
 // 生成静态页面
 const generatePage = async (outputPath, templatePath, data) => {
 	try {
@@ -100,25 +122,22 @@ const main = async () => {
 	// 移除上次打包结果
 	await clearDistDir();
 
-	// 复制css文件
-	var directoryPath = path.join(__dirname, 'src/css');
-	const cssFile = await readDirectory(directoryPath);
-	cssFile.forEach(async item => {
-		const cssPath = path.join(__dirname, `src/css/${item}`);
-		const outCssPath = path.join(__dirname, `dist/css/${item}`);
-		await createDistDir(path.dirname(outCssPath));
-		await copyFileToDist(cssPath, outCssPath);
-	});
+	// 复制 src 目录下的文件和文件夹，排除 templates 和 pages 目录
+	const srcDir = path.join(__dirname, 'src');
+	const distDir = path.join(__dirname, 'dist');
 
-	// 复制js文件
-	var directoryPath = path.join(__dirname, 'src/js');
-	const jsFile = await readDirectory(directoryPath);
-	jsFile.forEach(async item => {
-		const jsPath = path.join(__dirname, `src/js/${item}`);
-		const outJsPath = path.join(__dirname, `dist/js/${item}`);
-		await createDistDir(path.dirname(outJsPath));
-		await copyFileToDist(jsPath, outJsPath);
-	});
+	const entries = await readdir(srcDir, { withFileTypes: true });
+
+	for (const entry of entries) {
+		const sourcePath = path.join(srcDir, entry.name);
+		const targetPath = path.join(distDir, entry.name);
+
+		if (entry.isDirectory() && !['templates', 'pages'].includes(entry.name)) {
+			await copyDirectory(sourcePath, targetPath);
+		} else if (entry.isFile()) {
+			await copyFileToDist(sourcePath, targetPath);
+		}
+	}
 
 	// 读取pages目录
 	var directoryPath = path.join(__dirname, 'src/pages');
