@@ -5,8 +5,8 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="author" content="<%= config.SEO.author %>">
-    <meta name="keywords" content="<%= config.SEO.keywords %>">
-    <meta name="description" content="<%= config.SEO.description %>">
+	<meta name="keywords" content="<%= config.SEO.keywords %>">
+	<meta name="description" content="<%= config.SEO.description %>">
 	<title>
 		<%= config.title %>
 	</title>
@@ -55,7 +55,7 @@
 	</div>
 	<div class="my-index-layout">
 		<!-- 菜单栏 -->
-		<div class="ui secondary vertical menu" style="overflow: auto;width: 12rem;">
+		<div class="ui secondary vertical menu" style="overflow: auto;width: 12rem;min-width: 130px;">
 			<% config.menu.forEach(element=> { %>
 				<a class="item my-index-menu-item">
 					<%= element.name %>
@@ -78,6 +78,85 @@
 					<p style="text-align: center;">
 						<%= config.subTitle %>
 					</p>
+				</div>
+			</div>
+			<!-- 网站卡片 -->
+			<div class="my-index-cards">
+				<div class="card">
+					<div class="my-index-card-header">
+						<img src="https://icons.duckduckgo.com/ip3/turso.tech.ico" alt="">
+						<div>Elliot</div>
+					</div>
+					<div class="description multi-line-ellipsis">
+						Elliot requested permission to view your contact details
+						Elliot requested permission to view your contact details
+						Elliot requested permission to view your contact details
+					</div>
+					<div class="my-index-card-tags">
+						<div class="ui horizontal label">Dog</div>
+						<div class="ui horizontal label">Dog111111</div>
+						<div class="ui horizontal label">Dog</div>
+						<div class="ui horizontal label">Dog</div>
+						<div class="ui horizontal label">Dog123</div>
+						<div class="ui horizontal label">Dog</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="my-index-card-header">
+						<img src="https://icons.duckduckgo.com/ip3/turso.tech.ico" alt="">
+						<div>Elliot</div>
+					</div>
+					<div class="description multi-line-ellipsis">
+						Elliot requested permission to view your contact details
+						Elliot requested permission to view your contact details
+						Elliot requested permission to view your contact details
+					</div>
+					<div class="my-index-card-tags">
+						<div class="ui horizontal label">Dog</div>
+						<div class="ui horizontal label">Dog111111</div>
+						<div class="ui horizontal label">Dog</div>
+						<div class="ui horizontal label">Dog</div>
+						<div class="ui horizontal label">Dog123</div>
+						<div class="ui horizontal label">Dog</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="my-index-card-header">
+						<img src="https://icons.duckduckgo.com/ip3/turso.tech.ico" alt="">
+						<div>Elliot</div>
+					</div>
+					<div class="description multi-line-ellipsis">
+						Elliot requested permission to view your contact details
+						Elliot requested permission to view your contact details
+						Elliot requested permission to view your contact details
+					</div>
+					<div class="my-index-card-tags">
+						<div class="ui horizontal label">Dog</div>
+						<div class="ui horizontal label">Dog111111</div>
+						<div class="ui horizontal label">Dog</div>
+						<div class="ui horizontal label">Dog</div>
+						<div class="ui horizontal label">Dog123</div>
+						<div class="ui horizontal label">Dog</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="my-index-card-header">
+						<img src="https://icons.duckduckgo.com/ip3/turso.tech.ico" alt="">
+						<div>Elliot</div>
+					</div>
+					<div class="description multi-line-ellipsis">
+						Elliot requested permission to view your contact details
+						Elliot requested permission to view your contact details
+						Elliot requested permission to view your contact details
+					</div>
+					<div class="my-index-card-tags">
+						<div class="ui horizontal label">Dog</div>
+						<div class="ui horizontal label">Dog111111</div>
+						<div class="ui horizontal label">Dog</div>
+						<div class="ui horizontal label">Dog</div>
+						<div class="ui horizontal label">Dog123</div>
+						<div class="ui horizontal label">Dog</div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -4,8 +4,6 @@ function changeMenuShow() {
 	const burger = document.querySelector('.burger');
 	const burgerCheckbox = document.querySelector('#burger');
 	const burgerMenu = document.querySelector('.my-index-burger-menu');
-	const burgerMenuDiv = document.querySelector('.my-index-burger-menu > div');
-    console.log(burgerMenuDiv.offsetWidth)
 
 	burgerCheckbox.onchange = function (e) {
 		const isChecked = e.target.checked;
