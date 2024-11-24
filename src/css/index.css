@@ -4,22 +4,105 @@
 }
 
 .my-index-flex-center {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .my-index-flex-column-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
 }
 
 .my-index-menu-item {
-    font-size: 1.2rem;
-    text-align: center;
+	font-size: 1.2rem;
+	text-align: center;
 }
 
 p {
-    margin-bottom: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+/* From Uiverse.io by Cevorob */
+.burger {
+	position: absolute;
+	right: 10px;
+	top: 13px;
+    z-index: 1000;
+	width: 40px;
+	height: 30px;
+	background: transparent;
+	cursor: pointer;
+	display: block;
+	transform: scale(0.5);
+}
+
+.burger input {
+	display: none;
+}
+
+.burger span {
+	display: block;
+	position: absolute;
+	height: 4px;
+	width: 100%;
+	background: black;
+	border-radius: 9px;
+	opacity: 1;
+	left: 0;
+	transform: rotate(0deg);
+	transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+	top: 0px;
+	transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+	top: 50%;
+	transform: translateY(-50%);
+	transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+	top: 100%;
+	transform-origin: left center;
+	transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+	transform: rotate(45deg);
+	top: 0px;
+	left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+	width: 0%;
+	opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+	transform: rotate(-45deg);
+	top: 28px;
+	left: 5px;
+}
+.my-index-burger-menu {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.my-index-burger-menu > div {
+	width: 55%;
+	height: 100%;
+	background-color: #ffffff;
+    transition: all 500ms;
+    transform: translateX(-100%);
 }

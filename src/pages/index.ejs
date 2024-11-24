@@ -26,13 +26,32 @@
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="./css/semantic.css" />
 	<link rel="stylesheet" href="./css/index.css" />
-	<script src="./js/index.js"></script>
 	<script src="./js/jquery.js"></script>
 	<script src="./js/semantic.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
 </head>
 
 <body>
+	<label class="burger" for="burger">
+		<input type="checkbox" id="burger">
+		<span></span>
+		<span></span>
+		<span></span>
+	</label>
+	<!-- 移动端菜单栏 -->
+	<div class="my-index-burger-menu">
+		<div>
+			<div class="ui secondary vertical menu" style="overflow: auto;width: 100%;">
+				<% config.menu.forEach(element=> { %>
+					<a style="width: 100%;text-align: center;font-size: 1.2rem;" class="item">
+						<%= element.name %>
+					</a>
+					<% }) %>
+			</div>
+		</div>
+	</div>
 	<div class="my-index-layout">
+		<!-- 菜单栏 -->
 		<div class="ui secondary vertical menu" style="overflow: auto;width: 12rem;">
 			<% config.menu.forEach(element=> { %>
 				<a class="item my-index-menu-item">
@@ -50,12 +69,18 @@
 			</div>
 			<div style="margin-top: 20px;" class="my-index-flex-center">
 				<div class="my-index-flex-column-center">
-					<p style="font-size: 1.6rem;font-weight: 700;text-align: center;"><%= config.title %></p>
-					<p style="text-align: center;"><%= config.subTitle %></p>
+					<p style="font-size: 1.6rem;font-weight: 700;text-align: center;">
+						<%= config.title %>
+					</p>
+					<p style="text-align: center;">
+						<%= config.subTitle %>
+					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </body>
+
+<script src="./js/index.js"></script>
 
 </html>
