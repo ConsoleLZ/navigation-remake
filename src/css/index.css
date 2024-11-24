@@ -1,0 +1,25 @@
+.my-index-layout {
+	height: 100vh;
+	display: flex;
+}
+
+.my-index-flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.my-index-flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.my-index-menu-item {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 0 !important;
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>
+		<%= config.title %>
+	</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			color: #333;
+		}
+
+		body {
+			padding: 5px;
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/icon.min.css"
+		integrity="sha512-rTyypI20S663Wq9zrzMSOP1MNPHaYX7+ug5OZ/DTqCDLwRdErCo2W30Hdme3aUzJSvAUap3SmBk0r5j0vRxyGw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="./css/semantic.css" />
+	<link rel="stylesheet" href="./css/index.css" />
+	<script src="./js/index.js"></script>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/semantic.js"></script>
+</head>
+
+<body>
+	<div class="my-index-layout">
+		<div class="ui secondary vertical menu" style="overflow: auto;width: 12rem;">
+			<% config.menu.forEach(element=> { %>
+				<a class="item my-index-menu-item">
+					<%= element.name %>
+				</a>
+				<% }) %>
+		</div>
+
+		<div style="padding: 10px;flex: 1;">
+			<div class="my-index-flex-center">
+				<div class="ui icon input">
+					<input type="text" placeholder="搜索...">
+					<i class="search icon"></i>
+				</div>
+			</div>
+			<div style="margin-top: 20px;" class="my-index-flex-center">
+				<div class="my-index-flex-column-center">
+					<p style="font-size: 1.6rem;font-weight: 700;text-align: center;"><%= config.title %></p>
+					<p style="text-align: center;"><%= config.subTitle %></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
