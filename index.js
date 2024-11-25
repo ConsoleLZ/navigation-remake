@@ -3,6 +3,7 @@ const path = require('path');
 const ejs = require('ejs');
 const { mkdir, rm, readdir, readFile, writeFile, copyFile } = fs.promises;
 const yaml = require('js-yaml');
+const { tags, dataList } = require('./src/data/index.js');
 
 // 解析配置文件 config.yml
 const parseConfig = () => {
@@ -21,11 +22,6 @@ const parseConfig = () => {
 	// 解析 YAML 文件
 	const config = readYamlFile();
 	return config;
-};
-
-// 读取 Markdown 文件
-const readMarkdownFile = async filePath => {
-	return await readFile(filePath, 'utf-8');
 };
 
 // 渲染 EJS 模板
@@ -115,7 +111,10 @@ const readDirectory = async directoryPath => {
 // 入口函数
 const main = async () => {
 	const data = {
-		config: parseConfig()
+		config: parseConfig(),
+		tags,
+		// 每次只加载10条数据
+		dataList: dataList
 	};
 	// 创建打包目录
 	await createDistDir(path.join(__dirname, 'dist'));

@@ -1,6 +1,5 @@
 {
 	"scripts": {
-		"start": "livereload dist/ -p 3000",
 		"build": "node index.js",
 		"format": "prettier --write \"**/*.ejs\" \"**/*.yml\" \"**/*.json\" \"**/*.css\" \"**/*.md\" \"**/*.js\""
 	},
