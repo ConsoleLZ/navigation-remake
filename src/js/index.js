@@ -75,10 +75,15 @@ function changeMenuShow() {
 
 // 入口函数
 function main() {
-	// 动态切换网站数据
+	// 控制菜单的显示和隐藏
 	changeMenuShow();
 	// 初始化字体大小
 	setRemFontSize();
+	// 观察元素是否进入视口
+	const iconDomList = document.querySelectorAll('.my-index-cards img')
+	iconDomList.forEach(item=>{
+		isEntryView().observe(item)
+	})
 }
 
 main();
@@ -94,7 +99,7 @@ function onSelectTag(tag) {
 	dataListFilter.forEach(item => {
 		let outTagsHtml = '';
 		item.tags.forEach(tag => {
-			outTagsHtml += `<div style="padding: 6px 12px;" class="ui horizontal label">${tag}</div>`;
+			outTagsHtml += `<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">${tag}</div>`;
 		});
 		outHtml += `
 		<div class="card">
@@ -102,7 +107,7 @@ function onSelectTag(tag) {
 				<img src="${item.ico}" alt="">
 				<div>${item.name}</div>
 			</div>
-			<div class="description multi-line-ellipsis">
+			<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
 				${item.description}
 			</div>
 			<div class="my-index-card-tags">

@@ -113,8 +113,7 @@ const main = async () => {
 	const data = {
 		config: parseConfig(),
 		tags,
-		// 每次只加载10条数据
-		dataList: dataList
+		dataList
 	};
 	// 创建打包目录
 	await createDistDir(path.join(__dirname, 'dist'));

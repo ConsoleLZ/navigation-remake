@@ -5,10 +5,29 @@ function isLink(url) {
 
 		img.src = url;
 		img.addEventListener('load', () => {
-			resolve(true);
+			resolve();
 		});
 		img.addEventListener('error', () => {
-			resolve(false);
+			reject();
 		});
+	});
+}
+
+// 判断指定元素是否进入视口
+function isEntryView() {
+	return observer = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+			// 如果元素与视口相交
+			if (entry.isIntersecting) {
+				isLink(entry.target.dataset.img).then(()=>{
+					entry.target.src = entry.target.dataset.img
+				})
+				// 可以选择在这里停止观察该元素
+				observer.unobserve(entry.target);
+			}
+		});
+	}, {
+		// 配置选项，例如阈值
+		threshold: 0.1 // 元素有10%在视口内就算作相交
 	});
 }
