@@ -222,3 +222,12 @@ p {
 	flex: 1;
 	padding-top: 1rem;
 }
+.title {
+	font-size: 1.6rem;
+	font-weight: 700;
+	text-align: center;
+	color: #a075e5;
+	text-shadow:
+		1px -1px #fff,
+		-1px 1px #999;
+}
