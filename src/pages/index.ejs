@@ -44,8 +44,7 @@
 	<!-- 移动端菜单栏 -->
 	<div class="my-index-burger-menu">
 		<div style="display: flex;flex-direction: column;justify-content: center;">
-			<div class="ui secondary vertical menu"
-				style="overflow: auto;width: 100%;">
+			<div class="ui secondary vertical menu" style="overflow: auto;width: 100%;">
 				<% Object.values(tags).forEach(element=> { %>
 					<a onclick="onSelectTag('<%= element %>')" class="item my-index-menu-item">
 						<%= element %>
@@ -56,11 +55,11 @@
 	</div>
 	<div class="my-index-layout">
 		<!-- 菜单栏 -->
-		<div class="ui secondary vertical menu my-index-menu">
+		<div class="my-index-menu">
 			<% Object.values(tags).forEach(element=> { %>
-				<a onclick="onSelectTag('<%= element %>')" class="item my-index-menu-item">
+				<div onclick="onSelectTag('<%= element %>')" class="my-index-menu-item">
 					<%= element %>
-				</a>
+				</div>
 				<% }) %>
 		</div>
 
@@ -73,11 +72,13 @@
 			</div>
 			<div style="margin-top: 20px;" class="my-index-flex-center">
 				<div class="my-index-flex-column-center">
-					<p style="font-size: 1.7rem;font-weight: 700;text-align: center;">
+					<p style="font-size: 1.5rem;font-weight: 700;text-align: center;">
 						<%= config.title %>
 					</p>
 					<p style="text-align: center;">
 						<%= config.subTitle %>
+					</p>
+					<p style="text-align: center;">目前一共收录<%= dataList.length %>个作品，一共有<%= Object.keys(tags).length %>个标签
 					</p>
 				</div>
 			</div>

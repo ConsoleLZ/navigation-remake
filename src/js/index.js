@@ -1,3 +1,23 @@
+// 创建一个全局的IntersectionObserver实例
+let observer;
+
+function isEntryView() {
+  if (!observer) {
+    // 如果还没有创建观察者，则创建一个
+    observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          isLink(entry.target.dataset.img).then(() => {
+            entry.target.src = entry.target.dataset.img;
+          });
+          observer.unobserve(entry.target); // 停止观察该元素
+        }
+      });
+    }, { threshold: 0.1 });
+  }
+  return observer;
+}
+
 // 动态改变字体大小
 function setRemFontSize() {
 	const baseSize = 10; // 基础字体大小 (px)
@@ -96,26 +116,37 @@ function onSelectTag(tag) {
 	const dataListFilter = dataList.filter(item => item.tags.includes(tag) || tag === '全部');
 	// 输出过滤后的html
 	let outHtml = '';
-	dataListFilter.forEach(item => {
-		let outTagsHtml = '';
-		item.tags.forEach(tag => {
-			outTagsHtml += `<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">${tag}</div>`;
+	if(dataListFilter.length){
+		dataListFilter.forEach(item => {
+			let outTagsHtml = '';
+			item.tags.forEach(tag => {
+				outTagsHtml += `<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">${tag}</div>`;
+			});
+			outHtml += `
+			<div class="card">
+				<div class="my-index-card-header">
+					<img data-img="${item.ico}" src="/assets/load-error.svg" alt="">
+					<div>${item.name}</div>
+				</div>
+				<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+					${item.description}
+				</div>
+				<div class="my-index-card-tags">
+					${outTagsHtml}				
+				</div>
+			</div>
+			`;
 		});
-		outHtml += `
-		<div class="card">
-			<div class="my-index-card-header">
-				<img src="${item.ico}" alt="">
-				<div>${item.name}</div>
-			</div>
-			<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
-				${item.description}
-			</div>
-			<div class="my-index-card-tags">
-				${outTagsHtml}				
-			</div>
-		</div>
-		`;
-	});
+	}else {
+		outHtml = '暂无数据...'
+	}
+	
 
 	cardsDom.innerHTML = outHtml;
+
+	// 观察元素是否进入视口
+	const iconDomList = document.querySelectorAll('.my-index-cards img')
+	iconDomList.forEach(item=>{
+		isEntryView().observe(item)
+	})
 }
