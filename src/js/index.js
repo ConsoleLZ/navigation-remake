@@ -116,14 +116,14 @@ function onSelectTag(tag) {
 	const dataListFilter = dataList.filter(item => item.tags.includes(tag) || tag === '全部');
 	// 输出过滤后的html
 	let outHtml = '';
-	if(dataListFilter.length){
+	if (dataListFilter.length) {
 		dataListFilter.forEach(item => {
 			let outTagsHtml = '';
 			item.tags.forEach(tag => {
 				outTagsHtml += `<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">${tag}</div>`;
 			});
 			outHtml += `
-			<div class="card">
+			<div class="card" data-url="${item.url}">
 				<div class="my-index-card-header">
 					<img data-img="${item.ico}" src="/assets/load-error.svg" alt="">
 					<div>${item.name}</div>
@@ -137,18 +137,24 @@ function onSelectTag(tag) {
 			</div>
 			`;
 		});
-	}else {
+	} else {
 		outHtml = '暂无数据...'
 	}
-	
 
 	cardsDom.innerHTML = outHtml;
 
+	// 绑定点击事件
+	document.querySelectorAll('.my-index-cards .card').forEach(card => {
+		card.addEventListener('click', function() {
+			onJump(this.getAttribute('data-url'));
+		});
+	});
+
 	// 观察元素是否进入视口
-	const iconDomList = document.querySelectorAll('.my-index-cards img')
-	iconDomList.forEach(item=>{
-		isEntryView().observe(item)
-	})
+	const iconDomList = document.querySelectorAll('.my-index-cards img');
+	iconDomList.forEach(item => {
+		isEntryView().observe(item);
+	});
 }
 // 作品跳转
 function onJump(url){
