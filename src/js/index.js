@@ -150,3 +150,7 @@ function onSelectTag(tag) {
 		isEntryView().observe(item)
 	})
 }
+// 作品跳转
+function onJump(url){
+	window.open(url)
+}

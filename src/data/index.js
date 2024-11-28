@@ -9,7 +9,7 @@ const tags = {
 	development: '项目开发',
 	componentLibrary: '组件库',
 	docs: '文档',
-	template: '网站模板',
+	template: '模板',
 	tools: '工具',
 	devise: 'UI设计',
 	resource: '资源素材',
@@ -20,7 +20,10 @@ const tags = {
 	cloudPlatform: '云平台',
 	safe: '网络安全',
 	game: '游戏',
-	other: '其它'
+	other: '其它',
+	plugin: '插件',
+	blender: 'blender',
+	vscode: 'vscode',
 };
 
 const dataList = [
@@ -241,7 +244,6 @@ const dataList = [
 		url: 'https://cn.vuejs.org/',
 		description: '易学易用，性能出色，适用场景丰富的 Web 前端框架.',
 		tags: [tags.development, tags.docs, tags.web]
-
 	},
 	{
 		name: 'react',
@@ -331,7 +333,8 @@ const dataList = [
 		name: 'javascript.info',
 		ico: 'https://zh.javascript.info/img/favicon/favicon.png',
 		url: 'https://zh.javascript.info/',
-		description: '以最新的 JavaScript 标准为基准。通过简单但足够详细的内容，为你讲解从基础到高阶的 JavaScript 相关知识。',
+		description:
+			'以最新的 JavaScript 标准为基准。通过简单但足够详细的内容，为你讲解从基础到高阶的 JavaScript 相关知识。',
 		tags: [tags.docs, tags.web]
 	},
 	{
@@ -521,7 +524,7 @@ const dataList = [
 		ico: 'https://assets-global.website-files.com/572cc412e8e48c8223fa0e57/6596b5ee2b5c3b8bbcbf53a6_UIDD-favicon.png',
 		url: 'https://www.uidesigndaily.com/',
 		description: '免费开源 UI 资源',
-		tags: [tags.development,tags.devise]
+		tags: [tags.development, tags.devise]
 	},
 	{
 		name: '即时设计',
@@ -549,28 +552,28 @@ const dataList = [
 		ico: 'https://cdn.dribbble.com/assets/favicon-99944ff731bb44d3a947810ca8728f177f8deac035a3a4342120c385fd7acb9d.svg',
 		url: 'https://dribbble.com/',
 		description: '寻找设计灵感',
-		tags: [tags.development,tags.devise]
+		tags: [tags.development, tags.devise]
 	},
 	{
 		name: 'Mobbin',
 		ico: 'https://mobbin.com/favicon.svg?v=2.1',
 		url: 'https://mobbin.com/',
 		description: '全球最大的移动和网页设计库',
-		tags: [tags.development,tags.devise]
+		tags: [tags.development, tags.devise]
 	},
 	{
 		name: 'Awwwards',
 		ico: 'https://assets.awwwards.com/assets/images/favicon.svg',
 		url: 'https://www.awwwards.com/',
 		description: '为一些优秀的网站颁发奖项，可以找找设计灵感',
-		tags: [tags.development,tags.devise]
+		tags: [tags.development, tags.devise]
 	},
 	{
 		name: '站酷',
 		ico: 'https://static.zcool.cn/git_z/z/site/favicon.ico?version=1618914637608',
 		url: 'https://www.zcool.com.cn/',
 		description: '上面或许有你需要的ui作品',
-		tags: [tags.development,tags.devise]
+		tags: [tags.development, tags.devise]
 	},
 	{
 		name: 'clip-path生成器',
@@ -654,7 +657,7 @@ const dataList = [
 		ico: 'https://romannurik.github.io/AndroidAssetStudio/favicon.ico',
 		url: 'https://romannurik.github.io/AndroidAssetStudio/',
 		description: 'App应用图标生成',
-		tags: [tags.development,tags.tools]
+		tags: [tags.development, tags.tools]
 	},
 	{
 		name: 'ezgifcom',
@@ -758,7 +761,8 @@ const dataList = [
 		name: 'AI Filter',
 		ico: 'https://aifilter.net/static/images/common/favicon.ico',
 		url: 'https://aifilter.net/',
-		description: '使用 AI 滤镜将您的照片转换为动漫、粘土、3D、像素、表情符号、PS2、贴纸和更多样式。非常适合初学者和专业人士，只需点击几下即可。',
+		description:
+			'使用 AI 滤镜将您的照片转换为动漫、粘土、3D、像素、表情符号、PS2、贴纸和更多样式。非常适合初学者和专业人士，只需点击几下即可。',
 		tags: [tags.ai]
 	},
 	{
@@ -877,7 +881,8 @@ const dataList = [
 		name: 'codepen',
 		ico: 'https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico',
 		url: 'https://codepen.io/',
-		description: 'CodePen 是面向前端设计人员和开发人员的社交开发环境。构建和部署网站，展示您的作品，构建测试用例以学习和调试，并寻找灵感。',
+		description:
+			'CodePen 是面向前端设计人员和开发人员的社交开发环境。构建和部署网站，展示您的作品，构建测试用例以学习和调试，并寻找灵感。',
 		tags: [tags.cloudPlatform, tags.community]
 	},
 	{
@@ -940,7 +945,8 @@ const dataList = [
 		name: 'roadmap',
 		ico: 'https://roadmap.sh/manifest/favicon.ico',
 		url: 'https://roadmap.sh/',
-		description: 'roadmap.sh 是社区努力的结果 创建路线图、指南和其他教育内容以帮助指导开发人员 在选择一条道路并指导他们的学习。',
+		description:
+			'roadmap.sh 是社区努力的结果 创建路线图、指南和其他教育内容以帮助指导开发人员 在选择一条道路并指导他们的学习。',
 		tags: [tags.learn]
 	},
 	{
@@ -1103,7 +1109,577 @@ const dataList = [
 		url: 'https://www.live2d.com/zh-CHS/',
 		description: '可以直接对原图进行加工，做出2D的立体表现',
 		tags: [tags.development]
-	}
+	},
+	{
+		name: 'lucaong / minisearch',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/lucaong/minisearch',
+		description: '小巧而强大的 JavaScript 全文搜索引擎，适用于浏览器和 Node',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'shikijs / shiki',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/shikijs/shiki',
+		description: '美观而强大的语法荧光笔(代码高亮)',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'baidu / amis',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/baidu/amis',
+		description: '前端低代码框架，通过 JSON 配置就能生成各种页面。',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'Vanessa219 / vditor',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/Vanessa219/vditor',
+		description:
+			'♏ 一款浏览器端的 Markdown 编辑器，支持所见即所得（富文本）、即时渲染（类似 Typora）和分屏预览模式。An In-browser Markdown editor, support WYSIWYG (Rich Text), Instant Rendering (Typora-like) and Split View modes.',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'VincentGarreau / particles.js',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/VincentGarreau/particles.js',
+		description: '用于创建粒子的轻量级 JavaScript 库',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'socketio / socket.io',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/socketio/socket.io',
+		description: '即时通讯应用程序框架',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'LarryZhu-dev / autofit.js',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/LarryZhu-dev/autofit.js',
+		description: 'autofit.js 迄今为止最易用的自适应工具',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'micro-zoe / micro-app',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/micro-zoe/micro-app',
+		description: '一款简约、高效、功能强大的微前端框架',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'agmmnn / awesome-blender',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/agmmnn/awesome-blender',
+		description: '精选的 Blender 插件、工具、教程列表;以及适合所有人的 3D 资源',
+		tags: [tags.plugin, tags.resource]
+	},
+	{
+		name: 'wangeditor-team / wangEditor',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/wangeditor-team/wangEditor',
+		description: '开源 Web 富文本编辑器',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'umijs / qiankun',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/umijs/qiankun',
+		description: '为微前端提供快速、简单和完整的解决方案',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'greensock / GSAP',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/greensock/GSAP',
+		description: '一个用于现代 Web 的 JavaScript 动画库',
+		tags: [tags.development, tags.animation, tags.web]
+	},
+	{
+		name: 'Tencent / wujie',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/Tencent/wujie',
+		description: '极致的微前端框架',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'jlmakes / scrollreveal',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/jlmakes/scrollreveal',
+		description: '当元素滚动到视图中时，为元素添加动画效果。',
+		tags: [tags.development, tags.animation, tags.web]
+	},
+	{
+		name: 'kylefarris / clamscan',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/kylefarris/clamscan',
+		description:
+			'强大的 ClamAV 病毒扫描库，支持使用本地套接字、本地/远程 TCP 和本地 Clamscan/clamdscan 二进制文件（带故障转移）扫描文件、目录和流。',
+		tags: [tags.development, tags.openSource, tags.safe]
+	},
+	{
+		name: 'lodash / lodash',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/lodash/lodash',
+		description: '一个现代化的JavaScript实用库，提供模块化、性能和额外功能。',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'mattboldt / typed.js',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/mattboldt/typed.js',
+		description: 'JavaScript 打字动画库',
+		tags: [tags.development, tags.animation, tags.web]
+	},
+	{
+		name: 'saucxs / captcha-mini',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/saucxs/captcha-mini',
+		description:
+			'captcha-mini.js是一个生成验证码的插件，使用js和canvas生成的，确保后端服务被暴力攻击，简单判断人机以及系统的安全性，体积小，功能多，支持配置',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'wangeditor-team / wangEditor',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/wangeditor-team/wangEditor',
+		description: '开源 Web 富文本编辑器',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'megasanjay / vue3-marquee',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/megasanjay/vue3-marquee',
+		description: '一个简单的跑马灯组件，对 Vue 3 的依赖为零。',
+		tags: [tags.development, tags.web]
+	},
+	{
+		name: 'modood / Administrative-divisions-of-China',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/modood/Administrative-divisions-of-China',
+		description: '中华人民共和国行政区划：省级（省份）、 地级（城市）、 县级（区县）、 乡级（乡镇街道）、 村级（村委会居委会） ，中国省市区镇村二级三级四级五级联动地址数据。',
+		tags: [tags.development]
+	},
+	{
+		name: 'highlightjs / highlight.js',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/highlightjs/highlight.js',
+		description: 'JavaScript 语法高亮显示器，具有语言自动检测和零依赖关系。',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'sindresorhus / github-markdown-css',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/sindresorhus/github-markdown-css',
+		description: '复制 GitHub Markdown 样式的最小 CSS 数量',
+		tags: [tags.development, tags.openSource, tags.web]
+	},
+	{
+		name: 'Eikanya / Live2d-model',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/Eikanya/Live2d-model',
+		description: 'live2d模型收集',
+		tags: [tags.development, tags.resource]
+	},
+	{
+		name: 'imuncle / live2d',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/imuncle/live2d',
+		description: 'live2d模型收集+展示，可直接用于静态网站',
+		tags: [tags.development, tags.resource]
+	},
+	{
+		name: 'un-pany / v3-admin-vite',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/un-pany/v3-admin-vite',
+		description: '☀ A vue3 admin template | vue3 admin/element plus admin/vite admin/vue3 template/vue3 后台/vue3 模板/vue3 后台管理系统',
+		tags: [tags.template]
+	},
+	{
+		name: 'idurar / idurar-erp-crm',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/idurar/idurar-erp-crm',
+		description: '开源无头ERP CRM电子商务会计软件',
+		tags: [tags.template]
+	},
+	{
+		name: 'mindskip / xzs',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/mindskip/xzs',
+		description: '在线考试系统',
+		tags: [tags.template]
+	},
+	{
+		name: 'Aras-ax / lottery',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/Aras-ax/lottery',
+		description: '🎉🌟✨🎈年会抽奖程序，基于 Express + Three.js的 3D 球体抽奖程序，奖品🧧🎁，文字，图片，抽奖规则均可配置，😜抽奖人员信息Excel一键导入😍，抽奖结果Excel导出😎，给你的抽奖活动带来全新酷炫体验🚀🚀🚀',
+		tags: [tags.template]
+	},
+	{
+		name: 'PanJiaChen / vue-element-admin',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/PanJiaChen/vue-element-admin',
+		description: '🎉 一个神奇的 Vue 管理员 https://panjiachen.github.io/vue-element-admin',
+		tags: [tags.template]
+	},
+	{
+		name: 'koodo-reader / koodo-reader',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/koodo-reader/koodo-reader',
+		description: '现代电子书管理器和阅读器，具有适用于 Windows、macOS、Linux 和 Web 的同步和备份功能',
+		tags: [tags.template]
+	},
+	{
+		name: 'steve / gallery',
+		ico: '/assets/github.svg',
+		url: 'https://gitee.com/steve007/gallery',
+		description: '数字展馆',
+		tags: [tags.template, tags.web]
+	},
+	{
+		name: 'guchengwuyue / yshop-drink意象桌面扫码点餐系统',
+		ico: '/assets/github.svg',
+		url: 'https://gitee.com/guchengwuyue/yshop-drink',
+		description: 'yshop意象点餐(扫码点餐)系统，在线点餐(外卖与自取)小程序模式，支持多门店模式，SaaS多租户模式，基础技术springboot3+jdk17+vue3+uniapp(vue3) 采用当前流行技术组合的前后端分离点餐系统： SpringBoot3、Spring Security OAuth2、MybatisPlus、SpringSecurity、jwt、redis、Vue3的前后端分离的系统',
+		tags: [tags.template]
+	},
+	{
+		name: 'freeCodeCamp / freeCodeCamp',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/freeCodeCamp/freeCodeCamp',
+		description: 'freeCodeCamp.org 的开源代码库和课程。免费学习编码。',
+		tags: [tags.learn]
+	},
+	{
+		name: 'GrowingGit / GitHub-Chinese-Top-Charts',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/GrowingGit/GitHub-Chinese-Top-Charts',
+		description: 'GitHub中文排行榜，各语言分设「软件 | 资料」榜单，精准定位中文好项目。各取所需，高效学习。',
+		tags: [tags.learn, tags.openSource]
+	},
+	{
+		name: 'krahets / hello-algo',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/krahets/hello-algo',
+		description: '《Hello 算法》：动画图解、一键运行的数据结构与算法教程。支持 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 代码。简体版和繁体版同步更新，English version ongoing',
+		tags: [tags.learn]
+	},
+	{
+		name: 'ascoders / weekly',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/ascoders/weekly',
+		description: '前端精读周刊。帮你理解最前沿、实用的技术。',
+		tags: [tags.learn, tags.web]
+	},
+	{
+		name: 'chokcoco / iCSS',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/chokcoco/iCSS',
+		description: '不止于 CSS',
+		tags: [tags.learn, tags.css]
+	},
+	{
+		name: 'chokcoco / CSS-Inspiration',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/chokcoco/CSS-Inspiration',
+		description: 'CSS Inspiration，在这里找到写 CSS 的灵感！',
+		tags: [tags.learn, tags.css]
+	},
+	{
+		name: 'hepengwei / visualization-collection-vue',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/hepengwei/visualization-collection-vue',
+		description: '🌈 一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、Three.js3D、人工智能应用等上百个案例（Vue版本）',
+		tags: [tags.learn, tags.css]
+	},
+	{
+		name: 'Syknapse / Contribute-To-This-Project',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/Syknapse/Contribute-To-This-Project',
+		description: '这个项目正在等待您的贡献。如果您以前从未在 GitHub 上贡献过代码，那么这个项目可以帮助您入门',
+		tags: [tags.learn]
+	},
+	{
+		name: 'javascript-tutorial / zh.javascript.info',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/javascript-tutorial/zh.javascript.info',
+		description: '现代 JavaScript 教程（The Modern JavaScript Tutorial），以最新的 ECMAScript 规范为基准，通过简单但足够详细的内容，为你讲解从基础到高阶的 JavaScript 相关知识。',
+		tags: [tags.learn, tags.web]
+	},
+	{
+		name: 'sechelper / kunge-cybersecurity-learning',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/sechelper/kunge-cybersecurity-learning',
+		description: '全网首创，坤哥网安学习法，最屌没有之一',
+		tags: [tags.learn]
+	},
+	{
+		name: 'you-dont-need / You-Dont-Need-JavaScript',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/you-dont-need/You-Dont-Need-JavaScript',
+		description: 'CSS 很强大，你可以在没有 JS 的情况下做很多事情。',
+		tags: [tags.learn, tags.css]
+	},
+	{
+		name: '1c7 / chinese-independent-developer',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/1c7/chinese-independent-developer',
+		description: '👩🏿‍💻👨🏾‍💻👩🏼‍💻👨🏽‍💻👩🏻‍💻中国独立开发者项目列表 -- 分享大家都在做什么',
+		tags: [tags.learn, tags.openSource]
+	},
+	{
+		name: 'phaserjs / examples',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/phaserjs/examples',
+		description: 'Phaser 3 例子',
+		tags: [tags.learn, tags.web]
+	},
+	{
+		name: 'zhayujie / chatgpt-on-wechat',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/zhayujie/chatgpt-on-wechat',
+		description: '基于大模型搭建的聊天机器人，同时支持 微信公众号、企业微信应用、飞书、钉钉 等接入，可选择GPT3.5/GPT-4o/GPT4.0/ Claude/文心一言/讯飞星火/通义千问/ Gemini/GLM-4/Claude/Kimi/LinkAI，能处理文本、语音和图片，访问操作系统和互联网，支持基于自有知识库进行定制企业智能客服。',
+		tags: [tags.ai, tags.openSource]
+	},
+	{
+		name: 'Guyungy / damaihelper',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/Guyungy/damaihelper',
+		description: '支持大麦网，淘票票、缤玩岛等多个平台，演唱会演出抢票脚本',
+		tags: [tags.openSource]
+	},
+	{
+		name: 'gzldc / 12306',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/gzldc/12306',
+		description: '12306抢票脚本',
+		tags: [tags.openSource]
+	},
+	{
+		name: 'Codennnn / vue-color-avatar',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/Codennnn/vue-color-avatar',
+		description: '一个在线头像生成器只是为了好玩 |一个纯前端实现的头像生成网站',
+		tags: [tags.other]
+	},
+	{
+		name: 'zhaoolee / ChineseBQB',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/zhaoolee/ChineseBQB',
+		description: '🇨🇳 Chinese sticker pack,More joy / 表情包的博物馆, Github最有毒的仓库, 中国表情包大集合, 聚欢乐~',
+		tags: [tags.resource]
+	},
+	{
+		name: 'Java-S12138 / frank',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/Java-S12138/frank',
+		description: '全新的英雄联盟助手软件，WeGame 的替代品',
+		tags: [tags.other]
+	},
+	{
+		name: 'Blankj / awesome-comment',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/Blankj/awesome-comment',
+		description: '有趣的评论',
+		tags: [tags.other]
+	},
+	{
+		name: 'alievk / avatarify-python',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/alievk/avatarify-python',
+		description: '适用于 Zoom、Skype 和其他视频会议应用程序的头像。',
+		tags: [tags.other]
+	},
+	{
+		name: 'bb-music / flutter-app',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/bb-music/flutter-app',
+		description: '使用 flutter 编写的哔哔音乐客户端，无需登录，没有信息收集，实现你的听歌自由。',
+		tags: [tags.openSource]
+	},
+	{
+		name: 'travellings-link / travellings',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/travellings-link/travellings',
+		description: '「开往 Travellings」是一个友链接力项目，旨在通过网络跳转的方式将流量引入那些鲜为人知的独立站点。 每当用户访问加入该项目的网页时，点击该网页上的“开往”按钮将随机跳转到另一个加入该项目的网页。',
+		tags: [tags.other]
+	},
+	{
+		name: 'NianBroken / Firework_Simulator',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/NianBroken/Firework_Simulator',
+		description: '烟花模拟器，一个可以模拟各种烟花效果的网页|它可以展示各种绚丽多彩的烟花效果，并让人仿佛置身于真实烟花的绚丽世界之中。|模拟烟花|烟花网页|烟花绽放|烟花效果',
+		tags: [tags.css, tags.web]
+	},
+	{
+        name: "篡改猴",
+        description: "使用用户脚本自由地改变网络",
+        ico: "https://store-images.s-microsoft.com/image/apps.20759.f7dbc670-57ef-4f66-932b-7a8786594577.1e93160d-1a0b-42ef-92b3-7f652ab8df5d.eadba2ba-e3fe-404c-bc8b-b383ebeb0d00?mode=scale&h=100&q=90&w=100",
+        url: "https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd",
+		tags: [tags.plugin, tags.tools]
+    },
+    {
+        name: "购物党自动比价工具",
+        description: "浏览商品页面时，自动查询180天历史价格、比较同款商品的全网最低价、提示促销和隐藏优惠券、一旦降价还能通过微信提醒你，海淘、二手房游戏平台也能比价！",
+        ico: "https://store-images.s-microsoft.com/image/apps.41882.11a2720c-d2ed-44c8-a03f-e9de8886cb90.e08e3ddf-819d-4af4-8a38-7ff8648a9767.2c62500b-089f-476a-9754-a5723476d0a1?mode=scale&h=100&q=90&w=100",
+        url: "https://microsoftedge.microsoft.com/addons/detail/%E8%B4%AD%E7%89%A9%E5%85%9A%E8%87%AA%E5%8A%A8%E6%AF%94%E4%BB%B7%E5%B7%A5%E5%85%B7/pngicgippofneelinabebobnkpmdiphn",
+		tags: [tags.plugin, tags.tools]
+    },
+    {
+        name: "FeHelper(前端助手)",
+        description: "Web开发者常用工具集，包括JSON格式化、代码美化、信息编解码、二维码/解码等等；FeHelper默认已为您安装JSON格式化功能，其余功能请到插件配置页「FH应用市场」直接安装/更新！",
+        ico: "https://store-images.s-microsoft.com/image/apps.47228.fd1a58dd-c709-4811-9013-e089199d7299.175fbc49-c6fb-46ab-9cb6-4bd6dd523f55.c46634db-15cf-462a-b539-10c0bd89d44d?mode=scale&h=100&q=90&w=100",
+        url: "https://microsoftedge.microsoft.com/addons/detail/fehelper%E5%89%8D%E7%AB%AF%E5%8A%A9%E6%89%8B/feolnkbgcbjmamimpfcnklggdcbgakhe?hl=zh-CN",
+		tags: [tags.plugin, tags.tools, tags.web]
+    },
+	{
+        name: "domlysz / BlenderGIS",
+		ico: '/assets/github.svg',
+        description: "使用地理数据创建3D模型",
+        url: "https://github.com/domlysz/BlenderGIS",
+		tags: [tags.plugin, tags.blender]
+    },
+	{
+        name: '电子木鱼',
+		ico: '/assets/game.svg',
+        url: 'https://haiyong.site/moyu/muyu/',
+		description: "功德加一",
+		tags: [tags.game]
+    },
+    {
+        name: '俄罗斯方块',
+		ico: '/assets/game.svg',
+        url: 'http://www.itmind.net/tetris/',
+		description: "",
+		tags: [tags.game]
+    },
+    {
+        name: '3D台球',
+		ico: '/assets/game.svg',
+        url: 'http://www.heyzxz.me/pcol/',
+		description: "",
+		tags: [tags.game]
+    },
+    {
+        name: '3D汽车',
+		ico: '/assets/game.svg',
+        url: 'https://haiyong.site/moyu/cheche/',
+        description: '感兴趣的可以去学习一下three.js',
+		tags: [tags.game]
+    },
+    {
+        name: '五子棋',
+		ico: '/assets/game.svg',
+        url: 'https://haiyong.site/moyu/wzq-2/',
+		description: "",
+		tags: [tags.game]
+    },
+    {
+        name: '植物大战僵尸',
+		ico: '/assets/game.svg',
+        url: 'https://haiyong.site/moyu/pvz/',
+		description: "",
+		tags: [tags.game]
+    },
+	{
+        name: "Material Theme — Free",
+        description: "Visual Studio Code现在最史诗般的主题",
+        ico: "https://equinusocio.gallerycdn.vsassets.io/extensions/equinusocio/vsc-material-theme/34.7.9/1731100257256/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme",
+		tags: [tags.plugin, tags.vscode]
+    },
+    {
+        name: "Material Icon Theme",
+        description: "Visual Studio Code 的 Material Design 图标",
+        ico: "https://pkief.gallerycdn.vsassets.io/extensions/pkief/material-icon-theme/5.14.1/1731509240649/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme",
+		tags: [tags.plugin, tags.vscode]
+    },
+    {
+        name: "Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code",
+        description: "中文语言包扩展（简体）",
+        ico: "https://ms-ceintl.gallerycdn.vsassets.io/extensions/ms-ceintl/vscode-language-pack-zh-hans/1.96.2024112709/1732699011431/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans",
+		tags: [tags.plugin, tags.vscode]
+    },
+    {
+        name: "Turbo Console Log",
+        description: "自动执行编写有意义的日志消息的过程",
+        ico: "https://chakrounanas.gallerycdn.vsassets.io/extensions/chakrounanas/turbo-console-log/2.10.5/1729389805758/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log",
+		tags: [tags.plugin, tags.vscode]
+    },
+    {
+        name: "Live Server",
+        description: "启动一个具有静态和动态页面实时重新加载功能的开发本地服务器",
+        ico: "https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1661914858952/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer",
+		tags: [tags.plugin, tags.vscode]
+    },
+    {
+        name: "LeetCode",
+        description: "解决 VS Code 中的 LeetCode 问题",
+        ico: "https://leetcode.gallerycdn.vsassets.io/extensions/leetcode/vscode-leetcode/0.18.4/1726212071110/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=LeetCode.vscode-leetcode",
+		tags: [tags.plugin, tags.vscode]
+    },
+    {
+        name: "Auto Rename Tag",
+        description: "自动重命名配对的 HTML/XML 标签",
+        ico: "https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-rename-tag/0.1.10/1644319230173/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag",
+		tags: [tags.plugin, tags.vscode]
+    },
+    {
+        name: "project-tree",
+        description: "安装插件，按 ctrl+shift+p 并输入 Project Tree 进入。 在 README.md 中生成项目的树状结构。",
+        ico: "https://zhucy.gallerycdn.vsassets.io/extensions/zhucy/project-tree/0.3.0/1589279463795/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=zhucy.project-tree",
+		tags: [tags.plugin, tags.vscode]
+    },
+    {
+        name: "Color Highlight",
+        description: "在编辑器中突出显示 Web 颜色",
+        ico: "https://naumovs.gallerycdn.vsassets.io/extensions/naumovs/color-highlight/2.8.0/1710416778913/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight",
+		tags: [tags.plugin, tags.vscode]
+    },
+    {
+        name: "Batch Runner",
+        description: "在 VS Code 终端中运行批处理文件",
+        ico: "https://nilssoderman.gallerycdn.vsassets.io/extensions/nilssoderman/batch-runner/1.3.2/1723902315400/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=NilsSoderman.batch-runner",
+		tags: [tags.plugin, tags.vscode]
+    },
+    {
+        name: "Project Manager",
+        description: "在项目之间轻松切换",
+        ico: "https://alefragnani.gallerycdn.vsassets.io/extensions/alefragnani/project-manager/12.8.0/1711736277737/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager",
+		tags: [tags.plugin, tags.vscode]
+    },
+    {
+        name: "Prettier - Code formatter",
+        description: "使用 prettier 的代码格式化程序",
+        ico: "https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/11.0.0/1723648421534/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
+		tags: [tags.plugin, tags.vscode]
+    },
+    {
+        name: "background",
+        description: "将背景图像引入 vscode",
+        ico: "https://shalldie.gallerycdn.vsassets.io/extensions/shalldie/background/2.0.3/1731577235340/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=shalldie.background",
+		tags: [tags.plugin, tags.vscode]
+    },
+    {
+        name: "jsdoc",
+        description: "为函数快速创建 JSDoc 样式的注释。",
+        ico: "https://lllllllqw.gallerycdn.vsassets.io/extensions/lllllllqw/jsdoc/1.0.9/1681753998741/Microsoft.VisualStudio.Services.Icons.Default",
+        url: "https://marketplace.visualstudio.com/items?itemName=lllllllqw.jsdoc",
+		tags: [tags.plugin, tags.vscode]
+    },
 ];
 
 module.exports = {
