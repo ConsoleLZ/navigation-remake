@@ -75,13 +75,13 @@ function changeMenuShow() {
 
 	function change() {
 		const w = window.innerWidth;
-		if (w < 660) {
+		if (w < 980) {
 			menu.style.display = 'none';
-			rightContainerDom.style.paddingLeft = '0';
+			rightContainerDom.style.paddingLeft = 0;
 			burger.style.display = 'block';
 		} else {
 			menu.style.display = 'flex';
-			rightContainerDom.style.paddingLeft = menu.offsetWidth + 'px';
+			rightContainerDom.style.paddingLeft = 10 + 'rem';
 			burger.style.display = 'none';
 		}
 	}
@@ -159,4 +159,12 @@ function onSelectTag(tag) {
 // 作品跳转
 function onJump(url){
 	window.open(url)
+}
+// 改变分页
+function changePage(i){
+	if(i == 1){
+		location.href = '/'
+	}else {
+		location.href = `page${i - 1}`
+	}
 }

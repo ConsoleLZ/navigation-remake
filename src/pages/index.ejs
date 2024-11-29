@@ -43,10 +43,10 @@
 	</label>
 	<!-- 移动端菜单栏 -->
 	<div class="my-index-burger-menu">
-		<div style="display: flex;flex-direction: column;justify-content: center;">
-			<div class="ui secondary vertical menu" style="overflow: auto;width: 100%;">
+		<div>
+			<div class="ui secondary vertical menu" style="width: 100%;">
 				<% Object.values(tags).forEach(element=> { %>
-					<a onclick="onSelectTag('<%= element %>')" class="item my-index-menu-item">
+					<a onclick="onSelectTag('<%= element %>')" class="item" style="text-align: center;">
 						<%= element %>
 					</a>
 					<% }) %>
@@ -55,11 +55,11 @@
 	</div>
 	<div class="my-index-layout">
 		<!-- 菜单栏 -->
-		<div class="my-index-menu">
+		<div class="ui secondary vertical menu my-index-menu">
 			<% Object.values(tags).forEach(element=> { %>
-				<div onclick="onSelectTag('<%= element %>')" class="my-index-menu-item">
+				<a onclick="onSelectTag('<%= element %>')" class="item">
 					<%= element %>
-				</div>
+				</a>
 				<% }) %>
 		</div>
 
@@ -104,6 +104,23 @@
 						</div>
 					</div>
 					<% }) %>
+			</div>
+			<!-- 分页菜单 -->
+			<div style="display: flex;justify-content: center;">
+				<div style="transform: scale(0.8);" class="ui floated pagination menu">
+					<a class="icon item">
+						<i class="left chevron icon"></i>
+					</a>
+					<% const totalPages=Math.ceil(dataList.length / config.pagingNumber);for (let i=1; i <=totalPages;
+						i++) { %>
+						<a class="item" onclick="changePage('<%= i %>')">
+							<%= i %>
+						</a>
+						<% } %>
+					<a class="icon item">
+						<i class="right chevron icon"></i>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

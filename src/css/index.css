@@ -22,24 +22,13 @@
 	gap: 10px;
 }
 
-.my-index-menu-item {
-	font-size: 0.7rem;
-	text-align: center;
-	cursor: pointer;
-	transition: all 200ms;
-}
-
-.my-index-menu-item:hover {
-	color: rgb(50, 119, 237);
-}
-
 p {
 	margin-bottom: 0 !important;
 }
 
 /* From Uiverse.io by Cevorob */
 .burger {
-	position: absolute;
+	position: fixed;
 	right: 10px;
 	top: 13px;
 	z-index: 1000;
@@ -113,11 +102,12 @@ p {
 }
 
 .my-index-burger-menu > div {
-	width: 55%;
+	width: 100%;
 	height: 100%;
 	background-color: #ffffff;
 	transition: all 500ms;
 	transform: translateX(-100%);
+	overflow: auto;
 }
 
 .my-index-cards {
@@ -170,17 +160,14 @@ p {
 
 .my-index-menu {
 	overflow: auto;
-	width: fit-content;
 	height: 100vh;
-	min-width: 130px;
+	width: 10rem !important;
+	font-size: 0.8rem !important;
 	position: fixed;
 	left: 0;
 	top: 0;
+	z-index: 999;
 	background-color: white;
-	display: flex;
-	flex-direction: column;
-	padding: 10px;
-	gap: 10px;
 }
 
 .my-index-menu::-webkit-scrollbar {

@@ -137,15 +137,10 @@ const main = async () => {
 		}
 	}
 
-	// 读取pages目录
-	var directoryPath = path.join(__dirname, 'src/pages');
-	const pagesFile = await readDirectory(directoryPath);
-	pagesFile.forEach(async item => {
-		const menuFind = parseConfig().menu.find(menuItem => menuItem.path === item.split('.')[0]);
-		const outPath = `dist/${menuFind.path}.html`;
-		const templatePath = path.join(__dirname, `src/pages/${menuFind.path}.ejs`);
-		await generatePage(outPath, templatePath, data);
-	});
+	// 创建html文件
+	const outPath = 'dist/index.html';
+	const templatePath = path.join(__dirname, `src/pages/index.ejs`);
+	await generatePage(outPath, templatePath, data);
 };
 
 main();

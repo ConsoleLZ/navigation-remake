@@ -5,6 +5,9 @@ menu:
     - name: 首页
       path: index
 
+# 每一页数量
+pagingNumber: 20
+
 # 关于网站SEO
 SEO:
     author: 小哲
