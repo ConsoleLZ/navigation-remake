@@ -6,7 +6,7 @@ menu:
       path: index
 
 # 每一页数量
-pagingNumber: 20
+pageNumber: 20
 
 # 关于网站SEO
 SEO:

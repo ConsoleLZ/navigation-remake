@@ -2,20 +2,23 @@
 let observer;
 
 function isEntryView() {
-  if (!observer) {
-    // 如果还没有创建观察者，则创建一个
-    observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          isLink(entry.target.dataset.img).then(() => {
-            entry.target.src = entry.target.dataset.img;
-          });
-          observer.unobserve(entry.target); // 停止观察该元素
-        }
-      });
-    }, { threshold: 0.1 });
-  }
-  return observer;
+	if (!observer) {
+		// 如果还没有创建观察者，则创建一个
+		observer = new IntersectionObserver(
+			(entries, observer) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						isLink(entry.target.dataset.img).then(() => {
+							entry.target.src = entry.target.dataset.img;
+						});
+						observer.unobserve(entry.target); // 停止观察该元素
+					}
+				});
+			},
+			{ threshold: 0.1 }
+		);
+	}
+	return observer;
 }
 
 // 动态改变字体大小
@@ -93,31 +96,12 @@ function changeMenuShow() {
 	change();
 }
 
-// 入口函数
-function main() {
-	// 控制菜单的显示和隐藏
-	changeMenuShow();
-	// 初始化字体大小
-	setRemFontSize();
-	// 观察元素是否进入视口
-	const iconDomList = document.querySelectorAll('.my-index-cards img')
-	iconDomList.forEach(item=>{
-		isEntryView().observe(item)
-	})
-}
-
-main();
-
-// 浏览器事件
-// 菜单栏标签的选择
-function onSelectTag(tag) {
-	const cardsDom = document.querySelector('.my-index-cards');
-	// 图标筛选
-	const dataListFilter = dataList.filter(item => item.tags.includes(tag) || tag === '全部');
+// 生成数据dom
+function generateDom(data) {
 	// 输出过滤后的html
 	let outHtml = '';
-	if (dataListFilter.length) {
-		dataListFilter.forEach(item => {
+	if (data.length) {
+		data.forEach(item => {
 			let outTagsHtml = '';
 			item.tags.forEach(tag => {
 				outTagsHtml += `<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">${tag}</div>`;
@@ -138,33 +122,64 @@ function onSelectTag(tag) {
 			`;
 		});
 	} else {
-		outHtml = '暂无数据...'
+		outHtml = '暂无数据...';
 	}
 
-	cardsDom.innerHTML = outHtml;
+	return outHtml
+}
+
+// 根据选择的标签和分页控制数据的显示
+function setData() {
+	// 获取当前页面的URL
+	const urlParams = new URLSearchParams(window.location.search);
+	const pageQuery = Number(urlParams.get('page')) || 0;
+	const tagQuery = urlParams.get('tag') || '全部';
+
+	const dataListFilter = dataList.filter(item => item.tags.includes(tagQuery) || tagQuery === '全部');
+	const dataListSlice = dataListFilter.slice(pageNumber * pageQuery,  pageNumber * (pageQuery + 1))
+
+	const cardsDom = document.querySelector('.my-index-cards');
+	
+	cardsDom.innerHTML = generateDom(dataListSlice);
 
 	// 绑定点击事件
 	document.querySelectorAll('.my-index-cards .card').forEach(card => {
-		card.addEventListener('click', function() {
+		card.addEventListener('click', function () {
 			onJump(this.getAttribute('data-url'));
 		});
 	});
+}
 
+// 入口函数
+function main() {
+	// 控制菜单的显示和隐藏
+	changeMenuShow();
+	// 初始化字体大小
+	setRemFontSize();
+	// 初始化数据
+	setData();
 	// 观察元素是否进入视口
 	const iconDomList = document.querySelectorAll('.my-index-cards img');
 	iconDomList.forEach(item => {
 		isEntryView().observe(item);
 	});
 }
+
+main();
+
+// 浏览器事件
+// 菜单栏标签的选择
+function onSelectTag(tag) {
+	location.href = `/?page=0&tag=${tag}`
+}
 // 作品跳转
-function onJump(url){
-	window.open(url)
+function onJump(url) {
+	window.open(url);
 }
 // 改变分页
-function changePage(i){
-	if(i == 1){
-		location.href = '/'
-	}else {
-		location.href = `page${i - 1}`
-	}
+function changePage(i) {
+	// 获取当前页面的URL
+	const urlParams = new URLSearchParams(window.location.search);
+	const tagQuery = urlParams.get('tag') || '全部';
+	location.href = `/?page=${i}&tag=${tagQuery}`
 }
