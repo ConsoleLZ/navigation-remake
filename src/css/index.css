@@ -206,6 +206,7 @@ p {
 }
 
 .my-index-right-container {
+	height: fit-content;
 	flex: 1;
 	padding-top: 1rem;
 }
@@ -217,4 +218,9 @@ p {
 	text-shadow:
 		1px -1px #fff,
 		-1px 1px #999;
+}
+.header-search {
+	width: 100%;
+	position: sticky;
+	top: 10px;
 }
