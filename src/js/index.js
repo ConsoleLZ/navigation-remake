@@ -125,7 +125,7 @@ function generateDom(data) {
 		outHtml = '暂无数据...';
 	}
 
-	return outHtml
+	return outHtml;
 }
 
 // 根据选择的标签和分页控制数据的显示
@@ -136,10 +136,10 @@ function setData() {
 	const tagQuery = urlParams.get('tag') || '全部';
 
 	const dataListFilter = dataList.filter(item => item.tags.includes(tagQuery) || tagQuery === '全部');
-	const dataListSlice = dataListFilter.slice(pageNumber * pageQuery,  pageNumber * (pageQuery + 1))
+	const dataListSlice = dataListFilter.slice(pageNumber * pageQuery, pageNumber * (pageQuery + 1));
 
 	const cardsDom = document.querySelector('.my-index-cards');
-	
+
 	cardsDom.innerHTML = generateDom(dataListSlice);
 
 	// 绑定点击事件
@@ -149,6 +149,35 @@ function setData() {
 		});
 	});
 }
+
+// 搜索逻辑
+function tokenizer(str) {
+	// 分词逻辑，返回完整的单词以及单词的部分片段
+	const words = str.match(/[\u4e00-\u9fa5]+|[a-zA-Z0-9]+/g) || [];
+	const subStrings = [];
+
+	words.forEach(word => {
+		if (/^[a-zA-Z0-9]+$/.test(word)) {
+			// 英文或数字
+			// 生成所有可能的子串
+			for (let i = 1; i <= word.length; i++) {
+				subStrings.push(...word.slice(0, i));
+			}
+		} else {
+			// 中文
+			// 生成所有可能的 n-gram 子串
+			for (let i = 1; i <= word.length; i++) {
+				for (let j = 0; j <= word.length - i; j++) {
+					subStrings.push(word.substring(j, j + i));
+				}
+			}
+		}
+	});
+
+	return subStrings.filter((value, index, self) => self.indexOf(value) === index); // 去重
+}
+
+let miniSearch = null;
 
 // 入口函数
 function main() {
@@ -163,6 +192,19 @@ function main() {
 	iconDomList.forEach(item => {
 		isEntryView().observe(item);
 	});
+
+	// 搜索功能
+	miniSearch = new MiniSearch({
+		fields: ['name', 'description'], // 搜索哪些字段
+		storeFields: ['name', 'description', 'url'], // 返回哪些字段
+		tokenize: tokenizer
+	});
+	const originalDataList = [...dataList]; // 原始数据列表
+	let document1 = originalDataList.map((item, index) => ({
+		...item,
+		id: index
+	}));
+	miniSearch.addAll(document1); // 配置搜索源
 }
 
 main();
@@ -170,7 +212,7 @@ main();
 // 浏览器事件
 // 菜单栏标签的选择
 function onSelectTag(tag) {
-	location.href = `/?page=0&tag=${tag}`
+	location.href = `/?page=0&tag=${tag}`;
 }
 // 作品跳转
 function onJump(url) {
@@ -181,5 +223,25 @@ function changePage(i) {
 	// 获取当前页面的URL
 	const urlParams = new URLSearchParams(window.location.search);
 	const tagQuery = urlParams.get('tag') || '全部';
-	location.href = `/?page=${i}&tag=${tagQuery}`
+	location.href = `/?page=${i}&tag=${tagQuery}`;
+}
+
+function onSearch(e) {
+	const mySearch = document.querySelector('#mySearch');
+	const searchResult = []
+	if (e.key === 'Enter') {
+		// 搜索
+		miniSearch.autoSuggest(mySearch.value, {
+			filter: result => {
+				// 处理搜索结果
+				searchResult.push({
+					name: result.name,
+					description: result.description,
+					url: result.url
+				});
+				return true;
+			}
+		});
+		console.log(searchResult)
+	}
 }
