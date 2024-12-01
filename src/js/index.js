@@ -1,5 +1,5 @@
 // 创建一个全局的IntersectionObserver实例
-let observer;
+let observer, miniSearch;
 
 function isEntryView() {
 	if (!observer) {
@@ -134,14 +134,32 @@ function setData() {
 	const urlParams = new URLSearchParams(window.location.search);
 	const pageQuery = Number(urlParams.get('page')) || 0;
 	const tagQuery = urlParams.get('tag') || '全部';
-
-	const dataListFilter = dataList.filter(item => item.tags.includes(tagQuery) || tagQuery === '全部');
-	const dataListSlice = dataListFilter.slice(pageNumber * pageQuery, pageNumber * (pageQuery + 1));
-
+	const tagSearch = urlParams.get('search');
 	const cardsDom = document.querySelector('.my-index-cards');
-
+	let dataListSlice = null;
+	if (tagSearch) {
+		const searchResult = [];
+		// 搜索
+		miniSearch.autoSuggest(tagSearch, {
+			filter: result => {
+				// 处理搜索结果
+				searchResult.push({
+					name: result.name,
+					description: result.description,
+					url: result.url,
+					ico: result.ico,
+					tags: result.tags
+				});
+				return true;
+			}
+		});
+		dataListSlice = searchResult.slice(pageNumber * pageQuery, pageNumber * (pageQuery + 1));
+	} else {
+		const dataListFilter = dataList.filter(item => item.tags.includes(tagQuery) || tagQuery === '全部');
+		dataListSlice = dataListFilter.slice(pageNumber * pageQuery, pageNumber * (pageQuery + 1));
+	}
+	console.log(dataListSlice);
 	cardsDom.innerHTML = generateDom(dataListSlice);
-
 	// 绑定点击事件
 	document.querySelectorAll('.my-index-cards .card').forEach(card => {
 		card.addEventListener('click', function () {
@@ -177,22 +195,12 @@ function tokenizer(str) {
 	return subStrings.filter((value, index, self) => self.indexOf(value) === index); // 去重
 }
 
-let miniSearch = null;
-
 // 入口函数
 function main() {
 	// 控制菜单的显示和隐藏
 	changeMenuShow();
 	// 初始化字体大小
 	setRemFontSize();
-	// 初始化数据
-	setData();
-	// 观察元素是否进入视口
-	const iconDomList = document.querySelectorAll('.my-index-cards img');
-	iconDomList.forEach(item => {
-		isEntryView().observe(item);
-	});
-
 	// 搜索功能
 	miniSearch = new MiniSearch({
 		fields: ['name', 'description'], // 搜索哪些字段
@@ -205,6 +213,14 @@ function main() {
 		id: index
 	}));
 	miniSearch.addAll(document1); // 配置搜索源
+	// 初始化数据
+	setData();
+	// 观察元素是否进入视口
+	const iconDomList = document.querySelectorAll('.my-index-cards img');
+	iconDomList.forEach(item => {
+		isEntryView().observe(item);
+	});
+
 }
 
 main();
@@ -223,35 +239,17 @@ function changePage(i) {
 	// 获取当前页面的URL
 	const urlParams = new URLSearchParams(window.location.search);
 	const tagQuery = urlParams.get('tag') || '全部';
-	location.href = `/?page=${i}&tag=${tagQuery}`;
+	const tagSearch = urlParams.get('search');
+	if(tagSearch){
+		location.href = `/?page=${i}&search=${tagSearch}`;
+	}else {
+		location.href = `/?page=${i}&tag=${tagQuery}`;
+	}
 }
 
 function onSearch(e) {
 	const mySearch = document.querySelector('#mySearch');
-	const searchResult = [];
 	if (e.key === 'Enter') {
-		// 搜索
-		miniSearch.autoSuggest(mySearch.value, {
-			filter: result => {
-				// 处理搜索结果
-				searchResult.push({
-					name: result.name,
-					description: result.description,
-					url: result.url,
-					ico: result.ico,
-					tags: result.tags
-				});
-				return true;
-			}
-		});
-		const cardsDom = document.querySelector('.my-index-cards');
-
-		cardsDom.innerHTML = generateDom(searchResult);
-
-		// 观察元素是否进入视口
-		const iconDomList = document.querySelectorAll('.my-index-cards img');
-		iconDomList.forEach(item => {
-			isEntryView().observe(item);
-		});
+		location.href = `/?page=0&search=${mySearch.value}`;
 	}
 }
