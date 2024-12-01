@@ -226,6 +226,10 @@ function main() {
 main();
 
 // 浏览器事件
+// 返回首页
+function onGoHome(){
+	location.href = '/'
+}
 // 菜单栏标签的选择
 function onSelectTag(tag) {
 	location.href = `/?page=0&tag=${tag}`;

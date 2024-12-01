@@ -218,6 +218,7 @@ p {
 	text-shadow:
 		1px -1px #fff,
 		-1px 1px #999;
+	cursor: pointer;
 }
 .header-search {
 	width: 100%;
