@@ -196,7 +196,7 @@ function main() {
 	// 搜索功能
 	miniSearch = new MiniSearch({
 		fields: ['name', 'description'], // 搜索哪些字段
-		storeFields: ['name', 'description', 'url'], // 返回哪些字段
+		storeFields: ['name', 'description', 'url', 'ico', 'tags'], // 返回哪些字段
 		tokenize: tokenizer
 	});
 	const originalDataList = [...dataList]; // 原始数据列表
@@ -228,7 +228,7 @@ function changePage(i) {
 
 function onSearch(e) {
 	const mySearch = document.querySelector('#mySearch');
-	const searchResult = []
+	const searchResult = [];
 	if (e.key === 'Enter') {
 		// 搜索
 		miniSearch.autoSuggest(mySearch.value, {
@@ -237,11 +237,21 @@ function onSearch(e) {
 				searchResult.push({
 					name: result.name,
 					description: result.description,
-					url: result.url
+					url: result.url,
+					ico: result.ico,
+					tags: result.tags
 				});
 				return true;
 			}
 		});
-		console.log(searchResult)
+		const cardsDom = document.querySelector('.my-index-cards');
+
+		cardsDom.innerHTML = generateDom(searchResult);
+
+		// 观察元素是否进入视口
+		const iconDomList = document.querySelectorAll('.my-index-cards img');
+		iconDomList.forEach(item => {
+			isEntryView().observe(item);
+		});
 	}
 }
