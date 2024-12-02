@@ -1,7 +1,7 @@
 ## 导航网站模板
 这是一个纯静态的网站模板，其中UI库使用的是: [https://semantic-ui.com/](https://semantic-ui.com/)
 
-![图片](https://pic.imgdb.cn/item/674d87c9d0e0a243d4dc0391.jpg)
+![图片](https://github.com/ConsoleLZ/navigation-remake/blob/main/preview.png)
 
 ## 启动
 
