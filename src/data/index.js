@@ -22,11 +22,26 @@ const tags = {
 	game: '游戏',
 	other: '其它',
 	plugin: '插件',
-	blender: 'blender',
-	vscode: 'vscode',
+	blender: 'blender插件',
+	model: '3D建模',
+	vscode: 'vscode'
 };
 
 const dataList = [
+	{
+		name: 'blender',
+		ico: 'https://www.blender.org/wp-content/themes/bthree/assets/icons/favicon.svg',
+		url: 'https://www.blender.org/',
+		description: '3D建模工具',
+		tags: [tags.model]
+	},
+	{
+		name: 'Spline 3D',
+		ico: 'https://spline.design/images/icon_favicon32x32.png',
+		url: 'https://spline.design/',
+		description: '3D建模工具',
+		tags: [tags.model]
+	},
 	{
 		name: '阿里矢量图标库',
 		ico: 'https://img.alicdn.com/imgextra/i4/O1CN01Z5paLz1O0zuCC7osS_!!6000000001644-55-tps-83-82.svg',
@@ -830,8 +845,8 @@ const dataList = [
 	},
 	{
 		name: 'Github',
-		ico: 'https://css.kkgithub.com/favicons/favicon.png',
-		url: 'https://kkgithub.com/',
+		ico: 'https://github.githubassets.com/favicons/favicon.png',
+		url: 'https://github.com/',
 		description: '全球领先的人工智能开发者平台',
 		tags: [tags.cloudPlatform, tags.community]
 	},
@@ -1257,7 +1272,8 @@ const dataList = [
 		name: 'modood / Administrative-divisions-of-China',
 		ico: '/assets/github.svg',
 		url: 'https://github.com/modood/Administrative-divisions-of-China',
-		description: '中华人民共和国行政区划：省级（省份）、 地级（城市）、 县级（区县）、 乡级（乡镇街道）、 村级（村委会居委会） ，中国省市区镇村二级三级四级五级联动地址数据。',
+		description:
+			'中华人民共和国行政区划：省级（省份）、 地级（城市）、 县级（区县）、 乡级（乡镇街道）、 村级（村委会居委会） ，中国省市区镇村二级三级四级五级联动地址数据。',
 		tags: [tags.development]
 	},
 	{
@@ -1292,7 +1308,8 @@ const dataList = [
 		name: 'un-pany / v3-admin-vite',
 		ico: '/assets/github.svg',
 		url: 'https://github.com/un-pany/v3-admin-vite',
-		description: '☀ A vue3 admin template | vue3 admin/element plus admin/vite admin/vue3 template/vue3 后台/vue3 模板/vue3 后台管理系统',
+		description:
+			'☀ A vue3 admin template | vue3 admin/element plus admin/vite admin/vue3 template/vue3 后台/vue3 模板/vue3 后台管理系统',
 		tags: [tags.template]
 	},
 	{
@@ -1313,7 +1330,8 @@ const dataList = [
 		name: 'Aras-ax / lottery',
 		ico: '/assets/github.svg',
 		url: 'https://github.com/Aras-ax/lottery',
-		description: '🎉🌟✨🎈年会抽奖程序，基于 Express + Three.js的 3D 球体抽奖程序，奖品🧧🎁，文字，图片，抽奖规则均可配置，😜抽奖人员信息Excel一键导入😍，抽奖结果Excel导出😎，给你的抽奖活动带来全新酷炫体验🚀🚀🚀',
+		description:
+			'🎉🌟✨🎈年会抽奖程序，基于 Express + Three.js的 3D 球体抽奖程序，奖品🧧🎁，文字，图片，抽奖规则均可配置，😜抽奖人员信息Excel一键导入😍，抽奖结果Excel导出😎，给你的抽奖活动带来全新酷炫体验🚀🚀🚀',
 		tags: [tags.template]
 	},
 	{
@@ -1341,7 +1359,8 @@ const dataList = [
 		name: 'guchengwuyue / yshop-drink意象桌面扫码点餐系统',
 		ico: '/assets/github.svg',
 		url: 'https://gitee.com/guchengwuyue/yshop-drink',
-		description: 'yshop意象点餐(扫码点餐)系统，在线点餐(外卖与自取)小程序模式，支持多门店模式，SaaS多租户模式，基础技术springboot3+jdk17+vue3+uniapp(vue3) 采用当前流行技术组合的前后端分离点餐系统： SpringBoot3、Spring Security OAuth2、MybatisPlus、SpringSecurity、jwt、redis、Vue3的前后端分离的系统',
+		description:
+			'yshop意象点餐(扫码点餐)系统，在线点餐(外卖与自取)小程序模式，支持多门店模式，SaaS多租户模式，基础技术springboot3+jdk17+vue3+uniapp(vue3) 采用当前流行技术组合的前后端分离点餐系统： SpringBoot3、Spring Security OAuth2、MybatisPlus、SpringSecurity、jwt、redis、Vue3的前后端分离的系统',
 		tags: [tags.template]
 	},
 	{
@@ -1362,7 +1381,8 @@ const dataList = [
 		name: 'krahets / hello-algo',
 		ico: '/assets/github.svg',
 		url: 'https://github.com/krahets/hello-algo',
-		description: '《Hello 算法》：动画图解、一键运行的数据结构与算法教程。支持 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 代码。简体版和繁体版同步更新，English version ongoing',
+		description:
+			'《Hello 算法》：动画图解、一键运行的数据结构与算法教程。支持 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 代码。简体版和繁体版同步更新，English version ongoing',
 		tags: [tags.learn]
 	},
 	{
@@ -1390,7 +1410,8 @@ const dataList = [
 		name: 'hepengwei / visualization-collection-vue',
 		ico: '/assets/github.svg',
 		url: 'https://github.com/hepengwei/visualization-collection-vue',
-		description: '🌈 一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、Three.js3D、人工智能应用等上百个案例（Vue版本）',
+		description:
+			'🌈 一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、Three.js3D、人工智能应用等上百个案例（Vue版本）',
 		tags: [tags.learn, tags.css]
 	},
 	{
@@ -1404,7 +1425,8 @@ const dataList = [
 		name: 'javascript-tutorial / zh.javascript.info',
 		ico: '/assets/github.svg',
 		url: 'https://github.com/javascript-tutorial/zh.javascript.info',
-		description: '现代 JavaScript 教程（The Modern JavaScript Tutorial），以最新的 ECMAScript 规范为基准，通过简单但足够详细的内容，为你讲解从基础到高阶的 JavaScript 相关知识。',
+		description:
+			'现代 JavaScript 教程（The Modern JavaScript Tutorial），以最新的 ECMAScript 规范为基准，通过简单但足够详细的内容，为你讲解从基础到高阶的 JavaScript 相关知识。',
 		tags: [tags.learn, tags.web]
 	},
 	{
@@ -1439,7 +1461,8 @@ const dataList = [
 		name: 'zhayujie / chatgpt-on-wechat',
 		ico: '/assets/github.svg',
 		url: 'https://github.com/zhayujie/chatgpt-on-wechat',
-		description: '基于大模型搭建的聊天机器人，同时支持 微信公众号、企业微信应用、飞书、钉钉 等接入，可选择GPT3.5/GPT-4o/GPT4.0/ Claude/文心一言/讯飞星火/通义千问/ Gemini/GLM-4/Claude/Kimi/LinkAI，能处理文本、语音和图片，访问操作系统和互联网，支持基于自有知识库进行定制企业智能客服。',
+		description:
+			'基于大模型搭建的聊天机器人，同时支持 微信公众号、企业微信应用、飞书、钉钉 等接入，可选择GPT3.5/GPT-4o/GPT4.0/ Claude/文心一言/讯飞星火/通义千问/ Gemini/GLM-4/Claude/Kimi/LinkAI，能处理文本、语音和图片，访问操作系统和互联网，支持基于自有知识库进行定制企业智能客服。',
 		tags: [tags.ai, tags.openSource]
 	},
 	{
@@ -1502,184 +1525,188 @@ const dataList = [
 		name: 'travellings-link / travellings',
 		ico: '/assets/github.svg',
 		url: 'https://github.com/travellings-link/travellings',
-		description: '「开往 Travellings」是一个友链接力项目，旨在通过网络跳转的方式将流量引入那些鲜为人知的独立站点。 每当用户访问加入该项目的网页时，点击该网页上的“开往”按钮将随机跳转到另一个加入该项目的网页。',
+		description:
+			'「开往 Travellings」是一个友链接力项目，旨在通过网络跳转的方式将流量引入那些鲜为人知的独立站点。 每当用户访问加入该项目的网页时，点击该网页上的“开往”按钮将随机跳转到另一个加入该项目的网页。',
 		tags: [tags.other]
 	},
 	{
 		name: 'NianBroken / Firework_Simulator',
 		ico: '/assets/github.svg',
 		url: 'https://github.com/NianBroken/Firework_Simulator',
-		description: '烟花模拟器，一个可以模拟各种烟花效果的网页|它可以展示各种绚丽多彩的烟花效果，并让人仿佛置身于真实烟花的绚丽世界之中。|模拟烟花|烟花网页|烟花绽放|烟花效果',
+		description:
+			'烟花模拟器，一个可以模拟各种烟花效果的网页|它可以展示各种绚丽多彩的烟花效果，并让人仿佛置身于真实烟花的绚丽世界之中。|模拟烟花|烟花网页|烟花绽放|烟花效果',
 		tags: [tags.css, tags.web]
 	},
 	{
-        name: "篡改猴",
-        description: "使用用户脚本自由地改变网络",
-        ico: "https://store-images.s-microsoft.com/image/apps.20759.f7dbc670-57ef-4f66-932b-7a8786594577.1e93160d-1a0b-42ef-92b3-7f652ab8df5d.eadba2ba-e3fe-404c-bc8b-b383ebeb0d00?mode=scale&h=100&q=90&w=100",
-        url: "https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd",
+		name: '篡改猴',
+		description: '使用用户脚本自由地改变网络',
+		ico: 'https://store-images.s-microsoft.com/image/apps.20759.f7dbc670-57ef-4f66-932b-7a8786594577.1e93160d-1a0b-42ef-92b3-7f652ab8df5d.eadba2ba-e3fe-404c-bc8b-b383ebeb0d00?mode=scale&h=100&q=90&w=100',
+		url: 'https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd',
 		tags: [tags.plugin, tags.tools]
-    },
-    {
-        name: "购物党自动比价工具",
-        description: "浏览商品页面时，自动查询180天历史价格、比较同款商品的全网最低价、提示促销和隐藏优惠券、一旦降价还能通过微信提醒你，海淘、二手房游戏平台也能比价！",
-        ico: "https://store-images.s-microsoft.com/image/apps.41882.11a2720c-d2ed-44c8-a03f-e9de8886cb90.e08e3ddf-819d-4af4-8a38-7ff8648a9767.2c62500b-089f-476a-9754-a5723476d0a1?mode=scale&h=100&q=90&w=100",
-        url: "https://microsoftedge.microsoft.com/addons/detail/%E8%B4%AD%E7%89%A9%E5%85%9A%E8%87%AA%E5%8A%A8%E6%AF%94%E4%BB%B7%E5%B7%A5%E5%85%B7/pngicgippofneelinabebobnkpmdiphn",
+	},
+	{
+		name: '购物党自动比价工具',
+		description:
+			'浏览商品页面时，自动查询180天历史价格、比较同款商品的全网最低价、提示促销和隐藏优惠券、一旦降价还能通过微信提醒你，海淘、二手房游戏平台也能比价！',
+		ico: 'https://store-images.s-microsoft.com/image/apps.41882.11a2720c-d2ed-44c8-a03f-e9de8886cb90.e08e3ddf-819d-4af4-8a38-7ff8648a9767.2c62500b-089f-476a-9754-a5723476d0a1?mode=scale&h=100&q=90&w=100',
+		url: 'https://microsoftedge.microsoft.com/addons/detail/%E8%B4%AD%E7%89%A9%E5%85%9A%E8%87%AA%E5%8A%A8%E6%AF%94%E4%BB%B7%E5%B7%A5%E5%85%B7/pngicgippofneelinabebobnkpmdiphn',
 		tags: [tags.plugin, tags.tools]
-    },
-    {
-        name: "FeHelper(前端助手)",
-        description: "Web开发者常用工具集，包括JSON格式化、代码美化、信息编解码、二维码/解码等等；FeHelper默认已为您安装JSON格式化功能，其余功能请到插件配置页「FH应用市场」直接安装/更新！",
-        ico: "https://store-images.s-microsoft.com/image/apps.47228.fd1a58dd-c709-4811-9013-e089199d7299.175fbc49-c6fb-46ab-9cb6-4bd6dd523f55.c46634db-15cf-462a-b539-10c0bd89d44d?mode=scale&h=100&q=90&w=100",
-        url: "https://microsoftedge.microsoft.com/addons/detail/fehelper%E5%89%8D%E7%AB%AF%E5%8A%A9%E6%89%8B/feolnkbgcbjmamimpfcnklggdcbgakhe?hl=zh-CN",
+	},
+	{
+		name: 'FeHelper(前端助手)',
+		description:
+			'Web开发者常用工具集，包括JSON格式化、代码美化、信息编解码、二维码/解码等等；FeHelper默认已为您安装JSON格式化功能，其余功能请到插件配置页「FH应用市场」直接安装/更新！',
+		ico: 'https://store-images.s-microsoft.com/image/apps.47228.fd1a58dd-c709-4811-9013-e089199d7299.175fbc49-c6fb-46ab-9cb6-4bd6dd523f55.c46634db-15cf-462a-b539-10c0bd89d44d?mode=scale&h=100&q=90&w=100',
+		url: 'https://microsoftedge.microsoft.com/addons/detail/fehelper%E5%89%8D%E7%AB%AF%E5%8A%A9%E6%89%8B/feolnkbgcbjmamimpfcnklggdcbgakhe?hl=zh-CN',
 		tags: [tags.plugin, tags.tools, tags.web]
-    },
+	},
 	{
-        name: "domlysz / BlenderGIS",
+		name: 'domlysz / BlenderGIS',
 		ico: '/assets/github.svg',
-        description: "使用地理数据创建3D模型",
-        url: "https://github.com/domlysz/BlenderGIS",
-		tags: [tags.plugin, tags.blender]
-    },
+		description: '使用地理数据创建3D模型',
+		url: 'https://github.com/domlysz/BlenderGIS',
+		tags: [tags.plugin, tags.blender, tags.model]
+	},
 	{
-        name: '电子木鱼',
+		name: '电子木鱼',
 		ico: '/assets/game.svg',
-        url: 'https://haiyong.site/moyu/muyu/',
-		description: "功德加一",
+		url: 'https://haiyong.site/moyu/muyu/',
+		description: '功德加一',
 		tags: [tags.game]
-    },
-    {
-        name: '俄罗斯方块',
-		ico: '/assets/game.svg',
-        url: 'http://www.itmind.net/tetris/',
-		description: "",
-		tags: [tags.game]
-    },
-    {
-        name: '3D台球',
-		ico: '/assets/game.svg',
-        url: 'http://www.heyzxz.me/pcol/',
-		description: "",
-		tags: [tags.game]
-    },
-    {
-        name: '3D汽车',
-		ico: '/assets/game.svg',
-        url: 'https://haiyong.site/moyu/cheche/',
-        description: '感兴趣的可以去学习一下three.js',
-		tags: [tags.game]
-    },
-    {
-        name: '五子棋',
-		ico: '/assets/game.svg',
-        url: 'https://haiyong.site/moyu/wzq-2/',
-		description: "",
-		tags: [tags.game]
-    },
-    {
-        name: '植物大战僵尸',
-		ico: '/assets/game.svg',
-        url: 'https://haiyong.site/moyu/pvz/',
-		description: "",
-		tags: [tags.game]
-    },
+	},
 	{
-        name: "Material Theme — Free",
-        description: "Visual Studio Code现在最史诗般的主题",
-        ico: "https://equinusocio.gallerycdn.vsassets.io/extensions/equinusocio/vsc-material-theme/34.7.9/1731100257256/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme",
+		name: '俄罗斯方块',
+		ico: '/assets/game.svg',
+		url: 'http://www.itmind.net/tetris/',
+		description: '',
+		tags: [tags.game]
+	},
+	{
+		name: '3D台球',
+		ico: '/assets/game.svg',
+		url: 'http://www.heyzxz.me/pcol/',
+		description: '',
+		tags: [tags.game]
+	},
+	{
+		name: '3D汽车',
+		ico: '/assets/game.svg',
+		url: 'https://haiyong.site/moyu/cheche/',
+		description: '感兴趣的可以去学习一下three.js',
+		tags: [tags.game]
+	},
+	{
+		name: '五子棋',
+		ico: '/assets/game.svg',
+		url: 'https://haiyong.site/moyu/wzq-2/',
+		description: '',
+		tags: [tags.game]
+	},
+	{
+		name: '植物大战僵尸',
+		ico: '/assets/game.svg',
+		url: 'https://haiyong.site/moyu/pvz/',
+		description: '',
+		tags: [tags.game]
+	},
+	{
+		name: 'Material Theme — Free',
+		description: 'Visual Studio Code现在最史诗般的主题',
+		ico: 'https://equinusocio.gallerycdn.vsassets.io/extensions/equinusocio/vsc-material-theme/34.7.9/1731100257256/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme',
 		tags: [tags.plugin, tags.vscode]
-    },
-    {
-        name: "Material Icon Theme",
-        description: "Visual Studio Code 的 Material Design 图标",
-        ico: "https://pkief.gallerycdn.vsassets.io/extensions/pkief/material-icon-theme/5.14.1/1731509240649/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme",
+	},
+	{
+		name: 'Material Icon Theme',
+		description: 'Visual Studio Code 的 Material Design 图标',
+		ico: 'https://pkief.gallerycdn.vsassets.io/extensions/pkief/material-icon-theme/5.14.1/1731509240649/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme',
 		tags: [tags.plugin, tags.vscode]
-    },
-    {
-        name: "Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code",
-        description: "中文语言包扩展（简体）",
-        ico: "https://ms-ceintl.gallerycdn.vsassets.io/extensions/ms-ceintl/vscode-language-pack-zh-hans/1.96.2024112709/1732699011431/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans",
+	},
+	{
+		name: 'Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code',
+		description: '中文语言包扩展（简体）',
+		ico: 'https://ms-ceintl.gallerycdn.vsassets.io/extensions/ms-ceintl/vscode-language-pack-zh-hans/1.96.2024112709/1732699011431/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans',
 		tags: [tags.plugin, tags.vscode]
-    },
-    {
-        name: "Turbo Console Log",
-        description: "自动执行编写有意义的日志消息的过程",
-        ico: "https://chakrounanas.gallerycdn.vsassets.io/extensions/chakrounanas/turbo-console-log/2.10.5/1729389805758/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log",
+	},
+	{
+		name: 'Turbo Console Log',
+		description: '自动执行编写有意义的日志消息的过程',
+		ico: 'https://chakrounanas.gallerycdn.vsassets.io/extensions/chakrounanas/turbo-console-log/2.10.5/1729389805758/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log',
 		tags: [tags.plugin, tags.vscode]
-    },
-    {
-        name: "Live Server",
-        description: "启动一个具有静态和动态页面实时重新加载功能的开发本地服务器",
-        ico: "https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1661914858952/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer",
+	},
+	{
+		name: 'Live Server',
+		description: '启动一个具有静态和动态页面实时重新加载功能的开发本地服务器',
+		ico: 'https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1661914858952/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer',
 		tags: [tags.plugin, tags.vscode]
-    },
-    {
-        name: "LeetCode",
-        description: "解决 VS Code 中的 LeetCode 问题",
-        ico: "https://leetcode.gallerycdn.vsassets.io/extensions/leetcode/vscode-leetcode/0.18.4/1726212071110/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=LeetCode.vscode-leetcode",
+	},
+	{
+		name: 'LeetCode',
+		description: '解决 VS Code 中的 LeetCode 问题',
+		ico: 'https://leetcode.gallerycdn.vsassets.io/extensions/leetcode/vscode-leetcode/0.18.4/1726212071110/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=LeetCode.vscode-leetcode',
 		tags: [tags.plugin, tags.vscode]
-    },
-    {
-        name: "Auto Rename Tag",
-        description: "自动重命名配对的 HTML/XML 标签",
-        ico: "https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-rename-tag/0.1.10/1644319230173/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag",
+	},
+	{
+		name: 'Auto Rename Tag',
+		description: '自动重命名配对的 HTML/XML 标签',
+		ico: 'https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-rename-tag/0.1.10/1644319230173/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag',
 		tags: [tags.plugin, tags.vscode]
-    },
-    {
-        name: "project-tree",
-        description: "安装插件，按 ctrl+shift+p 并输入 Project Tree 进入。 在 README.md 中生成项目的树状结构。",
-        ico: "https://zhucy.gallerycdn.vsassets.io/extensions/zhucy/project-tree/0.3.0/1589279463795/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=zhucy.project-tree",
+	},
+	{
+		name: 'project-tree',
+		description: '安装插件，按 ctrl+shift+p 并输入 Project Tree 进入。 在 README.md 中生成项目的树状结构。',
+		ico: 'https://zhucy.gallerycdn.vsassets.io/extensions/zhucy/project-tree/0.3.0/1589279463795/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=zhucy.project-tree',
 		tags: [tags.plugin, tags.vscode]
-    },
-    {
-        name: "Color Highlight",
-        description: "在编辑器中突出显示 Web 颜色",
-        ico: "https://naumovs.gallerycdn.vsassets.io/extensions/naumovs/color-highlight/2.8.0/1710416778913/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight",
+	},
+	{
+		name: 'Color Highlight',
+		description: '在编辑器中突出显示 Web 颜色',
+		ico: 'https://naumovs.gallerycdn.vsassets.io/extensions/naumovs/color-highlight/2.8.0/1710416778913/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight',
 		tags: [tags.plugin, tags.vscode]
-    },
-    {
-        name: "Batch Runner",
-        description: "在 VS Code 终端中运行批处理文件",
-        ico: "https://nilssoderman.gallerycdn.vsassets.io/extensions/nilssoderman/batch-runner/1.3.2/1723902315400/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=NilsSoderman.batch-runner",
+	},
+	{
+		name: 'Batch Runner',
+		description: '在 VS Code 终端中运行批处理文件',
+		ico: 'https://nilssoderman.gallerycdn.vsassets.io/extensions/nilssoderman/batch-runner/1.3.2/1723902315400/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=NilsSoderman.batch-runner',
 		tags: [tags.plugin, tags.vscode]
-    },
-    {
-        name: "Project Manager",
-        description: "在项目之间轻松切换",
-        ico: "https://alefragnani.gallerycdn.vsassets.io/extensions/alefragnani/project-manager/12.8.0/1711736277737/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager",
+	},
+	{
+		name: 'Project Manager',
+		description: '在项目之间轻松切换',
+		ico: 'https://alefragnani.gallerycdn.vsassets.io/extensions/alefragnani/project-manager/12.8.0/1711736277737/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager',
 		tags: [tags.plugin, tags.vscode]
-    },
-    {
-        name: "Prettier - Code formatter",
-        description: "使用 prettier 的代码格式化程序",
-        ico: "https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/11.0.0/1723648421534/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
+	},
+	{
+		name: 'Prettier - Code formatter',
+		description: '使用 prettier 的代码格式化程序',
+		ico: 'https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/11.0.0/1723648421534/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode',
 		tags: [tags.plugin, tags.vscode]
-    },
-    {
-        name: "background",
-        description: "将背景图像引入 vscode",
-        ico: "https://shalldie.gallerycdn.vsassets.io/extensions/shalldie/background/2.0.3/1731577235340/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=shalldie.background",
+	},
+	{
+		name: 'background',
+		description: '将背景图像引入 vscode',
+		ico: 'https://shalldie.gallerycdn.vsassets.io/extensions/shalldie/background/2.0.3/1731577235340/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=shalldie.background',
 		tags: [tags.plugin, tags.vscode]
-    },
-    {
-        name: "jsdoc",
-        description: "为函数快速创建 JSDoc 样式的注释。",
-        ico: "https://lllllllqw.gallerycdn.vsassets.io/extensions/lllllllqw/jsdoc/1.0.9/1681753998741/Microsoft.VisualStudio.Services.Icons.Default",
-        url: "https://marketplace.visualstudio.com/items?itemName=lllllllqw.jsdoc",
+	},
+	{
+		name: 'jsdoc',
+		description: '为函数快速创建 JSDoc 样式的注释。',
+		ico: 'https://lllllllqw.gallerycdn.vsassets.io/extensions/lllllllqw/jsdoc/1.0.9/1681753998741/Microsoft.VisualStudio.Services.Icons.Default',
+		url: 'https://marketplace.visualstudio.com/items?itemName=lllllllqw.jsdoc',
 		tags: [tags.plugin, tags.vscode]
-    },
+	}
 ];
 
 module.exports = {

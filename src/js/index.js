@@ -220,15 +220,14 @@ function main() {
 	iconDomList.forEach(item => {
 		isEntryView().observe(item);
 	});
-
 }
 
 main();
 
 // 浏览器事件
 // 返回首页
-function onGoHome(){
-	location.href = '/'
+function onGoHome() {
+	location.href = '/';
 }
 // 菜单栏标签的选择
 function onSelectTag(tag) {
@@ -244,9 +243,9 @@ function changePage(i) {
 	const urlParams = new URLSearchParams(window.location.search);
 	const tagQuery = urlParams.get('tag') || '全部';
 	const tagSearch = urlParams.get('search');
-	if(tagSearch){
+	if (tagSearch) {
 		location.href = `/?page=${i}&search=${tagSearch}`;
-	}else {
+	} else {
 		location.href = `/?page=${i}&tag=${tagQuery}`;
 	}
 }
