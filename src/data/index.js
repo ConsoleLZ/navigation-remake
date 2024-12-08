@@ -29,6 +29,20 @@ const tags = {
 
 const dataList = [
 	{
+		name: 'Reqable',
+		ico: 'https://reqable.com/zh-CN/img/favicon.ico',
+		url: 'https://reqable.com/zh-CN/',
+		description: '代理调试 + 请求测试一站式解决方案。Reqable = Fiddler + Charles + Postman, 让API调试更快 🚀 更简单 👌',
+		tags: [tags.tools]
+	},
+	{
+		name: '高德开放平台（经纬度获取）',
+		ico: 'https://a.amap.com/pc/static/favicon.ico',
+		url: 'https://lbs.amap.com/tools/picker',
+		description: '根据地区名，获取经纬度信息',
+		tags: [tags.tools]
+	},
+	{
 		name: 'blender',
 		ico: 'https://www.blender.org/wp-content/themes/bthree/assets/icons/favicon.svg',
 		url: 'https://www.blender.org/',
