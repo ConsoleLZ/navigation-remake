@@ -29,13 +29,14 @@
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="./css/semantic.css" />
 	<link rel="stylesheet" href="./css/index.css" />
-	<link rel="icon" href="/navigation-remake/favicon.png" type="image/png">
+	<link rel="icon" href="<%- config.baseURL %>favicon.png" type="image/png">
 	<script src="./js/jquery.js"></script>
 	<script src="./js/semantic.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
 	<script>
 		let pageNumber = <%- config.pageNumber %>;
+		const baseURL = <%- config.baseURL %>;
 	</script>
 </head>
 
