@@ -227,11 +227,11 @@ main();
 // 浏览器事件
 // 返回首页
 function onGoHome() {
-	location.href = '/';
+	location.href = baseURL;
 }
 // 菜单栏标签的选择
 function onSelectTag(tag) {
-	location.href = `/?page=0&tag=${tag}`;
+	location.href = `${baseURL}?page=0&tag=${tag}`;
 }
 // 作品跳转
 function onJump(url) {
@@ -244,15 +244,15 @@ function changePage(i) {
 	const tagQuery = urlParams.get('tag') || '全部';
 	const tagSearch = urlParams.get('search');
 	if (tagSearch) {
-		location.href = `/?page=${i}&search=${tagSearch}`;
+		location.href = `${baseURL}?page=${i}&search=${tagSearch}`;
 	} else {
-		location.href = `/?page=${i}&tag=${tagQuery}`;
+		location.href = `${baseURL}?page=${i}&tag=${tagQuery}`;
 	}
 }
 
 function onSearch(e) {
 	const mySearch = document.querySelector('#mySearch');
 	if (e.key === 'Enter') {
-		location.href = `/?page=0&search=${mySearch.value}`;
+		location.href = `${baseURL}?page=0&search=${mySearch.value}`;
 	}
 }
