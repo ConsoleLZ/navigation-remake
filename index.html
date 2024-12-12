@@ -1,0 +1,5559 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="小哲">
+	<meta name="keywords" content="网站，插件，软件，项目">
+	<meta name="description" content="收集优质网站，项目，插件等">
+	<title>
+		小哲的导航网站
+	</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			color: #333;
+		}
+
+		body {
+			padding: 5px;
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/icon.min.css"
+		integrity="sha512-rTyypI20S663Wq9zrzMSOP1MNPHaYX7+ug5OZ/DTqCDLwRdErCo2W30Hdme3aUzJSvAUap3SmBk0r5j0vRxyGw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="./css/semantic.css" />
+	<link rel="stylesheet" href="./css/index.css" />
+	<link rel="icon" href="/favicon.png" type="image/png">
+	<script src="./js/jquery.js"></script>
+	<script src="./js/semantic.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+	<script>
+		let pageNumber = 30;
+	</script>
+</head>
+
+<body>
+	<label class="burger" for="burger">
+		<input type="checkbox" id="burger">
+		<span></span>
+		<span></span>
+		<span></span>
+	</label>
+	<!-- 移动端菜单栏 -->
+	<div class="my-index-burger-menu">
+		<div>
+			<div class="ui secondary vertical menu" style="width: 100%;">
+				
+					<a onclick="onSelectTag('全部')" class="item" style="text-align: center;">
+						全部
+					</a>
+					
+					<a onclick="onSelectTag('图标')" class="item" style="text-align: center;">
+						图标
+					</a>
+					
+					<a onclick="onSelectTag('css')" class="item" style="text-align: center;">
+						css
+					</a>
+					
+					<a onclick="onSelectTag('动画')" class="item" style="text-align: center;">
+						动画
+					</a>
+					
+					<a onclick="onSelectTag('开源项目')" class="item" style="text-align: center;">
+						开源项目
+					</a>
+					
+					<a onclick="onSelectTag('前端')" class="item" style="text-align: center;">
+						前端
+					</a>
+					
+					<a onclick="onSelectTag('项目开发')" class="item" style="text-align: center;">
+						项目开发
+					</a>
+					
+					<a onclick="onSelectTag('组件库')" class="item" style="text-align: center;">
+						组件库
+					</a>
+					
+					<a onclick="onSelectTag('文档')" class="item" style="text-align: center;">
+						文档
+					</a>
+					
+					<a onclick="onSelectTag('模板')" class="item" style="text-align: center;">
+						模板
+					</a>
+					
+					<a onclick="onSelectTag('工具')" class="item" style="text-align: center;">
+						工具
+					</a>
+					
+					<a onclick="onSelectTag('UI设计')" class="item" style="text-align: center;">
+						UI设计
+					</a>
+					
+					<a onclick="onSelectTag('资源素材')" class="item" style="text-align: center;">
+						资源素材
+					</a>
+					
+					<a onclick="onSelectTag('项目管理')" class="item" style="text-align: center;">
+						项目管理
+					</a>
+					
+					<a onclick="onSelectTag('学习')" class="item" style="text-align: center;">
+						学习
+					</a>
+					
+					<a onclick="onSelectTag('智能AI')" class="item" style="text-align: center;">
+						智能AI
+					</a>
+					
+					<a onclick="onSelectTag('社区')" class="item" style="text-align: center;">
+						社区
+					</a>
+					
+					<a onclick="onSelectTag('云平台')" class="item" style="text-align: center;">
+						云平台
+					</a>
+					
+					<a onclick="onSelectTag('网络安全')" class="item" style="text-align: center;">
+						网络安全
+					</a>
+					
+					<a onclick="onSelectTag('游戏')" class="item" style="text-align: center;">
+						游戏
+					</a>
+					
+					<a onclick="onSelectTag('其它')" class="item" style="text-align: center;">
+						其它
+					</a>
+					
+					<a onclick="onSelectTag('插件')" class="item" style="text-align: center;">
+						插件
+					</a>
+					
+					<a onclick="onSelectTag('blender插件')" class="item" style="text-align: center;">
+						blender插件
+					</a>
+					
+					<a onclick="onSelectTag('3D建模')" class="item" style="text-align: center;">
+						3D建模
+					</a>
+					
+					<a onclick="onSelectTag('vscode')" class="item" style="text-align: center;">
+						vscode
+					</a>
+					
+			</div>
+		</div>
+	</div>
+	<div class="my-index-layout">
+		<!-- 菜单栏 -->
+		<div class="ui secondary vertical menu my-index-menu">
+			
+				<a onclick="onSelectTag('全部')" class="item">
+					全部
+				</a>
+				
+				<a onclick="onSelectTag('图标')" class="item">
+					图标
+				</a>
+				
+				<a onclick="onSelectTag('css')" class="item">
+					css
+				</a>
+				
+				<a onclick="onSelectTag('动画')" class="item">
+					动画
+				</a>
+				
+				<a onclick="onSelectTag('开源项目')" class="item">
+					开源项目
+				</a>
+				
+				<a onclick="onSelectTag('前端')" class="item">
+					前端
+				</a>
+				
+				<a onclick="onSelectTag('项目开发')" class="item">
+					项目开发
+				</a>
+				
+				<a onclick="onSelectTag('组件库')" class="item">
+					组件库
+				</a>
+				
+				<a onclick="onSelectTag('文档')" class="item">
+					文档
+				</a>
+				
+				<a onclick="onSelectTag('模板')" class="item">
+					模板
+				</a>
+				
+				<a onclick="onSelectTag('工具')" class="item">
+					工具
+				</a>
+				
+				<a onclick="onSelectTag('UI设计')" class="item">
+					UI设计
+				</a>
+				
+				<a onclick="onSelectTag('资源素材')" class="item">
+					资源素材
+				</a>
+				
+				<a onclick="onSelectTag('项目管理')" class="item">
+					项目管理
+				</a>
+				
+				<a onclick="onSelectTag('学习')" class="item">
+					学习
+				</a>
+				
+				<a onclick="onSelectTag('智能AI')" class="item">
+					智能AI
+				</a>
+				
+				<a onclick="onSelectTag('社区')" class="item">
+					社区
+				</a>
+				
+				<a onclick="onSelectTag('云平台')" class="item">
+					云平台
+				</a>
+				
+				<a onclick="onSelectTag('网络安全')" class="item">
+					网络安全
+				</a>
+				
+				<a onclick="onSelectTag('游戏')" class="item">
+					游戏
+				</a>
+				
+				<a onclick="onSelectTag('其它')" class="item">
+					其它
+				</a>
+				
+				<a onclick="onSelectTag('插件')" class="item">
+					插件
+				</a>
+				
+				<a onclick="onSelectTag('blender插件')" class="item">
+					blender插件
+				</a>
+				
+				<a onclick="onSelectTag('3D建模')" class="item">
+					3D建模
+				</a>
+				
+				<a onclick="onSelectTag('vscode')" class="item">
+					vscode
+				</a>
+				
+		</div>
+
+		<div class="my-index-right-container">
+			<div class="my-index-flex-center header-search">
+				<div class="ui icon input">
+					<input id="mySearch" onkeydown="onSearch(event)" type="text" placeholder="搜索...">
+					<i class="search icon"></i>
+				</div>
+			</div>
+			<div style="margin-top: 20px;" class="my-index-flex-center">
+				<div class="my-index-flex-column-center">
+					<p class="title" onclick="onGoHome()">
+						小哲的导航网站
+					</p>
+					<p style="text-align: center;">
+						收录学习过程中的优质网站，项目，插件等
+					</p>
+					<p style="text-align: center;">目前一共收录239个作品，一共有25个标签
+					</p>
+				</div>
+			</div>
+			<!-- 网站卡片 -->
+			<div class="my-index-cards">
+				
+					<div class="card" onclick="onJump('https://reqable.com/zh-CN/')">
+						<div class="my-index-card-header">
+							<img data-img="https://reqable.com/zh-CN/img/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Reqable
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							代理调试 + 请求测试一站式解决方案。Reqable = Fiddler + Charles + Postman, 让API调试更快 🚀 更简单 👌
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://lbs.amap.com/tools/picker')">
+						<div class="my-index-card-header">
+							<img data-img="https://a.amap.com/pc/static/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								高德开放平台（经纬度获取）
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							根据地区名，获取经纬度信息
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.blender.org/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.blender.org/wp-content/themes/bthree/assets/icons/favicon.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								blender
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							3D建模工具
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									3D建模
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://spline.design/')">
+						<div class="my-index-card-header">
+							<img data-img="https://spline.design/images/icon_favicon32x32.png" src="/assets/load-error.svg" alt="">
+							<div>
+								Spline 3D
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							3D建模工具
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									3D建模
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.iconfont.cn/home/index')">
+						<div class="my-index-card-header">
+							<img data-img="https://img.alicdn.com/imgextra/i4/O1CN01Z5paLz1O0zuCC7osS_!!6000000001644-55-tps-83-82.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								阿里矢量图标库
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							找找好看的图标吧
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									图标
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://animate.style/')">
+						<div class="my-index-card-header">
+							<img data-img="https://animate.style/img/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								animate
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							css的动画集合
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									动画
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									css
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.swiper.com.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.swiper.com.cn/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								swiper
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							开源，免费，强大的触摸滑动插件
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://caniuse.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://caniuse.com/img/favicon-128.png" src="/assets/load-error.svg" alt="">
+							<div>
+								Can I use
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							前端兼容性问题查询
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://better-scroll.github.io/docs/zh-CN/')">
+						<div class="my-index-card-header">
+							<img data-img="https://better-scroll.github.io/docs/assets/bs.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								BetterScroll
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							优化页面滚动
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://canvasjs.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://canvasjs.com/wp-content/uploads/images/favicon/canvasjs-favicon-32x32.png?v=1.1" src="/assets/load-error.svg" alt="">
+							<div>
+								canvasJS
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							响应式HTML5图表库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://chartjs.bootcss.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://chartjs.bootcss.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Chart.js
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							为设计和开发人员准备的简单、灵活的 JavaScript 图表工具
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://echarts.apache.org/')">
+						<div class="my-index-card-header">
+							<img data-img="https://echarts.apache.org/zh/images/favicon.png?_v_=20240226" src="/assets/load-error.svg" alt="">
+							<div>
+								Apache ECharts
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一个基于 JavaScript 的开源可视化图表库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://uiverse.io/')">
+						<div class="my-index-card-header">
+							<img data-img="https://uiverse.io/favicon-32x32.png" src="/assets/load-error.svg" alt="">
+							<div>
+								uiverse
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							适用于任何项目的开源 UI 元素
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									css
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://vue3js.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://static.vue-js.com/6280b990-ff19-11ea-85f6-6fac77c0c9b3.png" src="/assets/load-error.svg" alt="">
+							<div>
+								Vue3 One Piece
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							vue的生态
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									文档
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://92ui.net/')">
+						<div class="my-index-card-header">
+							<img data-img="https://92ui.net/wp-content/uploads/2022/02/UIlogo.png" src="/assets/load-error.svg" alt="">
+							<div>
+								92ui
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							各类前端UI设计和源码分享，各种前端框架和工具导航
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									css
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									模板
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://icons8.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://maxst.icons8.com/vue-static/landings/primary-landings/favs/icons8_fav_32%C3%9732.png" src="/assets/load-error.svg" alt="">
+							<div>
+								ICONS8
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							拥有各种图标
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									图标
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://gsap.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://gsap.com/favicon-32x32.png" src="/assets/load-error.svg" alt="">
+							<div>
+								GSAP
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							使用js实现的一个非常强大和专业的动画库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									动画
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://mockaroo.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://mockaroo.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								mockaroo
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							允许您以 CSV、JSON、SQL 和 Excel 格式生成多达 1,000 行的真实测试数据
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://navnav.co/')">
+						<div class="my-index-card-header">
+							<img data-img="https://navnav.co/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Nav Nav+
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							UI元素
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									css
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('http://vform666.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="http://vform666.cn/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Variant Form
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一款高效的低代码表单
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.npmjs.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://static-production.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png" src="/assets/load-error.svg" alt="">
+							<div>
+								npm仓库
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							建造令人惊奇的东西
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目管理
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('http://mockjs.com/')">
+						<div class="my-index-card-header">
+							<img data-img="http://mockjs.com/assets/img/logo-2.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Mock.js
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							生成随机数据，拦截 Ajax 请求
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://gohugo.io/')">
+						<div class="my-index-card-header">
+							<img data-img="https://gohugo.io/favicon-32x32.png" src="/assets/load-error.svg" alt="">
+							<div>
+								HUGO
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							世界上最快的网站构建框架
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									模板
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://risingstars.js.org/')">
+						<div class="my-index-card-header">
+							<img data-img="https://risingstars.js.org/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								JavaScript Rising Stars
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							了解每年JS生态系统的趋势
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									文档
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://htmlrev.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://htmlrev.com/images/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								HTMLrev
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							网站模板
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									模板
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://threejs-journey.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://threejs-journey.com/assets/favicons/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								threejs-journey
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							可以学习three.js或者找找有关threeJS的作品
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://schteppe.github.io/cannon.js/')">
+						<div class="my-index-card-header">
+							<img data-img="" src="/assets/load-error.svg" alt="">
+							<div>
+								cannon.js
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一个轻量级和简单的 Web 3D 物理引擎
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://dayjs.fenxianglu.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://dayjs.fenxianglu.cn/assets/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								Day.js
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							可以为现代浏览器解析、验证、操作和显示日期和时间
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.bootstrapmb.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.bootstrapmb.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Bootstrap模板
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							高端HTML模板,学会偷懒,事半功倍
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									模板
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://tailwindcss.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://tailwindcss.com/favicons/favicon.ico?v=3" src="/assets/load-error.svg" alt="">
+							<div>
+								tailwindcss
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							快速构建现代网站，无需离开 HTML
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://scrollrevealjs.org/')">
+						<div class="my-index-card-header">
+							<img data-img="https://scrollrevealjs.org/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								ScrollReveal
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							当元素滚动到视图中时，为元素添加动画效果
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://emojipedia.org/')">
+						<div class="my-index-card-header">
+							<img data-img="https://emojipedia.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-icon.e5eb7dea.webp&amp;w=128&amp;q=75" src="/assets/load-error.svg" alt="">
+							<div>
+								Emojipedia
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							Emoji合集
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									图标
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://cordova.apache.ac.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://cordova.apache.org/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								cordova
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							使用HTML、CSS 和JS 构建移动应用,使用一个代码库 针对多个平台,免费且开源
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://airbnb.io/lottie/#/')">
+						<div class="my-index-card-header">
+							<img data-img="https://airbnb.io/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Lottie
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							ottie 是一个适用于 Android、iOS、Web 和 Windows 的库，它使用 Bodymovin 解析导出为 JSON 的 Adobe After Effects 动画，并在移动设备和 Web 上本地呈现它们！
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://cn.vuejs.org/')">
+						<div class="my-index-card-header">
+							<img data-img="https://cn.vuejs.org/logo.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								vue
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							易学易用，性能出色，适用场景丰富的 Web 前端框架.
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									文档
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://react.docschina.org/')">
+						<div class="my-index-card-header">
+							<img data-img="https://react.docschina.org/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								react
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							用于构建 Web 和原生交互界面的库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									文档
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://vitepress.dev/')">
+						<div class="my-index-card-header">
+							<img data-img="https://vitepress.dev/vitepress-logo-mini.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								vitepress
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							Vite &amp; Vue 驱动的静态站点生成器
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://nuxt.com.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://nuxt.com.cn/icon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								nuxt
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							创建高性能和生产级别的全栈Web应用和网站
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.webpackjs.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.webpackjs.com/icon_144x144.png" src="/assets/load-error.svg" alt="">
+							<div>
+								webpack
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							静态模块打包工具
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://cn.vitejs.dev/')">
+						<div class="my-index-card-header">
+							<img data-img="https://cn.vitejs.dev/logo.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Vite
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							下一代的前端工具链
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://developer.mozilla.org/zh-CN/')">
+						<div class="my-index-card-header">
+							<img data-img="https://developer.mozilla.org/favicon-48x48.cbbd161b.png" src="/assets/load-error.svg" alt="">
+							<div>
+								Mozilla
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							自 2005 年以来记录 Web 技术，包括 CSS、HTML 和 JavaScript
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									文档
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://component-party.dev/')">
+						<div class="my-index-card-header">
+							<img data-img="https://component-party.dev/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								Component party
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							站长极力推荐的一个各大框架对比学习的网站
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://reactnative.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://reactnative.cn/img/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								React Native
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							使用React来创建 Android 和 iOS 的原生应用
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://uniapp.dcloud.net.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/icon.png?v=1556263038788" src="/assets/load-error.svg" alt="">
+							<div>
+								uni-app
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							使用Vue进行跨端开发
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://threejs.org/')">
+						<div class="my-index-card-header">
+							<img data-img="https://threejs.org/files/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								threeJS
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							开发你的3d网站吧
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									文档
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://lbs.amap.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://a.amap.com/pc/static/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								高德开放平台
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							开发地图神器
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://docs.kkgithub.com/zh')">
+						<div class="my-index-card-header">
+							<img data-img="https://docs.kkgithub.com/assets/cb-345/images/site/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								GitHub文档
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							在 GitHub 旅程中随时为你提供帮助
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									文档
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://zh.javascript.info/')">
+						<div class="my-index-card-header">
+							<img data-img="https://zh.javascript.info/img/favicon/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								javascript.info
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							以最新的 JavaScript 标准为基准。通过简单但足够详细的内容，为你讲解从基础到高阶的 JavaScript 相关知识。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									文档
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('http://webgl3d.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="http://webgl3d.cn/img/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Three.js中文网
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							创作你的3d网站
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									文档
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://pixijs.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://pixijs.com/images/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								pixiJS
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							使用最快、最灵活的 2D WebGL 渲染器创建精美的数字内容。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.w3school.com.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.w3school.com.cn/ui2019/logo-32-red.png" src="/assets/load-error.svg" alt="">
+							<div>
+								w3school
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							领先的 Web 技术教程 - 全部免费
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									文档
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://phaser.io/')">
+						<div class="my-index-card-header">
+							<img data-img="https://phaser.io/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								phaser
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							Javascript 游戏框架
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://rollupjs.org/')">
+						<div class="my-index-card-header">
+							<img data-img="https://rollupjs.org/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								rollup.js
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							打包工具
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://pinia.vuejs.org/zh/')">
+						<div class="my-index-card-header">
+							<img data-img="https://pinia.vuejs.org/logo.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								pinia
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							符合直觉的 Vue.js 状态管理库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.uvui.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.uvui.cn/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								uv-ui
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							兼容vue3+2、nvue、app、h5、小程序等多端基于uni-app和uView2.x的生态框架
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									组件库
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://semantic-ui.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://semantic-ui.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Semantic UI
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							使用人性化的 HTML 创建美观、响应迅速的布局
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									组件库
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.antdv.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://aliyuncdn.antdv.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Ant Design Vue
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一款优美的UI框架
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									组件库
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://element-plus.org/zh-CN/')">
+						<div class="my-index-card-header">
+							<img data-img="https://element-plus.org/images/element-plus-logo-small.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Element Plus
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							基于Vue3，面向设计师和开发者的组件库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									组件库
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://vant-ui.github.io/vant/#/zh-CN')">
+						<div class="my-index-card-header">
+							<img data-img="https://fastly.jsdelivr.net/npm/@vant/assets/logo.png" src="/assets/load-error.svg" alt="">
+							<div>
+								Vant
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							轻量、可定制的移动端 Vue 组件库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									组件库
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://daisyui.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://img.daisyui.com/images/daisyui-logo/daisyui-logomark.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								daisyUI
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							最流行的组件库为Tailwind CSS
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									组件库
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://ant.design/index-cn')">
+						<div class="my-index-card-header">
+							<img data-img="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Ant Design
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							react组件库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									组件库
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://geist-ui.dev/zh-cn')">
+						<div class="my-index-card-header">
+							<img data-img="https://geist-ui.dev/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Geist
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							react组件库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									组件库
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://vant.pro/vant-weapp/#/home')">
+						<div class="my-index-card-header">
+							<img data-img="https://img01.yzcdn.cn/vant/logo.png" src="/assets/load-error.svg" alt="">
+							<div>
+								Vant Weapp
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							轻量、可靠的小程序 UI 组件库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									组件库
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.naiveui.com/zh-CN/os-theme')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.naiveui.com/assets/naivelogo-BdDVTUmz.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Naive UI
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一个 Vue 3 组件库,比较完整，主题可调，使用 TypeScript，快,有点意思
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									组件库
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://polyhaven.com/zh')">
+						<div class="my-index-card-header">
+							<img data-img="https://polyhaven.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Poly Haven
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							公共3D资源库, 可以下载three3D的天空盒素材图片
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://threedscans.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://threedscans.com/wp-content/uploads/2022/04/cropped-siteicon-32x32.jpg" src="/assets/load-error.svg" alt="">
+							<div>
+								threedscans
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							3D素材，主要为雕塑
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://zh.z-lib.gs/')">
+						<div class="my-index-card-header">
+							<img data-img="https://zh.z-lib.gs/favicon.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Z-Library
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							可以浏览和下载各种书籍
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://dotown.maeda-design-room.net/')">
+						<div class="my-index-card-header">
+							<img data-img="https://dotown.maeda-design-room.net/wp-content/uploads/2022/01/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								DOTOWN
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一些超好看的像素素材
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://kenney.nl/')">
+						<div class="my-index-card-header">
+							<img data-img="https://kenney.nl/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								kenney
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							数以千计的完全免费的游戏资产供您使用。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://craftpix.net/')">
+						<div class="my-index-card-header">
+							<img data-img="https://craftpix.net/favicon/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								CraftPix.Net
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							2D游戏资产商店&amp;免费
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://ambientcg.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://acg-media.struffelproductions.com/file/ambientCG-Web/media/icon/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								ambientCG
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							有很多纹理素材
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://assetstore.unity.com/zh-CN')">
+						<div class="my-index-card-header">
+							<img data-img="https://assetstore.unity.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								AssetStore
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							Unity的素材商店市场
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://vectorcraftr.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://vectorcraftr.com/images/icons/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								vectorCraftr
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一些好看的插画
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.aigei.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://cdn-sqn.aigei.com/assets/site/img/icon/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								爱给网
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							音效,配乐,3d模型,游戏素材,影视后期,视频素材,免费下载,音乐,特效,模版
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.uidesigndaily.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://assets-global.website-files.com/572cc412e8e48c8223fa0e57/6596b5ee2b5c3b8bbcbf53a6_UIDD-favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								Design Daily
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							免费开源 UI 资源
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									UI设计
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://js.design/')">
+						<div class="my-index-card-header">
+							<img data-img="https://img.js.design/assets/webImg/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								即时设计
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							云端编辑的专业级 UI 设计工具
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									UI设计
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://colorhunt.co/')">
+						<div class="my-index-card-header">
+							<img data-img="https://colorhunt.co/img/colorhunt-favicon.svg?2" src="/assets/load-error.svg" alt="">
+							<div>
+								Color Hunt
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							设计师和艺术家的调色板
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://modao.cc/')">
+						<div class="my-index-card-header">
+							<img data-img="https://images.modao.cc/images/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								MODAO
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							墨刀，让原型设计更简单
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									UI设计
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://dribbble.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://cdn.dribbble.com/assets/favicon-99944ff731bb44d3a947810ca8728f177f8deac035a3a4342120c385fd7acb9d.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Dribbble
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							寻找设计灵感
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									UI设计
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://mobbin.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://mobbin.com/favicon.svg?v=2.1" src="/assets/load-error.svg" alt="">
+							<div>
+								Mobbin
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							全球最大的移动和网页设计库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									UI设计
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.awwwards.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://assets.awwwards.com/assets/images/favicon.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Awwwards
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							为一些优秀的网站颁发奖项，可以找找设计灵感
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									UI设计
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.zcool.com.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://static.zcool.cn/git_z/z/site/favicon.ico?version=1618914637608" src="/assets/load-error.svg" alt="">
+							<div>
+								站酷
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							上面或许有你需要的ui作品
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									UI设计
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.jiangweishan.com/tool/clippy/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.jiangweishan.com/tool/clippy/pics/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								clip-path生成器
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							可以生成各种clip-path路径
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://picwish.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://qncdn.aoscdn.com/astro/picwish/_astro/favicon@30w.61721eae.png" src="/assets/load-error.svg" alt="">
+							<div>
+								佐糖
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							用AI让图像处理
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.logosc.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.logosc.cn/img/logo-icons/favicon.png?v=1" src="/assets/load-error.svg" alt="">
+							<div>
+								标小智
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							智能LOGO设计生成器
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.canva.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://static.canva.cn/static/images/favicon-1.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Canva可画
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							今天你想设计什么?
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									UI设计
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.easeconvert.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.easeconvert.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								易转换
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							免费好用的文件转换工具
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://xiezuocat.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://uranus-static.oss-accelerate.aliyuncs.com/xiezuocat/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								写作猫
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							把写作交给ai
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.ico51.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.ico51.cn/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								ico51
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							图片格式转换(ico)
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://cloudconvert.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://cloudconvert.com/images/logo_flat_32.png" src="/assets/load-error.svg" alt="">
+							<div>
+								CloudConvert
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							在线文件转换器
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://tool.browser.qq.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://tool.browser.qq.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								帮小忙
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							在线工具箱
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.u.tools/')">
+						<div class="my-index-card-header">
+							<img data-img="https://res.u-tools.cn/website5/assets/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								uTools
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							新一代效率工具平台
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://lingdaima.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://lingdaima.com/static/img/bolang.png" src="/assets/load-error.svg" alt="">
+							<div>
+								lingdaima
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							零代码工具箱 - 专为前端打造
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://romannurik.github.io/AndroidAssetStudio/')">
+						<div class="my-index-card-header">
+							<img data-img="https://romannurik.github.io/AndroidAssetStudio/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Android Asset Studio
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							App应用图标生成
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://ezgif.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://ezgif.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								ezgifcom
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							在线GIF制作器和图像编辑器
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.developers.pub/resume')">
+						<div class="my-index-card-header">
+							<img data-img="https://static.developers.pub/8a71a71bc1ae403cbeb5b8e6230cb016.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								开发者客栈
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							简历制作
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.onlinedo.cn/video-gif')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.onlinedo.cn/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								江下科技
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							视频转gif文件
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://matheowis.github.io/HDRI-to-CubeMap/')">
+						<div class="my-index-card-header">
+							<img data-img="" src="/assets/load-error.svg" alt="">
+							<div>
+								HDRI-to-CubeMap
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							用来分割在Poly Haven找到的HDRI素材
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.yingdao.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://winrobot-pub-a-oss.winrobot360.com/static/home/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								影刀
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							我们创造软件机器人，让人不需要像机器一样工作
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://91huajian.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://91huajian.cn/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								91化简
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一款开源的，免费的简历设计制作神器
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.sunmao-design.top/sunmao/admin/#/dooring/home')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.sunmao-design.top/sunmao/admin/assets/logo.896aa176.png" src="/assets/load-error.svg" alt="">
+							<div>
+								云搭
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							零代码搭建小程序、H5、问卷、图文
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://jsoncrack.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://jsoncrack.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								JSON CRACK
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							将 JSON 可视化为交互式图形
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.gif.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.gif.cn/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								GIF中文网
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							GIF图片制作，视频转GIF，GIF图片素材
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://codegeex.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://codegeex.cn/assets/images/only_logo_dark.png" src="/assets/load-error.svg" alt="">
+							<div>
+								CodeGeeX
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							智能编程助手
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://openai.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://openai.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								OpenAI
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							拥有最强的chatGPT
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.doubao.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://p9-flow-imagex-sign.byteimg.com/ocean-cloud-tos/FileBizType.BIZ_BOT_ICON/4180773176086868_1709203591079450233_5Y6fJgvsfc.jpeg~tplv-a9rns2rl98-icon-tiny.jpeg?rk3s=9956f44f&amp;x-expires=1719224007&amp;x-signature=9IuG%2Bqi7IY2zIKhKL8%2FmdgUc9tI%3D" src="/assets/load-error.svg" alt="">
+							<div>
+								豆包
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							豆包 - 抖音旗下 AI 智能助手
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://tongyi.aliyun.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://acd-assets.alicdn.com/acd_work/tongyi-portal/assets/logo.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								通义千问
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							阿里达摩院推出的大模型，拥有千亿参数，可用于智能问答、知识检索、文案创作等场景
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://xinghuo.xfyun.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://xinghuo.xfyun.cn/spark-icon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								星火大模型
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							科大讯飞推出的AI大模型，支持对话、写作、编程等功能，还能提供语音交互方式
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://aifilter.net/')">
+						<div class="my-index-card-header">
+							<img data-img="https://aifilter.net/static/images/common/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								AI Filter
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							使用 AI 滤镜将您的照片转换为动漫、粘土、3D、像素、表情符号、PS2、贴纸和更多样式。非常适合初学者和专业人士，只需点击几下即可。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://chatnio.net/')">
+						<div class="my-index-card-header">
+							<img data-img="https://chatnio.net/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								chatnio
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一个各种ai模型集合的网站
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.tripo3d.ai/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.tripo3d.ai/v1/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								TRIPO
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							ai生成3D模型
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://aifacefy.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://aifacefy.com/icon.svg?d4bc701fa93cbc90" src="/assets/load-error.svg" alt="">
+							<div>
+								aifacefy
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							免费 AI 换脸
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.goenhance.ai/')">
+						<div class="my-index-card-header">
+							<img data-img="https://cdn.goenhance.ai/images/static/sites/goenhance-logo-drak-200.png" src="/assets/load-error.svg" alt="">
+							<div>
+								GoEnance
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							在几分钟内创建 AI 动画短片
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.leancloud.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.leancloud.cn/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								LeanCloud
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							可以存储数据，用户信息的云平台
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://vercel.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://assets.vercel.com/image/upload/front/favicon/vercel/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								vercel
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							自动化部署项目
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://uploadcare.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://ucarecdn.com/27856246-9e5a-41a4-8098-f4cf1d006ef1/" src="/assets/load-error.svg" alt="">
+							<div>
+								Uploadcare
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							上传、存储、转换、优化图像、视频和文档
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.dogecloud.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.dogecloud.com/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								多吉云
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							云存储，网站加速
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://lightly.teamcode.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://lightly.teamcode.com/favicon.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Lightly
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							让写代码变得更简单
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://github.githubassets.com/favicons/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								Github
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							全球领先的人工智能开发者平台
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									社区
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://gitee.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://gitee.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Gitee
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							DevOps一站式研发效能平台
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									社区
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://imgse.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://imgse.com/content/images/system/favicon_1587118523486_91617a.png" src="/assets/load-error.svg" alt="">
+							<div>
+								路过图传
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							免费图片上传
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.superbed.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.superbed.cn/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								聚合图床
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							免费图片上传
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.jsdelivr.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.jsdelivr.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								jsdelivr
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							开源项目的免费 CDN
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://cdnjs.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://cdnjs.com/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								cdnjs
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							免费的开源 CDN 服务
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://gitlab.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://gitlab.com/assets/favicon-72a2cad5025aa931d6ea56c3201d1f18e68a8cd39788c7c80d5b2b82aa5143ef.png" src="/assets/load-error.svg" alt="">
+							<div>
+								Gitlab
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							项目存储与版本管理
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://codepen.io/')">
+						<div class="my-index-card-header">
+							<img data-img="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								codepen
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							CodePen 是面向前端设计人员和开发人员的社交开发环境。构建和部署网站，展示您的作品，构建测试用例以学习和调试，并寻找灵感。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									社区
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://gitcode.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://cdn-static.gitcode.com/static/images/logo-favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								GitCode
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							代码仓库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://biofy.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://biofy.cn/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Biofy
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							拼接、聚合你的多元化世界
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://buuoj.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://buuoj.cn/themes/buu_core/static/img/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								BUUCTF
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							ctf我不会
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									网络安全
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://ctf.wgpsec.org/')">
+						<div class="my-index-card-header">
+							<img data-img="https://ctf.wgpsec.org/files/4aecfc78e9fe458cbd934aacc69ffd94/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								WgpSec CTF
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							打CTF怎么能没有电竞椅呢!
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									网络安全
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://juejin.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/static/favicons/favicon-32x32.png" src="/assets/load-error.svg" alt="">
+							<div>
+								稀土掘金
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一个很好的开发者社区，可以看看大佬的各种文章
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									社区
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.csdn.net/')">
+						<div class="my-index-card-header">
+							<img data-img="https://g.csdnimg.cn/static/logo/favicon32.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								CSDN
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							各种技术文章都在这里
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									社区
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.bilibili.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://th.bing.com/th?id=ODLS.e42d2c4d-ad65-4c7a-b0fd-817a1c3bed01&amp;w=32&amp;h=32&amp;qlt=90&amp;pcl=fffffa&amp;o=6&amp;pid=1.2" src="/assets/load-error.svg" alt="">
+							<div>
+								bilibili
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							视频教学网站，学习各种知识
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									社区
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://developer.hubing.online')">
+						<div class="my-index-card-header">
+							<img data-img="https://developer.hubing.online/favicon.png" src="/assets/load-error.svg" alt="">
+							<div>
+								中国独立开发者项目
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							各种大佬的项目
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://roadmap.sh/')">
+						<div class="my-index-card-header">
+							<img data-img="https://roadmap.sh/manifest/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								roadmap
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							roadmap.sh 是社区努力的结果 创建路线图、指南和其他教育内容以帮助指导开发人员 在选择一条道路并指导他们的学习。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://projecthunt.me/')">
+						<div class="my-index-card-header">
+							<img data-img="https://projecthunt.me/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								ProjectHunt
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							发现和分享出色的项目
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://segmentfault.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://static.segmentfault.com/main_site_next/dc3490f3/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								思否
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							技术分享
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									社区
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.flysheep6.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://images.weserv.nl/?url=https://r534.com/flysheep/i/2023/02/25/5fgq.jpg" src="/assets/load-error.svg" alt="">
+							<div>
+								flysheep
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							看看有没有你喜欢的游戏吧
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									游戏
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('http://www.5kfz.com/')">
+						<div class="my-index-card-header">
+							<img data-img="http://www.5kfz.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								悟空神辅
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							洛克们，开启你的辅助之旅吧
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									游戏
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.duolingo.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://d35aaqx5ub95lt.cloudfront.net/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								多邻国
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							学习英语神器
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://leetcode.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="https://leetcode.cn/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								力扣
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							算法题就靠它了
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									社区
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://shields.io/')">
+						<div class="my-index-card-header">
+							<img data-img="https://shields.io/img/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Shields.io
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							简洁、一致且易读的徽章
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://wallspic.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://wallspic.com/static/images/favicon/favicon-32x32.png" src="/assets/load-error.svg" alt="">
+							<div>
+								wallspic
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							看看有没有好看的壁纸吧!
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									其它
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://qwerty.kaiyi.cool/')">
+						<div class="my-index-card-header">
+							<img data-img="https://qwerty.kaiyi.cool/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Qwerty Learner
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							不想记单词
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://cn-vuejs-challenges.netlify.app/')">
+						<div class="my-index-card-header">
+							<img data-img="https://cn-vuejs-challenges.netlify.app/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								Vue.js挑战
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一个Vue.js在线挑战平台
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://yoksel.github.io/svg-filters/#/')">
+						<div class="my-index-card-header">
+							<img data-img="https://yoksel.github.io/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								SVG Filters
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							各种svg的滤镜效果
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://quickref.cn/')">
+						<div class="my-index-card-header">
+							<img data-img="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%221em%22%20width%3D%221em%22%3E%20%3Cpath%20d%3D%22m21.66%2010.44-.98%204.18c-.84%203.61-2.5%205.07-5.62%204.77-.5-.04-1.04-.13-1.62-.27l-1.68-.4c-4.17-.99-5.46-3.05-4.48-7.23l.98-4.19c.2-.85.44-1.59.74-2.2%201.17-2.42%203.16-3.07%206.5-2.28l1.67.39c4.19.98%205.47%203.05%204.49%207.23Z%22%20fill%3D%22%23c9d1d9%22%2F%3E%20%3Cpath%20d%3D%22M15.06%2019.39c-.62.42-1.4.77-2.35%201.08l-1.58.52c-3.97%201.28-6.06.21-7.35-3.76L2.5%2013.28c-1.28-3.97-.22-6.07%203.75-7.35l1.58-.52c.41-.13.8-.24%201.17-.31-.3.61-.54%201.35-.74%202.2l-.98%204.19c-.98%204.18.31%206.24%204.48%207.23l1.68.4c.58.14%201.12.23%201.62.27Zm2.43-8.88c-.06%200-.12-.01-.19-.02l-4.85-1.23a.75.75%200%200%201%20.37-1.45l4.85%201.23a.748.748%200%200%201-.18%201.47Z%22%20fill%3D%22%23228e6c%22%20%2F%3E%20%3Cpath%20d%3D%22M14.56%2013.89c-.06%200-.12-.01-.19-.02l-2.91-.74a.75.75%200%200%201%20.37-1.45l2.91.74c.4.1.64.51.54.91-.08.34-.38.56-.72.56Z%22%20fill%3D%22%23228e6c%22%20%2F%3E%20%3C%2Fsvg%3E" src="/assets/load-error.svg" alt="">
+							<div>
+								Quick Reference
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							为开发人员分享快速参考备忘清单
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									文档
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://api.uomg.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://api.uomg.com/assets/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								UomgAPI
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							稳定、快速、免费的 API 接口服务
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									云平台
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://d.design/')">
+						<div class="my-index-card-header">
+							<img data-img="https://static-ddesign.oss-cn-beijing.aliyuncs.com/2024/01/10/c501f10f7dd4b2b3?OSSAccessKeyId=STS.NUDkViXJ8tpLZJDNXHQnazvBQ&amp;Expires=1715786273&amp;Signature=E4Oi7JjYrWiCJlMMddRoLkC5BmM%3D&amp;response-content-disposition=attachment%3B%20filename%3D%221678341712313_47242a3527a615cb4fd8f42745d48fef.png%22&amp;security-token=CAIS3QJ1q6Ft5B2yfSjIr5bxIOzdtZUZw7KnWGz1qlgdXeFNlbPpszz2IHhMdHdoBOgfsf8wmG1Q7Pgelqp6U4cdoPYY41QpvPpt6gqET9froq7ctM4A6vCMHWyUFGS0vqv7aPn4S9XwY%2Bqkb0u%2B%2BAZ43br9c0fFPTmiKobbppN7Sd4VUwKkF2gkYu1bPQx%2FssQXGGLMPPK2SH7Qj3HXEVBjt3gK6xd24r%2FtxdaHuFiMzg%2Fh1uYJpo%2B0LpSpdMhjOtA9ca%2FshbcpJ%2Fqbjn4LtkQarfkstsEep2eb5OP6KkJK%2FhCLP9DT9tBSNwJjbsA4YfUc9KiizaAg47OIyNiqk0wTYfs6XyjSX4Gvxtsu5H8tjWHTH1ySGQMusrjnXvGd22uv4ecJv6JVUJOnpivFg%2FiAnq0%2BhovmmTaEK07oIIPu25otuqEetH7z9rGRTDviLfjnl0hRVPAyB5dZZYhItQSJGoABjt6Pr2F7wcwrJXrvVdCtJqubR%2BKPZ5pcYv%2Baby8qR%2FTy%2BZIofJgjqjhaPxXXxJiSa8sneCw%2BEO7MIe3clS45HPYCuUV88%2FpkSDOfN9txJ0HrwGQwnb0qgxV%2BZ%2F9XPYEXsreYs9XZXwxbv90N4lerJJ2aJ4kug%2FMNKqjppmRb2sFsgAA%3D%3D" src="/assets/load-error.svg" alt="">
+							<div>
+								堆友
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							多风格AI绘画神器免费生成；3D素材在线渲染，免费商用；各类创意设计大赛，等你来战！
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.emojiall.com/')">
+						<div class="my-index-card-header">
+							<img data-img="" src="/assets/load-error.svg" alt="">
+							<div>
+								EMOJIALL
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							这里有关于Emoji、Emoji含义、Emoji图片等的所有信息。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://icp.gov.moe/')">
+						<div class="my-index-card-header">
+							<img data-img="https://icp.gov.moe/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								萌国ICP备案
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							萌友网站联萌，快来申请萌萌的ICP备案号吧!
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									社区
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://busuanzi.ibruce.info/')">
+						<div class="my-index-card-header">
+							<img data-img="//busuanzi.ibruce.info/images/garlic.png" src="/assets/load-error.svg" alt="">
+							<div>
+								不蒜子
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							快速添加网站访问量、人数
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://xn--4gq62f52gdss.ink/')">
+						<div class="my-index-card-header">
+							<img data-img="" src="/assets/load-error.svg" alt="">
+							<div>
+								一元机场
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							要科学上网哦
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									其它
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://wave.video/zh/tools/audio-editing/text-to-speech')">
+						<div class="my-index-card-header">
+							<img data-img="https://assets.animatron.com/landings/static/wv-favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								wave.video
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							为你的视频增加一段语音
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://wallpapers-clan.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://wallpapers-clan.com/wp-content/uploads/2020/08/cropped-wallpapers-clan-favicon-3-32x32.png" src="/assets/load-error.svg" alt="">
+							<div>
+								wallpapers-clan
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							有很多好看的壁纸，图标(移动端，桌面端)
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									其它
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.mianshiya.com/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.mianshiya.com/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								面试鸭
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							题库质量高，完善，一个很好的刷题网站
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.openstreetmap.org/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.openstreetmap.org/assets/favicon-32x32-99b88fcadeef736889823c8a886b89d8cada9d4423a49a27de29bacc0a6bebd1.png" src="/assets/load-error.svg" alt="">
+							<div>
+								OpenStreetMap
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							提供城市OSM数据
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://www.live2d.com/zh-CHS/')">
+						<div class="my-index-card-header">
+							<img data-img="https://www.live2d.com/wp-content/themes/cubism_new/assets/img/favicon.ico" src="/assets/load-error.svg" alt="">
+							<div>
+								live2d
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							可以直接对原图进行加工，做出2D的立体表现
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/lucaong/minisearch')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								lucaong / minisearch
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							小巧而强大的 JavaScript 全文搜索引擎，适用于浏览器和 Node
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/shikijs/shiki')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								shikijs / shiki
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							美观而强大的语法荧光笔(代码高亮)
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/baidu/amis')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								baidu / amis
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							前端低代码框架，通过 JSON 配置就能生成各种页面。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/Vanessa219/vditor')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Vanessa219 / vditor
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							♏ 一款浏览器端的 Markdown 编辑器，支持所见即所得（富文本）、即时渲染（类似 Typora）和分屏预览模式。An In-browser Markdown editor, support WYSIWYG (Rich Text), Instant Rendering (Typora-like) and Split View modes.
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/VincentGarreau/particles.js')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								VincentGarreau / particles.js
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							用于创建粒子的轻量级 JavaScript 库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/socketio/socket.io')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								socketio / socket.io
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							即时通讯应用程序框架
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/LarryZhu-dev/autofit.js')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								LarryZhu-dev / autofit.js
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							autofit.js 迄今为止最易用的自适应工具
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/micro-zoe/micro-app')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								micro-zoe / micro-app
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一款简约、高效、功能强大的微前端框架
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/agmmnn/awesome-blender')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								agmmnn / awesome-blender
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							精选的 Blender 插件、工具、教程列表;以及适合所有人的 3D 资源
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/wangeditor-team/wangEditor')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								wangeditor-team / wangEditor
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							开源 Web 富文本编辑器
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/umijs/qiankun')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								umijs / qiankun
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							为微前端提供快速、简单和完整的解决方案
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/greensock/GSAP')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								greensock / GSAP
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一个用于现代 Web 的 JavaScript 动画库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									动画
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/Tencent/wujie')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Tencent / wujie
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							极致的微前端框架
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/jlmakes/scrollreveal')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								jlmakes / scrollreveal
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							当元素滚动到视图中时，为元素添加动画效果。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									动画
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/kylefarris/clamscan')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								kylefarris / clamscan
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							强大的 ClamAV 病毒扫描库，支持使用本地套接字、本地/远程 TCP 和本地 Clamscan/clamdscan 二进制文件（带故障转移）扫描文件、目录和流。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									网络安全
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/lodash/lodash')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								lodash / lodash
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一个现代化的JavaScript实用库，提供模块化、性能和额外功能。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/mattboldt/typed.js')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								mattboldt / typed.js
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							JavaScript 打字动画库
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									动画
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/saucxs/captcha-mini')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								saucxs / captcha-mini
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							captcha-mini.js是一个生成验证码的插件，使用js和canvas生成的，确保后端服务被暴力攻击，简单判断人机以及系统的安全性，体积小，功能多，支持配置
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/wangeditor-team/wangEditor')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								wangeditor-team / wangEditor
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							开源 Web 富文本编辑器
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/megasanjay/vue3-marquee')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								megasanjay / vue3-marquee
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一个简单的跑马灯组件，对 Vue 3 的依赖为零。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/modood/Administrative-divisions-of-China')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								modood / Administrative-divisions-of-China
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							中华人民共和国行政区划：省级（省份）、 地级（城市）、 县级（区县）、 乡级（乡镇街道）、 村级（村委会居委会） ，中国省市区镇村二级三级四级五级联动地址数据。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/highlightjs/highlight.js')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								highlightjs / highlight.js
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							JavaScript 语法高亮显示器，具有语言自动检测和零依赖关系。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/sindresorhus/github-markdown-css')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								sindresorhus / github-markdown-css
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							复制 GitHub Markdown 样式的最小 CSS 数量
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/Eikanya/Live2d-model')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Eikanya / Live2d-model
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							live2d模型收集
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/imuncle/live2d')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								imuncle / live2d
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							live2d模型收集+展示，可直接用于静态网站
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									项目开发
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/un-pany/v3-admin-vite')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								un-pany / v3-admin-vite
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							☀ A vue3 admin template | vue3 admin/element plus admin/vite admin/vue3 template/vue3 后台/vue3 模板/vue3 后台管理系统
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									模板
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/idurar/idurar-erp-crm')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								idurar / idurar-erp-crm
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							开源无头ERP CRM电子商务会计软件
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									模板
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/mindskip/xzs')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								mindskip / xzs
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							在线考试系统
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									模板
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/Aras-ax/lottery')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Aras-ax / lottery
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							🎉🌟✨🎈年会抽奖程序，基于 Express + Three.js的 3D 球体抽奖程序，奖品🧧🎁，文字，图片，抽奖规则均可配置，😜抽奖人员信息Excel一键导入😍，抽奖结果Excel导出😎，给你的抽奖活动带来全新酷炫体验🚀🚀🚀
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									模板
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/PanJiaChen/vue-element-admin')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								PanJiaChen / vue-element-admin
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							🎉 一个神奇的 Vue 管理员 https://panjiachen.github.io/vue-element-admin
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									模板
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/koodo-reader/koodo-reader')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								koodo-reader / koodo-reader
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							现代电子书管理器和阅读器，具有适用于 Windows、macOS、Linux 和 Web 的同步和备份功能
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									模板
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://gitee.com/steve007/gallery')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								steve / gallery
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							数字展馆
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									模板
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://gitee.com/guchengwuyue/yshop-drink')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								guchengwuyue / yshop-drink意象桌面扫码点餐系统
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							yshop意象点餐(扫码点餐)系统，在线点餐(外卖与自取)小程序模式，支持多门店模式，SaaS多租户模式，基础技术springboot3+jdk17+vue3+uniapp(vue3) 采用当前流行技术组合的前后端分离点餐系统： SpringBoot3、Spring Security OAuth2、MybatisPlus、SpringSecurity、jwt、redis、Vue3的前后端分离的系统
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									模板
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/freeCodeCamp/freeCodeCamp')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								freeCodeCamp / freeCodeCamp
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							freeCodeCamp.org 的开源代码库和课程。免费学习编码。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/GrowingGit/GitHub-Chinese-Top-Charts')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								GrowingGit / GitHub-Chinese-Top-Charts
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							GitHub中文排行榜，各语言分设「软件 | 资料」榜单，精准定位中文好项目。各取所需，高效学习。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/krahets/hello-algo')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								krahets / hello-algo
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							《Hello 算法》：动画图解、一键运行的数据结构与算法教程。支持 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 代码。简体版和繁体版同步更新，English version ongoing
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/ascoders/weekly')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								ascoders / weekly
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							前端精读周刊。帮你理解最前沿、实用的技术。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/chokcoco/iCSS')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								chokcoco / iCSS
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							不止于 CSS
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									css
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/chokcoco/CSS-Inspiration')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								chokcoco / CSS-Inspiration
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							CSS Inspiration，在这里找到写 CSS 的灵感！
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									css
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/hepengwei/visualization-collection-vue')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								hepengwei / visualization-collection-vue
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							🌈 一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、Three.js3D、人工智能应用等上百个案例（Vue版本）
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									css
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/Syknapse/Contribute-To-This-Project')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Syknapse / Contribute-To-This-Project
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							这个项目正在等待您的贡献。如果您以前从未在 GitHub 上贡献过代码，那么这个项目可以帮助您入门
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/javascript-tutorial/zh.javascript.info')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								javascript-tutorial / zh.javascript.info
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							现代 JavaScript 教程（The Modern JavaScript Tutorial），以最新的 ECMAScript 规范为基准，通过简单但足够详细的内容，为你讲解从基础到高阶的 JavaScript 相关知识。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/sechelper/kunge-cybersecurity-learning')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								sechelper / kunge-cybersecurity-learning
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							全网首创，坤哥网安学习法，最屌没有之一
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/you-dont-need/You-Dont-Need-JavaScript')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								you-dont-need / You-Dont-Need-JavaScript
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							CSS 很强大，你可以在没有 JS 的情况下做很多事情。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									css
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/1c7/chinese-independent-developer')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								1c7 / chinese-independent-developer
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							👩🏿‍💻👨🏾‍💻👩🏼‍💻👨🏽‍💻👩🏻‍💻中国独立开发者项目列表 -- 分享大家都在做什么
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/phaserjs/examples')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								phaserjs / examples
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							Phaser 3 例子
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									学习
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/zhayujie/chatgpt-on-wechat')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								zhayujie / chatgpt-on-wechat
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							基于大模型搭建的聊天机器人，同时支持 微信公众号、企业微信应用、飞书、钉钉 等接入，可选择GPT3.5/GPT-4o/GPT4.0/ Claude/文心一言/讯飞星火/通义千问/ Gemini/GLM-4/Claude/Kimi/LinkAI，能处理文本、语音和图片，访问操作系统和互联网，支持基于自有知识库进行定制企业智能客服。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									智能AI
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/Guyungy/damaihelper')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Guyungy / damaihelper
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							支持大麦网，淘票票、缤玩岛等多个平台，演唱会演出抢票脚本
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/gzldc/12306')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								gzldc / 12306
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							12306抢票脚本
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/Codennnn/vue-color-avatar')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Codennnn / vue-color-avatar
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							一个在线头像生成器只是为了好玩 |一个纯前端实现的头像生成网站
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									其它
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/zhaoolee/ChineseBQB')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								zhaoolee / ChineseBQB
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							🇨🇳 Chinese sticker pack,More joy / 表情包的博物馆, Github最有毒的仓库, 中国表情包大集合, 聚欢乐~
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									资源素材
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/Java-S12138/frank')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Java-S12138 / frank
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							全新的英雄联盟助手软件，WeGame 的替代品
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									其它
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/Blankj/awesome-comment')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								Blankj / awesome-comment
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							有趣的评论
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									其它
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/alievk/avatarify-python')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								alievk / avatarify-python
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							适用于 Zoom、Skype 和其他视频会议应用程序的头像。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									其它
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/bb-music/flutter-app')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								bb-music / flutter-app
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							使用 flutter 编写的哔哔音乐客户端，无需登录，没有信息收集，实现你的听歌自由。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									开源项目
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/travellings-link/travellings')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								travellings-link / travellings
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							「开往 Travellings」是一个友链接力项目，旨在通过网络跳转的方式将流量引入那些鲜为人知的独立站点。 每当用户访问加入该项目的网页时，点击该网页上的“开往”按钮将随机跳转到另一个加入该项目的网页。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									其它
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/NianBroken/Firework_Simulator')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								NianBroken / Firework_Simulator
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							烟花模拟器，一个可以模拟各种烟花效果的网页|它可以展示各种绚丽多彩的烟花效果，并让人仿佛置身于真实烟花的绚丽世界之中。|模拟烟花|烟花网页|烟花绽放|烟花效果
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									css
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd')">
+						<div class="my-index-card-header">
+							<img data-img="https://store-images.s-microsoft.com/image/apps.20759.f7dbc670-57ef-4f66-932b-7a8786594577.1e93160d-1a0b-42ef-92b3-7f652ab8df5d.eadba2ba-e3fe-404c-bc8b-b383ebeb0d00?mode=scale&amp;h=100&amp;q=90&amp;w=100" src="/assets/load-error.svg" alt="">
+							<div>
+								篡改猴
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							使用用户脚本自由地改变网络
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://microsoftedge.microsoft.com/addons/detail/%E8%B4%AD%E7%89%A9%E5%85%9A%E8%87%AA%E5%8A%A8%E6%AF%94%E4%BB%B7%E5%B7%A5%E5%85%B7/pngicgippofneelinabebobnkpmdiphn')">
+						<div class="my-index-card-header">
+							<img data-img="https://store-images.s-microsoft.com/image/apps.41882.11a2720c-d2ed-44c8-a03f-e9de8886cb90.e08e3ddf-819d-4af4-8a38-7ff8648a9767.2c62500b-089f-476a-9754-a5723476d0a1?mode=scale&amp;h=100&amp;q=90&amp;w=100" src="/assets/load-error.svg" alt="">
+							<div>
+								购物党自动比价工具
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							浏览商品页面时，自动查询180天历史价格、比较同款商品的全网最低价、提示促销和隐藏优惠券、一旦降价还能通过微信提醒你，海淘、二手房游戏平台也能比价！
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://microsoftedge.microsoft.com/addons/detail/fehelper%E5%89%8D%E7%AB%AF%E5%8A%A9%E6%89%8B/feolnkbgcbjmamimpfcnklggdcbgakhe?hl=zh-CN')">
+						<div class="my-index-card-header">
+							<img data-img="https://store-images.s-microsoft.com/image/apps.47228.fd1a58dd-c709-4811-9013-e089199d7299.175fbc49-c6fb-46ab-9cb6-4bd6dd523f55.c46634db-15cf-462a-b539-10c0bd89d44d?mode=scale&amp;h=100&amp;q=90&amp;w=100" src="/assets/load-error.svg" alt="">
+							<div>
+								FeHelper(前端助手)
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							Web开发者常用工具集，包括JSON格式化、代码美化、信息编解码、二维码/解码等等；FeHelper默认已为您安装JSON格式化功能，其余功能请到插件配置页「FH应用市场」直接安装/更新！
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									工具
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									前端
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://github.com/domlysz/BlenderGIS')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/github.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								domlysz / BlenderGIS
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							使用地理数据创建3D模型
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									blender插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									3D建模
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://haiyong.site/moyu/muyu/')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/game.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								电子木鱼
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							功德加一
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									游戏
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('http://www.itmind.net/tetris/')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/game.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								俄罗斯方块
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									游戏
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('http://www.heyzxz.me/pcol/')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/game.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								3D台球
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									游戏
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://haiyong.site/moyu/cheche/')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/game.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								3D汽车
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							感兴趣的可以去学习一下three.js
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									游戏
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://haiyong.site/moyu/wzq-2/')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/game.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								五子棋
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									游戏
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://haiyong.site/moyu/pvz/')">
+						<div class="my-index-card-header">
+							<img data-img="/assets/game.svg" src="/assets/load-error.svg" alt="">
+							<div>
+								植物大战僵尸
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									游戏
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme')">
+						<div class="my-index-card-header">
+							<img data-img="https://equinusocio.gallerycdn.vsassets.io/extensions/equinusocio/vsc-material-theme/34.7.9/1731100257256/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								Material Theme — Free
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							Visual Studio Code现在最史诗般的主题
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme')">
+						<div class="my-index-card-header">
+							<img data-img="https://pkief.gallerycdn.vsassets.io/extensions/pkief/material-icon-theme/5.14.1/1731509240649/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								Material Icon Theme
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							Visual Studio Code 的 Material Design 图标
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans')">
+						<div class="my-index-card-header">
+							<img data-img="https://ms-ceintl.gallerycdn.vsassets.io/extensions/ms-ceintl/vscode-language-pack-zh-hans/1.96.2024112709/1732699011431/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							中文语言包扩展（简体）
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log')">
+						<div class="my-index-card-header">
+							<img data-img="https://chakrounanas.gallerycdn.vsassets.io/extensions/chakrounanas/turbo-console-log/2.10.5/1729389805758/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								Turbo Console Log
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							自动执行编写有意义的日志消息的过程
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer')">
+						<div class="my-index-card-header">
+							<img data-img="https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1661914858952/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								Live Server
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							启动一个具有静态和动态页面实时重新加载功能的开发本地服务器
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=LeetCode.vscode-leetcode')">
+						<div class="my-index-card-header">
+							<img data-img="https://leetcode.gallerycdn.vsassets.io/extensions/leetcode/vscode-leetcode/0.18.4/1726212071110/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								LeetCode
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							解决 VS Code 中的 LeetCode 问题
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag')">
+						<div class="my-index-card-header">
+							<img data-img="https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-rename-tag/0.1.10/1644319230173/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								Auto Rename Tag
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							自动重命名配对的 HTML/XML 标签
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=zhucy.project-tree')">
+						<div class="my-index-card-header">
+							<img data-img="https://zhucy.gallerycdn.vsassets.io/extensions/zhucy/project-tree/0.3.0/1589279463795/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								project-tree
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							安装插件，按 ctrl+shift+p 并输入 Project Tree 进入。 在 README.md 中生成项目的树状结构。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight')">
+						<div class="my-index-card-header">
+							<img data-img="https://naumovs.gallerycdn.vsassets.io/extensions/naumovs/color-highlight/2.8.0/1710416778913/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								Color Highlight
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							在编辑器中突出显示 Web 颜色
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=NilsSoderman.batch-runner')">
+						<div class="my-index-card-header">
+							<img data-img="https://nilssoderman.gallerycdn.vsassets.io/extensions/nilssoderman/batch-runner/1.3.2/1723902315400/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								Batch Runner
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							在 VS Code 终端中运行批处理文件
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager')">
+						<div class="my-index-card-header">
+							<img data-img="https://alefragnani.gallerycdn.vsassets.io/extensions/alefragnani/project-manager/12.8.0/1711736277737/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								Project Manager
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							在项目之间轻松切换
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode')">
+						<div class="my-index-card-header">
+							<img data-img="https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/11.0.0/1723648421534/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								Prettier - Code formatter
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							使用 prettier 的代码格式化程序
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=shalldie.background')">
+						<div class="my-index-card-header">
+							<img data-img="https://shalldie.gallerycdn.vsassets.io/extensions/shalldie/background/2.0.3/1731577235340/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								background
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							将背景图像引入 vscode
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+					<div class="card" onclick="onJump('https://marketplace.visualstudio.com/items?itemName=lllllllqw.jsdoc')">
+						<div class="my-index-card-header">
+							<img data-img="https://lllllllqw.gallerycdn.vsassets.io/extensions/lllllllqw/jsdoc/1.0.9/1681753998741/Microsoft.VisualStudio.Services.Icons.Default" src="/assets/load-error.svg" alt="">
+							<div>
+								jsdoc
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							为函数快速创建 JSDoc 样式的注释。
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									插件
+								</div>
+								
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									vscode
+								</div>
+								
+						</div>
+					</div>
+					
+			</div>
+			<!-- 分页菜单 -->
+			<div style="display: flex;justify-content: center;">
+				<div style="transform: scale(0.8);" class="ui floated pagination menu">
+					<a class="icon item">
+						<i class="left chevron icon"></i>
+					</a>
+					
+						<a class="item" onclick="changePage('0')">
+							1
+						</a>
+						
+						<a class="item" onclick="changePage('1')">
+							2
+						</a>
+						
+						<a class="item" onclick="changePage('2')">
+							3
+						</a>
+						
+						<a class="item" onclick="changePage('3')">
+							4
+						</a>
+						
+						<a class="item" onclick="changePage('4')">
+							5
+						</a>
+						
+						<a class="item" onclick="changePage('5')">
+							6
+						</a>
+						
+						<a class="item" onclick="changePage('6')">
+							7
+						</a>
+						
+						<a class="item" onclick="changePage('7')">
+							8
+						</a>
+						
+							<a class="icon item">
+								<i class="right chevron icon"></i>
+							</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="./data/index.js"></script>
+<script src="./js/utils.js"></script>
+<script src="./js/index.js"></script>
+
+</html>
