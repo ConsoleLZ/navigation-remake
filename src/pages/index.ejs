@@ -93,7 +93,7 @@
 				<% dataList.forEach(element=> { %>
 					<div class="card" onclick="onJump('<%= element.url %>')">
 						<div class="my-index-card-header">
-							<img data-img="<%= element.ico %>" src="/assets/load-error.svg" alt="">
+							<img data-img="<%= element.ico %>" src="<%- config.baseURL %>assets/load-error.svg" alt="">
 							<div>
 								<%= element.name %>
 							</div>
