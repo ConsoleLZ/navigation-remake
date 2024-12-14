@@ -29,6 +29,48 @@ const tags = {
 
 const dataList = [
 	{
+		name: 'nilaoda / BBDown',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/nilaoda/BBDown',
+		description: 'Bilibili Downloader. 一个命令行式哔哩哔哩下载器.',
+		tags: [tags.tools]
+	},
+	{
+		name: 'matomo-org / matomo',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/matomo-org/matomo',
+		description: '网站数据统计',
+		tags: [tags.tools, tags.development]
+	},
+	{
+		name: 'MarkMindCkm / obsidian-markmind',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/MarkMindCkm/obsidian-markmind',
+		description: '一个使用markdown为文件的思维导图软件',
+		tags: [tags.tools]
+	},
+	{
+		name: 'yakGPT / yakGPT',
+		ico: '/assets/github.svg',
+		url: 'https://github.com/yakGPT/yakGPT',
+		description: '本地运行chatGPT',
+		tags: [tags.ai]
+	},
+	{
+		name: 'FirstUI（unix）组件库',
+		ico: 'https://unix.firstui.cn/favicon.ico',
+		url: 'https://unix.firstui.cn/',
+		description: 'FirstUI（unix）组件库，一款适配 uni-app x 的轻量、简洁、高效、全面的移动端组件库。（options Api 版）',
+		tags: [tags.componentLibrary, tags.development]
+	},
+	{
+		name: '开源中国',
+		ico: 'https://static.oschina.net/new-osc/img/favicon.ico',
+		url: 'https://www.oschina.net/',
+		description: 'OSCHINA.NET 是目前领先的中文开源技术社区。我们传播开源的理念，推广开源项目，为 IT 开发者提供了一个发现、使用、并交流开源技术的平台',
+		tags: [tags.community, tags.learn]
+	},
+	{
 		name: 'Reqable',
 		ico: 'https://reqable.com/zh-CN/img/favicon.ico',
 		url: 'https://reqable.com/zh-CN/',
