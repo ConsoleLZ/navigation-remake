@@ -1,3 +1,5 @@
+const baseURL = '/navigation-remake/'
+
 // 所有的标签
 const tags = {
 	all: '全部',
