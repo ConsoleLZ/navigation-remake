@@ -109,7 +109,7 @@ function generateDom(data) {
 			outHtml += `
 			<div class="card" data-url="${item.url}">
 				<div class="my-index-card-header">
-					<img data-img="${item.ico}" src="/assets/load-error.svg" alt="">
+					<img data-img="${item.ico}" src="${baseURL}assets/load-error.svg" alt="">
 					<div>${item.name}</div>
 				</div>
 				<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
