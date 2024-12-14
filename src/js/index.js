@@ -155,7 +155,7 @@ function setData() {
 		});
 		dataListSlice = searchResult.slice(pageNumber * pageQuery, pageNumber * (pageQuery + 1));
 	} else {
-		const dataListFilter = dataList.filter(item => item.tags.includes(tagQuery) || tagQuery === '全部');
+		const dataListFilter = generateData(baseURL).dataList.filter(item => item.tags.includes(tagQuery) || tagQuery === '全部');
 		dataListSlice = dataListFilter.slice(pageNumber * pageQuery, pageNumber * (pageQuery + 1));
 	}
 	console.log(dataListSlice);
@@ -207,7 +207,7 @@ function main() {
 		storeFields: ['name', 'description', 'url', 'ico', 'tags'], // 返回哪些字段
 		tokenize: tokenizer
 	});
-	const originalDataList = [...dataList]; // 原始数据列表
+	const originalDataList = [...generateData(baseURL).dataList]; // 原始数据列表
 	let document1 = originalDataList.map((item, index) => ({
 		...item,
 		id: index

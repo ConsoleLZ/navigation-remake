@@ -3,7 +3,7 @@ const path = require('path');
 const ejs = require('ejs');
 const { mkdir, rm, readdir, readFile, writeFile, copyFile } = fs.promises;
 const yaml = require('js-yaml');
-const { tags, dataList } = require('./src/data/index.js');
+const {generateData} = require('./src/data/index.js');
 
 // 解析配置文件 config.yml
 const parseConfig = () => {
@@ -112,8 +112,8 @@ const readDirectory = async directoryPath => {
 const main = async () => {
 	const data = {
 		config: parseConfig(),
-		tags,
-		dataList
+		tags: generateData(parseConfig().baseURL).tags,
+		dataList: generateData(parseConfig().baseURL).dataList
 	};
 	// 创建打包目录
 	await createDistDir(path.join(__dirname, 'dist'));
