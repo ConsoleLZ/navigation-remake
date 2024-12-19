@@ -30,6 +30,20 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'BrainJS / brain.js',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/BrainJS/brain.js',
+			description: '🤖 GPU 加速 JavaScript 中的神经网络，适用于浏览器和 Node.js',
+			tags: [tags.development, tags.ai]
+		},
+		{
+			name: 'public-apis / public-apis',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/public-apis/public-apis',
+			description: '免费 API 的集合列表',
+			tags: [tags.development]
+		},
+		{
 			name: 'nilaoda / BBDown',
 			ico: `${baseURL}assets/github.svg`,
 			url: 'https://github.com/nilaoda/BBDown',
