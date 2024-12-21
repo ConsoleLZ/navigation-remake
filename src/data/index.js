@@ -30,6 +30,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'unity开发文档',
+			ico: 'https://docs.unity.cn/cn/current/StaticFiles/images/favicons/favicon.png',
+			url: 'https://docs.unity.cn/',
+			description: 'unity开发文档',
+			tags: [tags.docs]
+		},
+		{
 			name: 'dcloud开发者中心',
 			ico: 'https://ask.dcloud.net.cn/static/css/classblack/img/favicon.png',
 			url: 'https://dev.dcloud.net.cn/',
