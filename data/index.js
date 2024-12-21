@@ -30,6 +30,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'dcloud开发者中心',
+			ico: 'https://ask.dcloud.net.cn/static/css/classblack/img/favicon.png',
+			url: 'https://dev.dcloud.net.cn/',
+			description: 'dcloud开发者中心',
+			tags: [tags.cloudPlatform]
+		},
+		{
 			name: 'BrainJS / brain.js',
 			ico: `${baseURL}assets/github.svg`,
 			url: 'https://github.com/BrainJS/brain.js',
