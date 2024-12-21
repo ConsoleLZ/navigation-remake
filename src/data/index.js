@@ -30,6 +30,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'matter.js',
+			ico: 'https://www.brm.io/img/icon/favicon-32x32.png',
+			url: 'https://www.brm.io/matter-js/',
+			description: '是一个用于 Web 的 2D 物理引擎',
+			tags: [tags.docs]
+		},
+		{
 			name: 'unity开发文档',
 			ico: 'https://docs.unity.cn/cn/current/StaticFiles/images/favicons/favicon.png',
 			url: 'https://docs.unity.cn/',
