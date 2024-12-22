@@ -34,7 +34,7 @@ function generateData(baseURL) {
 			ico: 'https://www.brm.io/img/icon/favicon-32x32.png',
 			url: 'https://www.brm.io/matter-js/',
 			description: '是一个用于 Web 的 2D 物理引擎',
-			tags: [tags.docs]
+			tags: [tags.docs, tags.web, tags.development]
 		},
 		{
 			name: 'unity开发文档',
