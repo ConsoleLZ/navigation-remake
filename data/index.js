@@ -30,6 +30,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'google在线字体',
+			ico: 'https://www.gstatic.com/images/icons/material/apps/fonts/1x/catalog/v5/favicon.svg',
+			url: 'https://fonts.google.com/',
+			description: '引入链接格式：http://fonts.googleapis.com/css?family=Titan One',
+			tags: [tags.resource, tags.development]
+		},
+		{
 			name: 'matter.js',
 			ico: 'https://www.brm.io/img/icon/favicon-32x32.png',
 			url: 'https://www.brm.io/matter-js/',
