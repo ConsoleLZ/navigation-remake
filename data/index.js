@@ -30,6 +30,20 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'idootop / MagicMirror',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/idootop/MagicMirror',
+			description: '一键 AI 换脸、发型、穿搭，发现更美的自己 ✨',
+			tags: [tags.openSource, tags.ai]
+		},
+		{
+			name: 'HelloGithub',
+			ico: 'https://hellogithub.com/favicon/favicon-32x32.png',
+			url: 'https://hellogithub.com/',
+			description: 'HelloGitHub 开源社区，专注于发现和分享有趣、入门级的开源项目。在这里，探索开源技术解决方案，体验开源的乐趣，自荐或推荐开源项目，开启你的开源之旅。',
+			tags: [tags.openSource, tags.learn, tags.community]
+		},
+		{
 			name: 'google在线字体',
 			ico: 'https://www.gstatic.com/images/icons/material/apps/fonts/1x/catalog/v5/favicon.svg',
 			url: 'https://fonts.google.com/',
