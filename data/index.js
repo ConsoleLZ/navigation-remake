@@ -30,6 +30,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'unmagic / wechat-im',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/unmagic/wechat-im',
+			description: '微信小程序即时通讯模板，使用WebSocket通信',
+			tags: [tags.web, tags.template]
+		},
+		{
 			name: 'idootop / MagicMirror',
 			ico: `${baseURL}assets/github.svg`,
 			url: 'https://github.com/idootop/MagicMirror',
