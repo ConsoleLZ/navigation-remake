@@ -128,7 +128,39 @@ function generateDom(data) {
 	return outHtml;
 }
 
-// 根据选择的标签和分页控制数据的显示
+// 生成分页菜单的DOM
+function generatePaginationDom(total) {
+	const totalPages = Math.ceil(total / pageNumber);
+	let paginationHtml = `
+		<a class="icon item" onclick="changePage(${currentPage > 0 ? currentPage - 1 : 0})">
+			<i class="left chevron icon"></i>
+		</a>
+	`;
+	
+	for (let i = 0; i < totalPages; i++) {
+		paginationHtml += `
+			<a class="item ${i === currentPage ? 'active' : ''}" onclick="changePage('${i}')">
+				${i + 1}
+			</a>
+		`;
+	}
+	
+	paginationHtml += `
+		<a class="icon item" onclick="changePage(${currentPage < totalPages - 1 ? currentPage + 1 : currentPage})">
+			<i class="right chevron icon"></i>
+		</a>
+	`;
+	
+	return paginationHtml;
+}
+
+// 更新分页菜单
+function updatePagination(dataLength) {
+	const paginationContainer = document.querySelector('.ui.floated.pagination.menu');
+	paginationContainer.innerHTML = generatePaginationDom(dataLength);
+}
+
+// 修改setData函数
 function setData() {
 	// 获取当前页面的URL
 	const urlParams = new URLSearchParams(window.location.search);
@@ -136,7 +168,8 @@ function setData() {
 	const tagQuery = urlParams.get('tag') || '全部';
 	const tagSearch = urlParams.get('search');
 	const cardsDom = document.querySelector('.my-index-cards');
-	let dataListSlice = null;
+	let dataListFilter = [];
+	
 	if (tagSearch) {
 		const searchResult = [];
 		// 搜索
@@ -153,19 +186,53 @@ function setData() {
 				return true;
 			}
 		});
-		dataListSlice = searchResult.slice(pageNumber * pageQuery, pageNumber * (pageQuery + 1));
+		dataListFilter = searchResult;
 	} else {
-		const dataListFilter = generateData(baseURL).dataList.filter(item => item.tags.includes(tagQuery) || tagQuery === '全部');
-		dataListSlice = dataListFilter.slice(pageNumber * pageQuery, pageNumber * (pageQuery + 1));
+		dataListFilter = generateData(baseURL).dataList.filter(
+			item => item.tags.includes(tagQuery) || tagQuery === '全部'
+		);
 	}
-	console.log(dataListSlice);
+	
+	// 更新分页菜单
+	updatePagination(dataListFilter.length);
+	
+	// 获取当前页的数据
+	const dataListSlice = dataListFilter.slice(
+		pageNumber * pageQuery,
+		pageNumber * (pageQuery + 1)
+	);
+	
 	cardsDom.innerHTML = generateDom(dataListSlice);
+	
 	// 绑定点击事件
 	document.querySelectorAll('.my-index-cards .card').forEach(card => {
 		card.addEventListener('click', function () {
 			onJump(this.getAttribute('data-url'));
 		});
 	});
+	
+	// 观察元素是否进入视口
+	const iconDomList = document.querySelectorAll('.my-index-cards img');
+	iconDomList.forEach(item => {
+		isEntryView().observe(item);
+	});
+}
+
+// 添加全局变量来跟踪当前页码
+let currentPage = 0;
+
+// 修改changePage函数
+function changePage(i) {
+	currentPage = parseInt(i);
+	// 获取当前页面的URL
+	const urlParams = new URLSearchParams(window.location.search);
+	const tagQuery = urlParams.get('tag') || '全部';
+	const tagSearch = urlParams.get('search');
+	if (tagSearch) {
+		location.href = `${baseURL}?page=${i}&search=${tagSearch}`;
+	} else {
+		location.href = `${baseURL}?page=${i}&tag=${tagQuery}`;
+	}
 }
 
 // 搜索逻辑
@@ -197,6 +264,10 @@ function tokenizer(str) {
 
 // 入口函数
 function main() {
+	// 获取URL中的页码
+	const urlParams = new URLSearchParams(window.location.search);
+	currentPage = Number(urlParams.get('page')) || 0;
+	
 	// 控制菜单的显示和隐藏
 	changeMenuShow();
 	// 初始化字体大小
@@ -215,11 +286,6 @@ function main() {
 	miniSearch.addAll(document1); // 配置搜索源
 	// 初始化数据
 	setData();
-	// 观察元素是否进入视口
-	const iconDomList = document.querySelectorAll('.my-index-cards img');
-	iconDomList.forEach(item => {
-		isEntryView().observe(item);
-	});
 }
 
 main();
