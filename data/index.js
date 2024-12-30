@@ -30,6 +30,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'robinmoisson / staticrypt',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/robinmoisson/staticrypt',
+			description: '密码保护静态 HTML 页面，在浏览器中以 JS 解密，无依赖项。无需服务器逻辑。',
+			tags: [tags.web, tags.development]
+		},
+		{
 			name: 'unmagic / wechat-im',
 			ico: `${baseURL}assets/github.svg`,
 			url: 'https://github.com/unmagic/wechat-im',
