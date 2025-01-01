@@ -12,6 +12,7 @@ function generateData(baseURL) {
 		docs: '文档',
 		template: '模板',
 		tools: '工具',
+		software: '软件',
 		devise: 'UI设计',
 		resource: '资源素材',
 		depend: '项目管理',
@@ -21,14 +22,21 @@ function generateData(baseURL) {
 		cloudPlatform: '云平台',
 		safe: '网络安全',
 		game: '游戏',
-		other: '其它',
 		plugin: '插件',
 		blender: 'blender插件',
 		model: '3D建模',
-		vscode: 'vscode'
+		vscode: 'vscode',
+		other: '其它'
 	};
 
 	const dataList = [
+		{
+			name: 'termux / termux-app',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/termux/termux-app',
+			description: 'Termux - 适用于 Android 操作系统的终端仿真器应用程序，可通过各种软件包进行扩展。',
+			tags: [tags.software]
+		},
 		{
 			name: 'robinmoisson / staticrypt',
 			ico: `${baseURL}assets/github.svg`,
