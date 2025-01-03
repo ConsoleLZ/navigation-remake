@@ -31,6 +31,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'excalidraw / excalidraw',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/excalidraw/excalidraw',
+			description: '用于绘制手绘图表的虚拟白板，画图工具',
+			tags: [tags.tools]
+		},
+		{
 			name: 'termux / termux-app',
 			ico: `${baseURL}assets/github.svg`,
 			url: 'https://github.com/termux/termux-app',
