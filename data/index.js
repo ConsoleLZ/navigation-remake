@@ -31,6 +31,20 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'Cline (prev. Claude Dev)',
+			ico: 'https://saoudrizwan.gallerycdn.vsassets.io/extensions/saoudrizwan/claude-dev/3.1.5/1736472371825/Microsoft.VisualStudio.Services.Icons.Default',
+			url: 'https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev',
+			description: 'IDE 中的自主编码代理，能够在您的许可下创建/编辑文件、运行命令、使用浏览器等。',
+			tags: [tags.ai, tags.plugin, tags.vscode]
+		},
+		{
+			name: 'deepseek',
+			ico: 'https://www.deepseek.com/favicon.ico',
+			url: 'https://www.deepseek.com/',
+			description: '全新体验，无限可能',
+			tags: [tags.ai]
+		},
+		{
 			name: 'excalidraw / excalidraw',
 			ico: `${baseURL}assets/github.svg`,
 			url: 'https://github.com/excalidraw/excalidraw',
