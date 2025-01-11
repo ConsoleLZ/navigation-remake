@@ -31,6 +31,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'typicode / json-server',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/typicode/json-server',
+			description: '在不到 30 秒的时间内获得一个零编码的完整假 REST API',
+			tags: [tags.development, tags.tools]
+		},
+		{
 			name: 'Cline (prev. Claude Dev)',
 			ico: 'https://saoudrizwan.gallerycdn.vsassets.io/extensions/saoudrizwan/claude-dev/3.1.5/1736472371825/Microsoft.VisualStudio.Services.Icons.Default',
 			url: 'https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev',
@@ -1007,14 +1014,14 @@ function generateData(baseURL) {
 			ico: 'https://github.githubassets.com/favicons/favicon.png',
 			url: 'https://github.com/',
 			description: '全球领先的人工智能开发者平台',
-			tags: [tags.cloudPlatform, tags.community]
+			tags: [tags.cloudPlatform, tags.community, tags.depend]
 		},
 		{
 			name: 'Gitee',
 			ico: 'https://gitee.com/favicon.ico',
 			url: 'https://gitee.com/',
 			description: 'DevOps一站式研发效能平台',
-			tags: [tags.cloudPlatform, tags.community]
+			tags: [tags.cloudPlatform, tags.community, tags.depend]
 		},
 		{
 			name: '路过图传',
