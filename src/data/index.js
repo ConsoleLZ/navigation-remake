@@ -31,6 +31,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'cursor',
+			ico: `https://www.cursor.com/favicon.ico`,
+			url: 'https://www.cursor.com/',
+			description: 'Cursor 旨在让您非常高效，是使用 AI 进行编码的最佳方式',
+			tags: [tags.ai, tags.software]
+		},
+		{
 			name: 'typicode / json-server',
 			ico: `${baseURL}assets/github.svg`,
 			url: 'https://github.com/typicode/json-server',
