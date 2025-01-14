@@ -31,6 +31,20 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'tensorflow / tfjs',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/tensorflow/tfjs',
+			description: '一个 WebGL 加速 JavaScript 库，用于训练和部署 ML 模型。',
+			tags: [tags.development, tags.ai]
+		},
+		{
+			name: 'fabricjs / fabric.js',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/fabricjs/fabric.js',
+			description: 'Javascript Canvas Library, SVG-to-Canvas (& canvas-to-SVG) Parser',
+			tags: [tags.development]
+		},
+		{
 			name: 'cursor',
 			ico: `https://www.cursor.com/favicon.ico`,
 			url: 'https://www.cursor.com/',
