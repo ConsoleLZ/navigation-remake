@@ -32,6 +32,13 @@ function generateData(baseURL) {
 	const dataList = [
 		{
 			name: 'tensorflow / tfjs',
+			ico: 'https://gw.alicdn.com/imgextra/i4/O1CN01rqtbDA1oTYo6vqI3E_!!6000000005226-73-tps-16-16.ico',
+			url: 'http://sbmy.fun/',
+			description: '努力上班，绝不摸鱼！',
+			tags: [tags.other]
+		},
+		{
+			name: 'tensorflow / tfjs',
 			ico: `${baseURL}assets/github.svg`,
 			url: 'https://github.com/tensorflow/tfjs',
 			description: '一个 WebGL 加速 JavaScript 库，用于训练和部署 ML 模型。',

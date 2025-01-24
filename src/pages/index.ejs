@@ -35,7 +35,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
 	<script>
-		let pageNumber = <%- config.pageNumber %>;
+		let pageNumber = <% - config.pageNumber %>;
 		const baseURL = "<%- config.baseURL %>";
 	</script>
 </head>
@@ -70,6 +70,12 @@
 		</div>
 
 		<div class="my-index-right-container">
+			<button onclick="onJumpJuejinWord()" class="ui right labeled icon button mini blue" style="margin-left: 10px;margin-bottom: 15px;">
+				<i class="right arrow icon"></i>
+				<font _mstmutation="1">
+					掘金今日排行榜词云图
+				</font>
+			</button>
 			<div class="my-index-flex-center header-search">
 				<div class="ui icon input">
 					<input id="mySearch" onkeydown="onSearch(event)" type="text" placeholder="搜索...">
@@ -117,8 +123,8 @@
 					<a class="icon item">
 						<i class="left chevron icon"></i>
 					</a>
-					<% const totalPages=Math.ceil(dataList.length / config.pageNumber);for (let i=0; i<totalPages;
-						i++) { %>
+					<% const totalPages=Math.ceil(dataList.length / config.pageNumber);for (let i=0; i<totalPages; i++)
+						{ %>
 						<a class="item" onclick="changePage('<%= i %>')">
 							<%= i + 1 %>
 						</a>
