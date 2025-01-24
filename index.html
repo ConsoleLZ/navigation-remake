@@ -35,7 +35,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
 	<script>
-		let pageNumber = 30;
+		let pageNumber = ;
 		const baseURL = "/navigation-remake/";
 	</script>
 </head>
@@ -270,6 +270,12 @@
 		</div>
 
 		<div class="my-index-right-container">
+			<button onclick="onJumpJuejinWord()" class="ui right labeled icon button mini blue" style="margin-left: 10px;margin-bottom: 15px;">
+				<i class="right arrow icon"></i>
+				<font _mstmutation="1">
+					掘金今日排行榜词云图
+				</font>
+			</button>
 			<div class="my-index-flex-center header-search">
 				<div class="ui icon input">
 					<input id="mySearch" onkeydown="onSearch(event)" type="text" placeholder="搜索...">
@@ -284,13 +290,32 @@
 					<p style="text-align: center;">
 						收录学习过程中的优质网站，项目，插件等
 					</p>
-					<p style="text-align: center;">目前一共收录263个作品，一共有26个标签
+					<p style="text-align: center;">目前一共收录264个作品，一共有26个标签
 					</p>
 				</div>
 			</div>
 			<!-- 网站卡片 -->
 			<div class="my-index-cards">
 				
+					<div class="card" onclick="onJump('http://sbmy.fun/')">
+						<div class="my-index-card-header">
+							<img data-img="https://gw.alicdn.com/imgextra/i4/O1CN01rqtbDA1oTYo6vqI3E_!!6000000005226-73-tps-16-16.ico" src="/navigation-remake/assets/load-error.svg" alt="">
+							<div>
+								tensorflow / tfjs
+							</div>
+						</div>
+						<div style="font-size: 0.7rem;" class="description multi-line-ellipsis">
+							努力上班，绝不摸鱼！
+						</div>
+						<div class="my-index-card-tags">
+							
+								<div style="padding: 6px 12px;font-size: 0.6rem;" class="ui horizontal label">
+									其它
+								</div>
+								
+						</div>
+					</div>
+					
 					<div class="card" onclick="onJump('https://github.com/tensorflow/tfjs')">
 						<div class="my-index-card-header">
 							<img data-img="/navigation-remake/assets/github.svg" src="/navigation-remake/assets/load-error.svg" alt="">

@@ -322,3 +322,8 @@ function onSearch(e) {
 		location.href = `${baseURL}?page=0&search=${mySearch.value}`;
 	}
 }
+
+// 跳转到掘金词云图
+function onJumpJuejinWord(){
+	window.open('https://consolelz.github.io/juejin-word/')
+}
