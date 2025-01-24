@@ -31,10 +31,10 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
-			name: 'tensorflow / tfjs',
+			name: '努力上班，绝不摸鱼！',
 			ico: 'https://gw.alicdn.com/imgextra/i4/O1CN01rqtbDA1oTYo6vqI3E_!!6000000005226-73-tps-16-16.ico',
 			url: 'http://sbmy.fun/',
-			description: '努力上班，绝不摸鱼！',
+			description: '快速查看各大平台的的今日热榜话题',
 			tags: [tags.other]
 		},
 		{
