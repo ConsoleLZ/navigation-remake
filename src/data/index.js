@@ -18,6 +18,7 @@ function generateData(baseURL) {
 		depend: '项目管理',
 		learn: '学习',
 		ai: '智能AI',
+		hardware: '有关硬件',
 		community: '社区',
 		cloudPlatform: '云平台',
 		safe: '网络安全',
@@ -30,6 +31,13 @@ function generateData(baseURL) {
 	};
 
 	const dataList = [
+		{
+			name: '78 / xiaozhi-esp32',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/78/xiaozhi-esp32',
+			description: '打造自己的 AI 好友',
+			tags: [tags.ai, tags.hardware]
+		},
 		{
 			name: '努力上班，绝不摸鱼！',
 			ico: 'https://gw.alicdn.com/imgextra/i4/O1CN01rqtbDA1oTYo6vqI3E_!!6000000005226-73-tps-16-16.ico',
