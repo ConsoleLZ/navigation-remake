@@ -12,6 +12,7 @@ function generateData(baseURL) {
 		docs: '文档',
 		template: '模板',
 		tools: '工具',
+		scaffolding: '脚手架',
 		software: '软件',
 		devise: 'UI设计',
 		resource: '资源素材',
@@ -31,6 +32,27 @@ function generateData(baseURL) {
 	};
 
 	const dataList = [
+		{
+			name: 'Z-library',
+			ico: 'https://z-lib.gs/favicon.svg',
+			url: 'https://z-lib.gs/',
+			description: '您通往知识和文化的门户。每个人都可以访问',
+			tags: [tags.learn]
+		},
+		{
+			name: 'readest / readest',
+			ico: 'https://readest.com/icons/favicon.ico',
+			url: 'https://github.com/readest/readest',
+			description: 'Readest 是一款现代、功能丰富的电子书阅读器，专为狂热的读者设计，提供无缝的跨平台访问、强大的工具和直观的界面，以提升您的阅读体验。',
+			tags: [tags.other]
+		},
+		{
+			name: 'Electron⚡️Vite',
+			ico: 'https://vite.electron.js.cn/electron-vite.svg',
+			url: 'https://vite.electron.js.cn/',
+			description: '将 Vite 应用轻松转换为 Electron 应用的最简单方法',
+			tags: [tags.scaffolding]
+		},
 		{
 			name: '78 / xiaozhi-esp32',
 			ico: `${baseURL}assets/github.svg`,
