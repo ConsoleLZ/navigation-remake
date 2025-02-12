@@ -33,6 +33,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '立创商城',
+			ico: 'https://static.szlcsc.com/ecp/assets/web/static/images/favicon.ico',
+			url: 'https://www.szlcsc.com/',
+			description: '立创商城(SZLCSC.COM) 一站式电子元器件采购自营商城，拥有13万+平米智能化仓储，现货SKU品类超60万种，正品保证，支持一键BOM配单，最快4小时发货，为用户提供一站式电子元器件线上采购服务。',
+			tags: [tags.hardware, tags.development]
+		},
+		{
 			name: '嘉立创',
 			ico: 'https://www.jlc.com/portal/favicon.ico',
 			url: 'https://www.jlc.com/',
