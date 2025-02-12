@@ -33,6 +33,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '嘉立创',
+			ico: 'https://www.jlc.com/portal/favicon.ico',
+			url: 'https://www.jlc.com/',
+			description: '嘉立创,电子及机械产业一站式基础设施服务提供商,提供pcb打样和批量生产服务,每天PCB打样出货超过20000款,最快12小时出货,在广东省内的珠海、惠州、韶关和江西吉安、江苏淮安等地建立了智能生产基地，专业生产PCB线路板(PCB打样,线路板,PCB,电路板,PCB线路板加工,PCB快板)的PCB厂家。提供一流、快速、专业的线路板、电路板、pcb打样服务。',
+			tags: [tags.hardware, tags.development]
+		},
+		{
 			name: 'Z-library',
 			ico: 'https://z-lib.gs/favicon.svg',
 			url: 'https://z-lib.gs/',
