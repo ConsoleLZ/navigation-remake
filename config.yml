@@ -2,7 +2,7 @@ title: 小哲的导航网站
 subTitle: 收录学习过程中的优质网站，项目，插件等
 
 # 网站路径
-baseURL: '/navigation-remake/'
+baseURL: '/'
 
 menu:
     - name: 首页

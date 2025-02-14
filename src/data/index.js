@@ -33,6 +33,41 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '帽子云',
+			ico: 'https://www.maoziyun.com/favicon/favicon.png',
+			url: 'https://www.maoziyun.com/',
+			description: '帽子云是一款集成化的静态网站部署平台，作为 Github Pages / Cloudflare Pages 的替代方案。它不仅提供更快的访问速度，还支持快速构建、扩展和部署前端服务。',
+			tags: [tags.cloudPlatform]
+		},
+		{
+			name: 'AI工具集',
+			ico: 'https://ai-bot.cn/wp-content/uploads/2023/07/ai-bot-favicon.png',
+			url: 'https://ai-bot.cn/',
+			description: 'AI工具集官网收录了国内外数百个AI工具，该导航网站包括AI写作工具、AI图像生成和背景移除、AI视频制作、AI音频转录、AI辅助编程、AI音乐生成、AI绘画设计、AI对话聊天等AI工具集合大全，以及AI学习开发的常用网站、框架和模型，帮助你加入人工智能浪潮，自动化高效完成任务！',
+			tags: [tags.ai, tags.tools]
+		},
+		{
+			name: '即梦AI',
+			ico: 'https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/common/images/dreamina-v1.ico',
+			url: 'https://jimeng.jianying.com/',
+			description: '即梦AI一站式智能创作平台，即刻造梦。提供AI绘画和AIGC视频创作体验，拥有激发无限创作灵感的社区。让即梦AI开启您的智能创作之旅，探索梦境实现的无限可能！',
+			tags: [tags.ai]
+		},
+		{
+			name: '腾讯混元3D',
+			ico: 'https://cdn-3d-prod.hunyuan.tencent.com/public/static/logo/favicon.png',
+			url: 'https://3d.hunyuan.tencent.com/',
+			description: 'AI生成3D模型',
+			tags: [tags.ai]
+		},
+		{
+			name: 'Template0',
+			ico: 'https://template0.com/favicon.ico',
+			url: 'https://template0.com/',
+			description: '产品、业务、登录页面、博客、投资组合、电子商务和管理仪表板所需的所有免费 Web 模板。',
+			tags: [tags.template]
+		},
+		{
 			name: '立创商城',
 			ico: 'https://static.szlcsc.com/ecp/assets/web/static/images/favicon.ico',
 			url: 'https://www.szlcsc.com/',
