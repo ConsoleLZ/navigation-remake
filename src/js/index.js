@@ -78,14 +78,20 @@ function changeMenuShow() {
 
 	function change() {
 		const w = window.innerWidth;
+		const cardList = document.querySelector('.my-index-cards')
+		const indexFlexCenter = document.querySelector('.my-index-flex-column-center')
 		if (w < 980) {
 			menu.style.display = 'none';
 			rightContainerDom.style.paddingLeft = 0;
 			burger.style.display = 'block';
+			cardList.style.width = '100vw'
+			indexFlexCenter.style.width = '100vw'
 		} else {
 			menu.style.display = 'flex';
 			rightContainerDom.style.paddingLeft = 10 + 'rem';
 			burger.style.display = 'none';
+			cardList.style.width = '100%'
+			indexFlexCenter.style.width = '100%'
 		}
 	}
 	window.addEventListener('resize', () => {

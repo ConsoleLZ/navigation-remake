@@ -70,27 +70,31 @@
 		</div>
 
 		<div class="my-index-right-container">
-			<button onclick="onJumpJuejinWord()" class="ui right labeled icon button mini blue" style="margin-left: 10px;margin-bottom: 15px;">
-				<i class="right arrow icon"></i>
-				<font _mstmutation="1">
-					掘金今日排行榜词云图
-				</font>
-			</button>
-			<div class="my-index-flex-center header-search">
+			<div class="flex-20" style="max-width: 100vw;overflow: hidden;">
 				<div class="ui icon input">
 					<input id="mySearch" onkeydown="onSearch(event)" type="text" placeholder="搜索...">
 					<i class="search icon"></i>
 				</div>
+				<div class="flex-20" style="transform: scale(0.8);transform-origin: left;">
+					<button onclick="onJumpJuejinWord()" class="ui right labeled icon button mini blue">
+						<i class="right arrow icon"></i>
+						<font _mstmutation="1">
+							掘金今日排行榜词云图
+						</font>
+					</button>
+					<a class="ui tag label">作品：<%= dataList.length %></a>
+					<a class="ui tag label">标签：<%= Object.keys(tags).length %></a>
+				</div>
 			</div>
 			<div style="margin-top: 20px;" class="my-index-flex-center">
 				<div class="my-index-flex-column-center">
-					<p class="title" onclick="onGoHome()">
-						<%= config.title %>
-					</p>
+					<div style="display: flex;justify-content: center;">
+						<p class="title" onclick="onGoHome()">
+							<%= config.title %>
+						</p>
+					</div>
 					<p style="text-align: center;">
 						<%= config.subTitle %>
-					</p>
-					<p style="text-align: center;">目前一共收录<%= dataList.length %>个作品，一共有<%= Object.keys(tags).length %>个标签
 					</p>
 				</div>
 			</div>

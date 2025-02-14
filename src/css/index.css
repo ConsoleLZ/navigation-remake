@@ -10,11 +10,6 @@
 	gap: 6px;
 }
 
-.my-index-flex-center {
-	display: flex;
-	justify-content: center;
-}
-
 .my-index-flex-column-center {
 	display: flex;
 	flex-direction: column;
@@ -213,15 +208,16 @@ p {
 .title {
 	font-size: 1.6rem;
 	font-weight: 700;
-	text-align: center;
 	color: #a075e5;
+	width: fit-content;
 	text-shadow:
 		1px -1px #fff,
 		-1px 1px #999;
 	cursor: pointer;
 }
-.header-search {
-	width: 100%;
-	position: sticky;
-	top: 10px;
+.flex-20 {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
 }
