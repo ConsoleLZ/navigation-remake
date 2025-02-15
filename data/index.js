@@ -33,6 +33,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '立创开源硬件平台',
+			ico: 'https://oshwhub.com/favicon.ico',
+			url: 'https://oshwhub.com/',
+			description: '基于嘉立创EDA进行电路设计的硬件开源设计大本营,集嵌入式、电子模块、DIY设计、物联网、智能硬件、电子应用、电工电子等多种电路设计模块为一体的开源硬件平台',
+			tags: [tags.hardware, tags.community]
+		},
+		{
 			name: '帽子云',
 			ico: 'https://www.maoziyun.com/favicon/favicon.png',
 			url: 'https://www.maoziyun.com/',
