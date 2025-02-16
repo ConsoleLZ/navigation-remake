@@ -33,6 +33,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '芯查查',
+			ico: 'https://www.xcc.com/favicon.ico',
+			url: 'https://www.xcc.com/',
+			description: '更全、更快的芯片数据查询',
+			tags: [tags.hardware, tags.docs]
+		},
+		{
 			name: '立创开源硬件平台',
 			ico: 'https://oshwhub.com/favicon.ico',
 			url: 'https://oshwhub.com/',
