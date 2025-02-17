@@ -33,6 +33,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'MakerWorld',
+			ico: 'https://makerworld.com.cn/favicon_new.png',
+			url: 'https://makerworld.com.cn/zh',
+			description: '行业领先的 3D 打印模型社区，为 3D 打印爱好者和设计师提供服务。免费提供海量 3D 模型和 STL 模型下载，是您寻找彩色 3D 模型的首选平台',
+			tags: [tags.hardware, tags.resource]
+		},
+		{
 			name: '芯查查',
 			ico: 'https://www.xcc.com/favicon.ico',
 			url: 'https://www.xcc.com/',
