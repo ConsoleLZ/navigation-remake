@@ -33,6 +33,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '莫高设计',
+			ico: 'https://mastergo.com/favicon.ico',
+			url: 'https://mastergo.com/',
+			description: 'AI 时代的数字界面生产平台',
+			tags: [tags.devise]
+		},
+		{
 			name: 'MakerWorld',
 			ico: 'https://makerworld.com.cn/favicon_new.png',
 			url: 'https://makerworld.com.cn/zh',
