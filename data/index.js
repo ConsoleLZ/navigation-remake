@@ -33,6 +33,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '鸠摩搜索',
+			ico: 'https://www.jiumodiary.com/images/favicon.png',
+			url: 'https://www.jiumodiary.com/',
+			description: '书籍查找和下载',
+			tags: [tags.learn]
+		},
+		{
 			name: '莫高设计',
 			ico: 'https://mastergo.com/favicon.ico',
 			url: 'https://mastergo.com/',
