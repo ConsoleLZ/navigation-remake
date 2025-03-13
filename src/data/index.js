@@ -33,6 +33,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'WinUI',
+			ico: 'https://learn.microsoft.com/zh-cn/windows/apps/images/logo-winui.png',
+			url: 'https://learn.microsoft.com/zh-cn/windows/apps/winui/',
+			description: 'WinUI 是适用于 Windows 桌面应用和 UWP 应用的本机用户体验 (UX) 框架。',
+			tags: [tags.development]
+		},
+		{
 			name: '鸠摩搜索',
 			ico: 'https://www.jiumodiary.com/images/favicon.png',
 			url: 'https://www.jiumodiary.com/',
