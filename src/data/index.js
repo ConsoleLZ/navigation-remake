@@ -33,6 +33,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '反斗限免',
+			ico: 'https://free.apprcn.com/favicon.ico',
+			url: 'https://free.apprcn.com/',
+			description: '各类限免信息网站',
+			tags: [tags.resource, tags.tools, tags.game]
+		},
+		{
 			name: 'WinUI',
 			ico: 'https://learn.microsoft.com/zh-cn/windows/apps/images/logo-winui.png',
 			url: 'https://learn.microsoft.com/zh-cn/windows/apps/winui/',
