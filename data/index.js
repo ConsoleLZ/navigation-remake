@@ -33,6 +33,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'uCharts',
+			ico: 'https://www.ucharts.cn/v2/static/favicon.ico',
+			url: 'https://www.ucharts.cn/v2/#/',
+			description: 'uCharts跨平台图表库，全端全平台支持的图表库，开箱即用',
+			tags: [tags.componentLibrary, tags.development]
+		},
+		{
 			name: '反斗限免',
 			ico: 'https://free.apprcn.com/favicon.ico',
 			url: 'https://free.apprcn.com/',
