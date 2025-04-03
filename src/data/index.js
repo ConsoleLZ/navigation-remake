@@ -33,6 +33,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'PlatformIO IDE',
+			ico: 'https://platformio.gallerycdn.vsassets.io/extensions/platformio/platformio-ide/3.3.4/1736607344047/Microsoft.VisualStudio.Services.Icons.Default',
+			url: 'https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide',
+			description: '卓越嵌入式软件开发的门户: CMSIS、esp-idf、FreeRTOS、libOpenCM3、mbed OS、SPL、STM32Cube、Zephyr RTOS、Arduino、ARM、AVR、Espressif (ESP8266/ESP32) 、FPGA、MCS-51 (8051) 、MSP430、Nordic (nRF51/nRF52) 、PIC32、risc-v、树莓派 (RP2040) 、意法半导体 (STM8/STM32)',
+			tags: [tags.vscode, tags.hardware]
+		},
+		{
 			name: 'uCharts',
 			ico: 'https://www.ucharts.cn/v2/static/favicon.ico',
 			url: 'https://www.ucharts.cn/v2/#/',
