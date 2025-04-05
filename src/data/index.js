@@ -10,6 +10,7 @@ function generateData(baseURL) {
 		development: '项目开发',
 		componentLibrary: '组件库',
 		docs: '文档',
+		docsTools: '文档工具',
 		template: '模板',
 		tools: '工具',
 		scaffolding: '脚手架',
@@ -32,6 +33,13 @@ function generateData(baseURL) {
 	};
 
 	const dataList = [
+		{
+			name: 'iLovePDF',
+			ico: 'https://www.ilovepdf.com/img/ilovepdf.svg',
+			url: 'https://www.ilovepdf.com/zh-cn',
+			description: '完全免费、易于使用、丰富的PDF处理工具，包括：合并、拆分、压缩、转换、旋转和解锁PDF文件，以及给PDF文件添加水印的工具等。仅需几秒钟即可完成。',
+			tags: [tags.docsTools]
+		},
 		{
 			name: 'PlatformIO IDE',
 			ico: 'https://platformio.gallerycdn.vsassets.io/extensions/platformio/platformio-ide/3.3.4/1736607344047/Microsoft.VisualStudio.Services.Icons.Default',
