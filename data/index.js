@@ -34,8 +34,15 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'Node SerialPort',
+			ico: 'https://serialport.io/img/serialport-logo.png',
+			url: 'https://serialport.io/',
+			description: '使用 JavaScript 与您的串行设备通信',
+			tags: [tags.hardware, tags.development]
+		},
+		{
 			name: 'iLovePDF',
-			ico: 'https://www.ilovepdf.com/img/ilovepdf.svg',
+			ico: 'https://www.ilovepdf.com/img/favicons-pdf/favicon-32x32.png',
 			url: 'https://www.ilovepdf.com/zh-cn',
 			description: '完全免费、易于使用、丰富的PDF处理工具，包括：合并、拆分、压缩、转换、旋转和解锁PDF文件，以及给PDF文件添加水印的工具等。仅需几秒钟即可完成。',
 			tags: [tags.docsTools]
