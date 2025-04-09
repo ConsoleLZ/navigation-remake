@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'electron',
+			ico: 'https://electron.nodejs.cn/assets/img/favicon.ico',
+			url: 'https://electron.nodejs.cn/',
+			description: '使用 JavaScript、HTML 和 CSS 构建跨平台桌面应用',
+			tags: [tags.docs]
+		},
+		{
 			name: 'Node SerialPort',
 			ico: 'https://serialport.io/img/serialport-logo.png',
 			url: 'https://serialport.io/',
