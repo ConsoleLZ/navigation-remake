@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'BULMA',
+			ico: 'https://bulma.io/favicons/favicon.ico',
+			url: 'https://bulma.io/',
+			description: '一个纯html,css,js打造的组件库',
+			tags: [tags.componentLibrary, tags.web]
+		},
+		{
 			name: 'electron',
 			ico: 'https://electron.nodejs.cn/assets/img/favicon.ico',
 			url: 'https://electron.nodejs.cn/',
