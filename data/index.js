@@ -34,6 +34,20 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '小小API',
+			ico: 'https://xxapi.cn/favicon.ico',
+			url: 'https://xxapi.cn/',
+			description: '免费API|快速稳定的免费API调用平台',
+			tags: [tags.cloudPlatform]
+		},
+		{
+			name: 'WhyApi',
+			ico: '',
+			url: 'https://apis.whyta.cn/',
+			description: '一个免费的api调用平台，接口持续更新中...',
+			tags: [tags.cloudPlatform]
+		},
+		{
 			name: 'BULMA',
 			ico: 'https://bulma.io/favicons/favicon.ico',
 			url: 'https://bulma.io/',
