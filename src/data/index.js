@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'ttsmaker',
+			ico: 'https://ttsmaker.cn/static/v3_theme_01_asset/logo/favicon-32x32.png?version=2',
+			url: 'https://ttsmaker.cn/',
+			description: '在线AI配音工具, 文本转音频',
+			tags: [tags.tools, tags.ai]
+		},
+		{
 			name: 'tensorflow',
 			ico: 'https://www.gstatic.com/devrel-devsite/prod/v8d1d0686aef3ca9671e026a6ce14af5c61b805aabef7c385b0e34494acbfc654/tensorflow/images/favicon.png',
 			url: 'https://www.tensorflow.org/',
