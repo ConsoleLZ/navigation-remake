@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'LM Studio',
+			ico: 'https://lmstudio.ai/_next/static/media/android-chrome-192x192.3a60873f.png',
+			url: 'https://lmstudio.ai/',
+			description: '本地部署AI大模型',
+			tags: [tags.ai]
+		},
+		{
 			name: '小小API',
 			ico: 'https://xxapi.cn/favicon.ico',
 			url: 'https://xxapi.cn/',
