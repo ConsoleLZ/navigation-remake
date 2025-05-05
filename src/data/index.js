@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'tensorflow',
+			ico: 'https://www.gstatic.com/devrel-devsite/prod/v8d1d0686aef3ca9671e026a6ce14af5c61b805aabef7c385b0e34494acbfc654/tensorflow/images/favicon.png',
+			url: 'https://www.tensorflow.org/',
+			description: '端到端机器学习平台',
+			tags: [tags.ai]
+		},
+		{
 			name: 'LM Studio',
 			ico: 'https://lmstudio.ai/_next/static/media/android-chrome-192x192.3a60873f.png',
 			url: 'https://lmstudio.ai/',
