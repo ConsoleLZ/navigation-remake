@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '腾讯云代码托管平台',
+			ico: 'https://help-assets.codehub.cn/enterprise/guanwang/favicon.ico',
+			url: 'https://coding.net/',
+			description: '安全、高速的 Git/SVN 代码仓库服务',
+			tags: [tags.cloudPlatform]
+		},
+		{
 			name: 'ttsmaker',
 			ico: 'https://ttsmaker.cn/static/v3_theme_01_asset/logo/favicon-32x32.png?version=2',
 			url: 'https://ttsmaker.cn/',
