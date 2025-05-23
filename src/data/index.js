@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '沉浸式翻译',
+			ico: 'https://store-images.s-microsoft.com/image/apps.56263.d49a3368-918f-446f-8d8b-4dadb0f08e8e.cdbc41ed-1d7d-4505-afe8-a6a5e9625173.cee8f208-68bb-4658-8c00-42a1875c9156?mode=scale&h=100&q=90&w=100',
+			url: 'https://microsoftedge.microsoft.com/addons/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-/amkbmndfnliijdhojkpoglbnaaahippg',
+			description: '【沉浸式翻译】免费的（原文/译文）双语对照网页翻译插件，支持PDF翻译（保留排版），视频双语字幕翻译（Youtube, Netflix），EPUB电子书翻译；支持人工智能AI翻译大模型（OpenAI (ChatGPT)、DeepL、Gemini(Bard) 等）',
+			tags: [tags.plugin]
+		},
+		{
 			name: '腾讯云代码托管平台',
 			ico: 'https://help-assets.codehub.cn/enterprise/guanwang/favicon.ico',
 			url: 'https://coding.net/',
