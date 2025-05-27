@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'BongoCat',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/ayangweb/BongoCat',
+			description: '跨平台桌宠',
+			tags: [tags.other]
+		},
+		{
 			name: '8bitcn-ui',
 			ico: 'https://www.8bitcn.com/favicon.ico?favicon.2f7bc62f.ico',
 			url: 'https://www.8bitcn.com/',
