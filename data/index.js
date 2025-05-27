@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '8bitcn-ui',
+			ico: 'https://www.8bitcn.com/favicon.ico?favicon.2f7bc62f.ico',
+			url: 'https://www.8bitcn.com/',
+			description: '像素复古风格 UI 组件库',
+			tags: [tags.componentLibrary, tags.web]
+		},
+		{
 			name: '沉浸式翻译',
 			ico: 'https://store-images.s-microsoft.com/image/apps.56263.d49a3368-918f-446f-8d8b-4dadb0f08e8e.cdbc41ed-1d7d-4505-afe8-a6a5e9625173.cee8f208-68bb-4658-8c00-42a1875c9156?mode=scale&h=100&q=90&w=100',
 			url: 'https://microsoftedge.microsoft.com/addons/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-/amkbmndfnliijdhojkpoglbnaaahippg',
