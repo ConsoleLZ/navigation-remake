@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'Raphael AI  艾斐尔',
+			ico: 'https://raphael.app/favicon.ico',
+			url: 'https://raphael.app/zh',
+			description: '在几秒钟内创建令人惊叹的 AI 生成图像, 世界上第一个无限免费的 AI 图像生成器',
+			tags: [tags.ai]
+		},
+		{
 			name: 'MAX动漫',
 			ico: 'https://cdn.jsdelivr.net/gh/zkk7/jsku@master/mxico.png',
 			url: 'https://www.mxdm6.com/',
