@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'SeedHub',
+			ico: 'https://ps.aside.top/static/img/favicon.ico',
+			url: 'https://www.seedhub.cc/',
+			description: '每天为您分享优质的电影、电视剧和动漫资讯。免费分享，无需注册，更新及时，我们致力打造最好的影视资讯分享站！',
+			tags: [tags.other]
+		},
+		{
 			name: 'Raphael AI  艾斐尔',
 			ico: 'https://raphael.app/favicon.ico',
 			url: 'https://raphael.app/zh',
