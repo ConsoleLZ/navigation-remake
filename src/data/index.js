@@ -34,6 +34,20 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'GrabCAD',
+			ico: 'https://d1pspl52z5rk07.cloudfront.net/static/favicon.ico',
+			url: 'https://grabcad.com/library',
+			description: '这是一个非常受欢迎的平台，拥有大量的机械类3D模型，包括SolidWorks文件格式。用户需要注册才能下载模型',
+			tags: [tags.resource, tags.hardware]
+		},
+		{
+			name: '3DSOURCE 零件库',
+			ico: 'https://www.3dsource.cn/favicon.ico',
+			url: 'https://www.3dsource.cn/',
+			description: '3DSOURCE零件库是国内领先的、用户规模庞大的3D零部件资源库，包含标准件、通用件和厂商件CAD模型，汇聚国内外众多品牌生产厂商；集产品展示、产品选型、模型下载、采购询盘为一体的3D零部件资源一站式互联平台',
+			tags: [tags.resource, tags.hardware]
+		},
+		{
 			name: 'Raphael AI  艾斐尔',
 			ico: 'https://raphael.app/favicon.ico',
 			url: 'https://raphael.app/zh',
