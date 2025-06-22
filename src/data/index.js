@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'Snapdrop',
+			ico: 'https://drop.ioiox.com/images/favicon-96x96.png',
+			url: 'https://drop.ioiox.com/',
+			description: '局域网文件传输',
+			tags: [tags.tools]
+		},
+		{
 			name: 'GrabCAD',
 			ico: 'https://d1pspl52z5rk07.cloudfront.net/static/favicon.ico',
 			url: 'https://grabcad.com/library',
