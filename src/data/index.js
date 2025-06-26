@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'TresJS',
+			ico: 'https://tresjs.org/favicon.svg',
+			url: 'https://tresjs.org/',
+			description: '使用Vue创建出色的3D体验',
+			tags: [tags.web, tags.development]
+		},
+		{
 			name: 'DFRobot',
 			ico: 'https://wiki.dfrobot.com.cn/favicon.ico',
 			url: 'https://wiki.dfrobot.com.cn/',
