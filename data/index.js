@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'DFRobot',
+			ico: 'https://wiki.dfrobot.com.cn/favicon.ico',
+			url: 'https://wiki.dfrobot.com.cn/',
+			description: '有各种平台的项目和学习资料，比如arduino，没事可以逛一逛',
+			tags: [tags.learn, tags.community]
+		},
+		{
 			name: 'Snapdrop',
 			ico: 'https://drop.ioiox.com/images/favicon-96x96.png',
 			url: 'https://drop.ioiox.com/',
