@@ -37,8 +37,8 @@ function generateData(baseURL) {
 			name: 'DFRobot',
 			ico: 'https://wiki.dfrobot.com.cn/favicon.ico',
 			url: 'https://wiki.dfrobot.com.cn/',
-			description: '有各种平台的项目和学习资料，比如arduino，没事可以逛一逛',
-			tags: [tags.learn, tags.community]
+			description: '一个学习单片机的社区,有各种平台的项目和学习资料，比如arduino，没事可以逛一逛',
+			tags: [tags.learn, tags.community, tags.hardware]
 		},
 		{
 			name: 'Snapdrop',
