@@ -34,6 +34,20 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'AsPoem | 现代化诗词学习网站',
+			ico: 'https://aspoem.com/favicon.ico',
+			url: 'https://aspoem.com/zh-Hans',
+			description: '现代化的诗词学习网站，提供全站搜索，提供便捷的全站搜索功能，让您更快地查询律诗、绝句和各位诗人的作品。我们还优化了拼音标注、注释和白话文等的展示方式，使诗词更加易于阅读。',
+			tags: [tags.learn]
+		},
+		{
+			name: '优秀的开源项目',
+			ico: 'https://chencoding.top:8090/public/_media/logo.png',
+			url: 'https://chencoding.top:8090/#/',
+			description: '不定期收集 Github、Gitee优秀的开源项目，并进行归类整理。',
+			tags: [tags.openSource]
+		},
+		{
 			name: 'TresJS',
 			ico: 'https://tresjs.org/favicon.svg',
 			url: 'https://tresjs.org/',
