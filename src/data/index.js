@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '98.css',
+			ico: 'https://jdan.github.io/98.css/icon.png',
+			url: 'https://jdan.github.io/98.css/',
+			description: '一个用于构建旧 UI 的忠实再现的组件库',
+			tags: [tags.componentLibrary, tags.web]
+		},
+		{
 			name: 'AsPoem | 现代化诗词学习网站',
 			ico: 'https://aspoem.com/favicon.ico',
 			url: 'https://aspoem.com/zh-Hans',
