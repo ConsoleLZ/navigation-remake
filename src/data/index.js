@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'D3',
+			ico: 'https://d3.nodejs.cn/logo.png',
+			url: 'https://d3.nodejs.cn/',
+			description: '用于定制数据可视化的JavaScript库，它基于Web标准构建的底层方法为创作动态数据驱动的图形提供了无与伦比的灵活性',
+			tags: [tags.web, tags.development]
+		},
+		{
 			name: '98.css',
 			ico: 'https://jdan.github.io/98.css/icon.png',
 			url: 'https://jdan.github.io/98.css/',
