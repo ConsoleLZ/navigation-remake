@@ -329,3 +329,17 @@ function onSearch(e) {
 		location.href = `${baseURL}?page=0&search=${mySearch.value}`;
 	}
 }
+
+// 主题切换
+function onSwitchTheme(){
+	const switchThemeDom = document.querySelector('#switch_theme')
+	const html = document.querySelector('html')
+
+	if(switchThemeDom.checked){
+		html.style.filter = 'invert(1) hue-rotate(180deg)'
+		localStorage.setItem('theme', 'dark')
+	}else {
+		html.style.filter = ''
+		localStorage.setItem('theme', 'light')
+	}
+}

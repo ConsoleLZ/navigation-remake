@@ -82,7 +82,7 @@
 				</div>
 			</div>
 			<label class="ui-switch" style="position: fixed;bottom: 10px;right: 10px;">
-				<input type="checkbox">
+				<input type="checkbox" onchange="onSwitchTheme()" id="switch_theme">
 				<div class="slider">
 					<div class="circle"></div>
 				</div>
@@ -143,6 +143,19 @@
 		</div>
 	</div>
 </body>
+<script>
+// 主题显示
+		const theme = localStorage.getItem('theme')
+		const switchThemeDom = document.querySelector('#switch_theme')
+		const html = document.querySelector('html')
+		if(theme === 'dark'){
+			html.style.filter = 'invert(1) hue-rotate(180deg)'
+			switchThemeDom.checked = true
+		}else {
+			html.style.filter = ''
+			switchThemeDom.checked = false
+		}	
+</script>
 
 <script src="./data/index.js"></script>
 <script src="./js/utils.js"></script>
