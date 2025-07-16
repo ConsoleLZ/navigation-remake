@@ -29,6 +29,7 @@
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="./css/semantic.css" />
 	<link rel="stylesheet" href="./css/index.css" />
+	<link rel="stylesheet" href="./css/switch.css" />
 	<link rel="icon" href="<%- config.baseURL %>favicon.png" type="image/png">
 	<script src="./js/jquery.js"></script>
 	<script src="./js/semantic.js"></script>
@@ -76,16 +77,17 @@
 					<i class="search icon"></i>
 				</div>
 				<div class="flex-20" style="transform: scale(0.8);transform-origin: left;">
-					<button onclick="onJumpJuejinWord()" class="ui right labeled icon button mini blue">
-						<i class="right arrow icon"></i>
-						<font _mstmutation="1">
-							掘金今日排行榜词云图
-						</font>
-					</button>
 					<a class="ui tag label">作品：<%= dataList.length %></a>
 					<a class="ui tag label">标签：<%= Object.keys(tags).length %></a>
 				</div>
 			</div>
+			<label class="ui-switch" style="position: fixed;bottom: 10px;right: 10px;">
+				<input type="checkbox">
+				<div class="slider">
+					<div class="circle"></div>
+				</div>
+			</label>
+
 			<div style="margin-top: 20px;" class="my-index-flex-center">
 				<div class="my-index-flex-column-center">
 					<div style="display: flex;justify-content: center;">
