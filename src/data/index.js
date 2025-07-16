@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '<%= EJS %>',
+			ico: '',
+			url: 'https://ejs.bootcss.com/',
+			description: '高效的嵌入式 JavaScript 模板引擎。',
+			tags: [tags.web, tags.development]
+		},
+		{
 			name: 'D3',
 			ico: 'https://d3.nodejs.cn/logo.png',
 			url: 'https://d3.nodejs.cn/',
