@@ -83,6 +83,7 @@ function changeMenuShow() {
 		if (w < 980) {
 			menu.style.display = 'none';
 			rightContainerDom.style.paddingLeft = 0;
+			rightContainerDom.style.width = '100%'
 			burger.style.display = 'block';
 			cardList.style.width = '100vw'
 			indexFlexCenter.style.width = '100vw'
@@ -327,9 +328,4 @@ function onSearch(e) {
 	if (e.key === 'Enter') {
 		location.href = `${baseURL}?page=0&search=${mySearch.value}`;
 	}
-}
-
-// 跳转到掘金词云图
-function onJumpJuejinWord(){
-	window.open('https://consolelz.github.io/juejin-word/')
 }
