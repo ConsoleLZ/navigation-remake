@@ -34,6 +34,20 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '游侠网',
+			ico: 'https://www.ali213.net/favicon.ico',
+			url: 'https://www.ali213.net/',
+			description: '游侠网为单机游戏玩家提供最新单机游戏业界动态、国内外单机游戏下载、单机游戏补丁、单机游戏攻略秘籍、单机游戏专题等内容。坚守单机阵地，弘扬单机文化！',
+			tags: [tags.game, tags.community]
+		},
+		{
+			name: '3DM GAME',
+			ico: 'https://www.3dmgame.com/favicon.ico',
+			url: 'https://www.3dmgame.com/',
+			description: '3DM游戏网为玩家提供最新的游戏新闻、攻略、单机游戏资源、汉化资源、游戏补丁、游戏论坛等，经过多年努力已成为游戏玩家首要选择的游戏资讯、游戏资源网站。',
+			tags: [tags.game, tags.community]
+		},
+		{
 			name: '<%= EJS %>',
 			ico: '',
 			url: 'https://ejs.bootcss.com/',
