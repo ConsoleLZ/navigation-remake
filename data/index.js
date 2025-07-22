@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'BB八字取名网',
+			ico: 'https://bbname.cc/favicon.ico',
+			url: 'https://bbname.cc/zh-CN/',
+			description: '专业的八字命理分析，为宝宝打造独特而富有寓意的名字',
+			tags: [tags.other]
+		},
+		{
 			name: '游侠网',
 			ico: 'https://www.ali213.net/favicon.ico',
 			url: 'https://www.ali213.net/',
