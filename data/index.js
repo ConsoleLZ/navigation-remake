@@ -779,10 +779,10 @@ function generateData(baseURL) {
 			tags: [tags.development, tags.web]
 		},
 		{
-			name: 'Emojipedia',
-			ico: 'https://emojipedia.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-icon.e5eb7dea.webp&w=128&q=75',
-			url: 'https://emojipedia.org/',
-			description: 'Emoji合集',
+			name: 'Emoji中文网',
+			ico: 'https://www.emojiall.com/favicon.ico',
+			url: 'https://www.emojiall.com/zh-hans',
+			description: '我们专注于Unicode表情符号，提供清晰的含义、使用示例、一键复制、高清/矢量素材以及高级搜索功能。借助AI和大数据，您将获得排行榜、趋势图、情感分析和语言学研究，助您深入探索表情符号的世界。',
 			tags: [tags.icon]
 		},
 		{
