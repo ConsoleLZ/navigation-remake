@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'Monokai Pro',
+			ico: 'https://monokai.gallerycdn.vsassets.io/extensions/monokai/theme-monokai-pro-vscode/2.0.7/1749042712341/Microsoft.VisualStudio.Services.Icons.Default',
+			url: 'https://marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode',
+			description: '专业的深浅主题+图标包，来自原始Monokai配色方案的作者',
+			tags: [tags.vscode, tags.plugin]
+		},
+		{
 			name: 'BB八字取名网',
 			ico: 'https://bbname.cc/favicon.ico',
 			url: 'https://bbname.cc/zh-CN/',
