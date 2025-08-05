@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'IconPark',
+			ico: 'https://lf1-cdn2-tos.bytegoofy.com/bydesign/iconparksite/logo.svg',
+			url: 'https://iconpark.oceanengine.com/home',
+			description: '丰富多彩的资源库免费使用',
+			tags: [tags.icon, tags.web]
+		},
+		{
 			name: 'driver.js',
 			ico: 'https://driverjs.com/favicon.svg',
 			url: 'https://driverjs.com/',
