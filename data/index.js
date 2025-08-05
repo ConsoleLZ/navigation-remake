@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'driver.js',
+			ico: 'https://driverjs.com/favicon.svg',
+			url: 'https://driverjs.com/',
+			description: '轻量级 JavaScript 库，用于产品导览、亮点和上下文帮助，以引导用户浏览您的产品。',
+			tags: [tags.web, tags.development]
+		},
+		{
 			name: 'Monokai Pro',
 			ico: 'https://monokai.gallerycdn.vsassets.io/extensions/monokai/theme-monokai-pro-vscode/2.0.7/1749042712341/Microsoft.VisualStudio.Services.Icons.Default',
 			url: 'https://marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode',
