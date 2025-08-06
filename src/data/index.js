@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'CLion',
+			ico: 'https://pic1.imgdb.cn/item/6893023d58cb8da5c8095dcd.png',
+			url: 'https://www.jetbrains.com/clion/',
+			description: '用于 C 和 C++ 的跨平台 IDE',
+			tags: [tags.software]
+		},
+		{
 			name: 'Remix Icon',
 			ico: 'https://remixicon.com/favicon.ico',
 			url: 'https://remixicon.com/',
