@@ -34,6 +34,20 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'Remix Icon',
+			ico: 'https://remixicon.com/favicon.ico',
+			url: 'https://remixicon.com/',
+			description: '为设计师和开发人员精心制作的开源中性风格系统符号。所有图标均免费用于个人和商业用途。',
+			tags: [tags.icon, tags.web]
+		},
+		{
+			name: 'IconGo',
+			ico: 'https://icongo.github.io/favicon.svg',
+			url: 'https://icongo.github.io/#/',
+			description: '免费图标',
+			tags: [tags.icon, tags.web]
+		},
+		{
 			name: 'IconPark',
 			ico: 'https://lf1-cdn2-tos.bytegoofy.com/bydesign/iconparksite/logo.svg',
 			url: 'https://iconpark.oceanengine.com/home',
