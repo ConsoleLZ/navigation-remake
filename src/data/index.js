@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'PDFgear',
+			ico: 'https://www.pdfgear.com/img/icon.png',
+			url: 'https://www.pdfgear.com/zh/',
+			description: '完全免费的PDF软件',
+			tags: [tags.docsTools, tags.software]
+		},
+		{
 			name: 'ExcelJS',
 			ico: `${baseURL}assets/github.svg`,
 			url: 'https://github.com/exceljs/exceljs',
