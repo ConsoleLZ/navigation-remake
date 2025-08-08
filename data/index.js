@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'ExcelJS',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/exceljs/exceljs',
+			description: '读取，操作并写入电子表格数据和样式到 XLSX 和 JSON 文件。',
+			tags: [tags.development, tags.openSource]
+		},
+		{
 			name: 'CLion',
 			ico: 'https://pic1.imgdb.cn/item/6893023d58cb8da5c8095dcd.png',
 			url: 'https://www.jetbrains.com/clion/',
