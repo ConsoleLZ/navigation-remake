@@ -78,21 +78,21 @@ function changeMenuShow() {
 
 	function change() {
 		const w = window.innerWidth;
-		const cardList = document.querySelector('.my-index-cards')
-		const indexFlexCenter = document.querySelector('.my-index-flex-column-center')
+		const cardList = document.querySelector('.my-index-cards');
+		const indexFlexCenter = document.querySelector('.my-index-flex-column-center');
 		if (w < 980) {
 			menu.style.display = 'none';
 			rightContainerDom.style.paddingLeft = 0;
-			rightContainerDom.style.width = '100%'
+			rightContainerDom.style.width = '100%';
 			burger.style.display = 'block';
-			cardList.style.width = '100vw'
-			indexFlexCenter.style.width = '100vw'
+			cardList.style.width = '100vw';
+			indexFlexCenter.style.width = '100vw';
 		} else {
 			menu.style.display = 'flex';
 			rightContainerDom.style.paddingLeft = 10 + 'rem';
 			burger.style.display = 'none';
-			cardList.style.width = '100%'
-			indexFlexCenter.style.width = '100%'
+			cardList.style.width = '100%';
+			indexFlexCenter.style.width = '100%';
 		}
 	}
 	window.addEventListener('resize', () => {
@@ -143,7 +143,7 @@ function generatePaginationDom(total) {
 			<i class="left chevron icon"></i>
 		</a>
 	`;
-	
+
 	for (let i = 0; i < totalPages; i++) {
 		paginationHtml += `
 			<a class="item ${i === currentPage ? 'active' : ''}" onclick="changePage('${i}')">
@@ -151,13 +151,13 @@ function generatePaginationDom(total) {
 			</a>
 		`;
 	}
-	
+
 	paginationHtml += `
 		<a class="icon item" onclick="changePage(${currentPage < totalPages - 1 ? currentPage + 1 : currentPage})">
 			<i class="right chevron icon"></i>
 		</a>
 	`;
-	
+
 	return paginationHtml;
 }
 
@@ -176,7 +176,7 @@ function setData() {
 	const tagSearch = urlParams.get('search');
 	const cardsDom = document.querySelector('.my-index-cards');
 	let dataListFilter = [];
-	
+
 	if (tagSearch) {
 		const searchResult = [];
 		// 搜索
@@ -199,25 +199,22 @@ function setData() {
 			item => item.tags.includes(tagQuery) || tagQuery === '全部'
 		);
 	}
-	
+
 	// 更新分页菜单
 	updatePagination(dataListFilter.length);
-	
+
 	// 获取当前页的数据
-	const dataListSlice = dataListFilter.slice(
-		pageNumber * pageQuery,
-		pageNumber * (pageQuery + 1)
-	);
-	
+	const dataListSlice = dataListFilter.slice(pageNumber * pageQuery, pageNumber * (pageQuery + 1));
+
 	cardsDom.innerHTML = generateDom(dataListSlice);
-	
+
 	// 绑定点击事件
 	document.querySelectorAll('.my-index-cards .card').forEach(card => {
 		card.addEventListener('click', function () {
 			onJump(this.getAttribute('data-url'));
 		});
 	});
-	
+
 	// 观察元素是否进入视口
 	const iconDomList = document.querySelectorAll('.my-index-cards img');
 	iconDomList.forEach(item => {
@@ -274,7 +271,7 @@ function main() {
 	// 获取URL中的页码
 	const urlParams = new URLSearchParams(window.location.search);
 	currentPage = Number(urlParams.get('page')) || 0;
-	
+
 	// 控制菜单的显示和隐藏
 	changeMenuShow();
 	// 初始化字体大小
@@ -331,15 +328,53 @@ function onSearch(e) {
 }
 
 // 主题切换
-function onSwitchTheme(){
-	const switchThemeDom = document.querySelector('#switch_theme')
-	const html = document.querySelector('html')
+function onSwitchTheme() {
+    const switchThemeDom = document.querySelector('#switch_theme');
+    const html = document.querySelector('html');
+    const images = document.querySelectorAll('img');
+    
+    // 👇 新增：获取所有可能有背景图的元素（你可以根据项目情况调整选择器）
+    const bgElements = document.querySelectorAll('.has-bg'); // 或更精确：'.has-bg, [style*="background"], [class*="bg"]' 等
+    const elementsWithBg = [];
 
-	if(switchThemeDom.checked){
-		html.style.filter = 'invert(1) hue-rotate(180deg)'
-		localStorage.setItem('theme', 'dark')
-	}else {
-		html.style.filter = ''
-		localStorage.setItem('theme', 'light')
-	}
+    // 筛选出真正有背景图的元素
+    bgElements.forEach(el => {
+        const computedStyle = getComputedStyle(el);
+        if (computedStyle.backgroundImage && computedStyle.backgroundImage !== 'none') {
+            elementsWithBg.push(el);
+        }
+    });
+
+    if (switchThemeDom.checked) {
+        // 暗色模式：全局翻转
+        html.style.filter = 'invert(1) hue-rotate(180deg)';
+        localStorage.setItem('theme', 'dark');
+
+        // 处理 <img> 标签：反向滤镜
+        images.forEach(img => {
+            img.dataset.originalFilter = img.style.filter || '';
+            img.style.filter = 'invert(1) hue-rotate(180deg)';
+        });
+
+        // 处理 background-image 元素：反向滤镜
+        elementsWithBg.forEach(el => {
+            el.dataset.originalFilter = el.style.filter || '';
+            el.style.filter = 'invert(1) hue-rotate(180deg)';
+        });
+
+    } else {
+        // 亮色模式：恢复
+        html.style.filter = '';
+        localStorage.setItem('theme', 'light');
+
+        // 恢复 <img>
+        images.forEach(img => {
+            img.style.filter = img.dataset.originalFilter || '';
+        });
+
+        // 恢复 background-image 元素
+        elementsWithBg.forEach(el => {
+            el.style.filter = el.dataset.originalFilter || '';
+        });
+    }
 }
