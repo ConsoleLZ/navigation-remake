@@ -34,6 +34,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'PromptPilot',
+			ico: 'https://lf3-static.bytednsdoc.com/obj/eden-cn/lm_sth/ljhwZthlaukjlkulzlp/autope/logo/prompt-pilot.png',
+			url: 'https://promptpilot.volcengine.com/home',
+			description: '专为大模型开发，PromptPilot为你提供更精准，专业，可持续迭代提示词！',
+			tags: [tags.ai]
+		},
+		{
 			name: 'PDFgear',
 			ico: 'https://www.pdfgear.com/img/icon.png',
 			url: 'https://www.pdfgear.com/zh/',
