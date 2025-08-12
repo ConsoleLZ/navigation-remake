@@ -331,28 +331,50 @@ function onSearch(e) {
 function onSwitchTheme() {
     const switchThemeDom = document.querySelector('#switch_theme');
     const html = document.querySelector('html');
-    const images = document.querySelectorAll('img'); // 获取所有图片元素
+    const images = document.querySelectorAll('img');
+    
+    // 👇 新增：获取所有可能有背景图的元素（你可以根据项目情况调整选择器）
+    const bgElements = document.querySelectorAll('.has-bg'); // 或更精确：'.has-bg, [style*="background"], [class*="bg"]' 等
+    const elementsWithBg = [];
+
+    // 筛选出真正有背景图的元素
+    bgElements.forEach(el => {
+        const computedStyle = getComputedStyle(el);
+        if (computedStyle.backgroundImage && computedStyle.backgroundImage !== 'none') {
+            elementsWithBg.push(el);
+        }
+    });
 
     if (switchThemeDom.checked) {
-        // 暗色模式 - 应用全局滤镜
+        // 暗色模式：全局翻转
         html.style.filter = 'invert(1) hue-rotate(180deg)';
         localStorage.setItem('theme', 'dark');
-        
-        // 遍历所有图片，应用反向滤镜抵消全局效果
+
+        // 处理 <img> 标签：反向滤镜
         images.forEach(img => {
-            // 保存原始滤镜状态
             img.dataset.originalFilter = img.style.filter || '';
-            // 应用反向滤镜 (抵消全局滤镜效果)
             img.style.filter = 'invert(1) hue-rotate(180deg)';
         });
+
+        // 处理 background-image 元素：反向滤镜
+        elementsWithBg.forEach(el => {
+            el.dataset.originalFilter = el.style.filter || '';
+            el.style.filter = 'invert(1) hue-rotate(180deg)';
+        });
+
     } else {
-        // 亮色模式 - 移除全局滤镜
+        // 亮色模式：恢复
         html.style.filter = '';
         localStorage.setItem('theme', 'light');
-        
-        // 恢复所有图片的原始滤镜状态
+
+        // 恢复 <img>
         images.forEach(img => {
             img.style.filter = img.dataset.originalFilter || '';
+        });
+
+        // 恢复 background-image 元素
+        elementsWithBg.forEach(el => {
+            el.style.filter = el.dataset.originalFilter || '';
         });
     }
 }
