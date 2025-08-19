@@ -80,6 +80,7 @@ function changeMenuShow() {
 		const w = window.innerWidth;
 		const cardList = document.querySelector('.my-index-cards');
 		const indexFlexCenter = document.querySelector('.my-index-flex-column-center');
+		const myGithubUrlImg = document.querySelector('.myGithubUrlImg');
 		if (w < 980) {
 			menu.style.display = 'none';
 			rightContainerDom.style.paddingLeft = 0;
@@ -87,12 +88,14 @@ function changeMenuShow() {
 			burger.style.display = 'block';
 			cardList.style.width = '100vw';
 			indexFlexCenter.style.width = '100vw';
+			myGithubUrlImg.style.right = '50px'
 		} else {
 			menu.style.display = 'flex';
 			rightContainerDom.style.paddingLeft = 10 + 'rem';
 			burger.style.display = 'none';
 			cardList.style.width = '100%';
 			indexFlexCenter.style.width = '100%';
+			myGithubUrlImg.style.right = '20px'
 		}
 	}
 	window.addEventListener('resize', () => {
