@@ -20,6 +20,7 @@ function generateData(baseURL) {
 		depend: '项目管理',
 		learn: '学习',
 		ai: '智能AI',
+		mcp: 'MCP',
 		hardware: '有关硬件',
 		community: '社区',
 		cloudPlatform: '云平台',
@@ -33,6 +34,27 @@ function generateData(baseURL) {
 	};
 
 	const dataList = [
+		{
+			name: 'modelcontextprotocol / servers',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/modelcontextprotocol/servers',
+			description: '模型上下文协议服务器',
+			tags: [tags.mcp]
+		},
+		{
+			name: 'MCP Servers',
+			ico: 'https://mcpservers.org/icon.png',
+			url: 'https://mcpservers.org/',
+			description: '模型上下文协议的服务器集合',
+			tags: [tags.mcp]
+		},
+		{
+			name: '魔搭社区',
+			ico: 'https://gw.alicdn.com/imgextra/i4/O1CN01PRJFWt1PU8nZDGIKZ_!!6000000001843-0-tps-128-128.jpg',
+			url: 'https://modelscope.cn/',
+			description: '共享 · 共创 · 共进，构建持续创新的 AI 开源生态',
+			tags: [tags.ai, tags.mcp]
+		},
 		{
 			name: 'Pixso',
 			ico: 'https://cms.pixso.cn/images/favicon.ico',
