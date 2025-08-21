@@ -35,6 +35,20 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '通义灵码',
+			ico: 'https://img.alicdn.com/imgextra/i1/O1CN01BN6Jtc1lCfJNviV7H_!!6000000004783-2-tps-134-133.png',
+			url: 'https://lingma.aliyun.com/',
+			description: '灵动指间，快码加编，你的智能编码助手，支持MCP',
+			tags: [tags.software, tags.ai, tags.mcp]
+		},
+		{
+			name: 'Cherry Studio',
+			ico: 'https://www.cherry-ai.com/assets/favicon-BmbgeFTf.png',
+			url: 'https://www.cherry-ai.com/',
+			description: '支持多服务商集成的 AI 对话客户端，并且支持MCP服务',
+			tags: [tags.software, tags.ai, tags.mcp]
+		},
+		{
 			name: 'ollama',
 			ico: 'https://ollama.com/public/icon-32x32.png',
 			url: 'https://ollama.com/',
@@ -494,7 +508,7 @@ function generateData(baseURL) {
 			ico: `https://www.cursor.com/favicon.ico`,
 			url: 'https://www.cursor.com/',
 			description: 'Cursor 旨在让您非常高效，是使用 AI 进行编码的最佳方式',
-			tags: [tags.ai, tags.software]
+			tags: [tags.software, tags.ai, tags.mcp]
 		},
 		{
 			name: 'typicode / json-server',
