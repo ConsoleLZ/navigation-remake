@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'ollama',
+			ico: 'https://ollama.com/public/icon-32x32.png',
+			url: 'https://ollama.com/',
+			description: '本地大模型推理平台，支持用户通过命令行、HTTP API 和 OpenAI 客户端进行多样化的模型调用',
+			tags: [tags.software, tags.ai]
+		},
+		{
 			name: 'modelcontextprotocol / servers',
 			ico: `${baseURL}assets/github.svg`,
 			url: 'https://github.com/modelcontextprotocol/servers',
