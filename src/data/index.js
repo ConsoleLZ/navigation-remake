@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'fuck-u-code',
+			ico: `${baseURL}assets/github.svg`,
+			url: 'https://github.com/Done-0/fuck-u-code',
+			description: '一个专为挖掘项目"屎坑"设计的代码质量分析工具，能无情揭露代码的丑陋真相，并用毫不留情的幽默语言告诉你：你的代码到底有多烂。',
+			tags: [tags.tools, tags.openSource]
+		},
+		{
 			name: '通义灵码',
 			ico: 'https://img.alicdn.com/imgextra/i1/O1CN01BN6Jtc1lCfJNviV7H_!!6000000004783-2-tps-134-133.png',
 			url: 'https://lingma.aliyun.com/',
