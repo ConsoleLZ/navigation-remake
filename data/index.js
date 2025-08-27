@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'Model Context Protocol',
+			ico: 'https://mintcdn.com/mcp/nMRF3-ucbVB_YX-J/_generated/favicon/favicon-32x32.png?maxW=32&n=nMRF3-ucbVB_YX-J&s=0744b0f56c6ad5b29603cfb37f240495',
+			url: 'https://modelcontextprotocol.io/docs/getting-started/intro',
+			description: 'MCP文档',
+			tags: [tags.docs, tags.mcp]
+		},
+		{
 			name: 'fuck-u-code',
 			ico: `${baseURL}assets/github.svg`,
 			url: 'https://github.com/Done-0/fuck-u-code',
