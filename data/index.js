@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'Shadertoy',
+			ico: 'https://www.shadertoy.com/img/favicon.ico',
+			url: 'https://www.shadertoy.com/',
+			description: '构建和分享世界上你最喜欢的着色器并受启发',
+			tags: [tags.learn, tags.community, tags.development]
+		},
+		{
 			name: 'Model Context Protocol',
 			ico: 'https://mintcdn.com/mcp/nMRF3-ucbVB_YX-J/_generated/favicon/favicon-32x32.png?maxW=32&n=nMRF3-ucbVB_YX-J&s=0744b0f56c6ad5b29603cfb37f240495',
 			url: 'https://modelcontextprotocol.io/docs/getting-started/intro',
