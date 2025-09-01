@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'ImgTools',
+			ico: 'https://imgtools.info/favicon.ico',
+			url: 'https://imgtools.info/zh',
+			description: '简单免费的图片处理工具',
+			tags: [tags.tools]
+		},
+		{
 			name: 'Shadertoy',
 			ico: 'https://www.shadertoy.com/img/favicon.ico',
 			url: 'https://www.shadertoy.com/',
