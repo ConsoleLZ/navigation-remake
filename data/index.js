@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'AFFiNE',
+			ico: 'https://affine.pro/favicon-96.png',
+			url: 'https://affine.pro/',
+			description: 'AFFiNE 是一个包含完全合并的文档、白板和数据库的工作区。完成更多的事情，你的创造力不是单调的。',
+			tags: [tags.docsTools, tags.software]
+		},
+		{
 			name: 'ImgTools',
 			ico: 'https://imgtools.info/favicon.ico',
 			url: 'https://imgtools.info/zh',
