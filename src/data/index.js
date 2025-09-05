@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'Figma',
+			ico: 'https://static.figma.com/app/icon/1/favicon.ico',
+			url: 'https://www.figma.com/downloads/',
+			description: 'Figma helps design and development teams build great products, together.',
+			tags: [tags.devise, tags.software]
+		},
+		{
 			name: 'UXBAIKE',
 			ico: 'https://www.uxbaike.com/logo.png',
 			url: 'https://www.uxbaike.com/',
