@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'UXBAIKE',
+			ico: 'https://www.uxbaike.com/logo.png',
+			url: 'https://www.uxbaike.com/',
+			description: 'UI设计学习平台',
+			tags: [tags.devise, tags.learn]
+		},
+		{
 			name: 'AFFiNE',
 			ico: 'https://affine.pro/favicon-96.png',
 			url: 'https://affine.pro/',
@@ -1220,7 +1227,7 @@ function generateData(baseURL) {
 			ico: 'https://static.zcool.cn/git_z/z/site/favicon.ico?version=1618914637608',
 			url: 'https://www.zcool.com.cn/',
 			description: '上面或许有你需要的ui作品',
-			tags: [tags.development, tags.devise]
+			tags: [tags.devise, tags.community]
 		},
 		{
 			name: 'clip-path生成器',
