@@ -413,13 +413,6 @@ function generateData(baseURL) {
 			tags: [tags.learn]
 		},
 		{
-			name: '莫高设计',
-			ico: 'https://mastergo.com/favicon.ico',
-			url: 'https://mastergo.com/',
-			description: 'AI 时代的数字界面生产平台',
-			tags: [tags.devise]
-		},
-		{
 			name: 'MakerWorld',
 			ico: 'https://makerworld.com.cn/favicon_new.png',
 			url: 'https://makerworld.com.cn/zh',
@@ -1216,53 +1209,11 @@ function generateData(baseURL) {
 			tags: [tags.resource]
 		},
 		{
-			name: 'Design Daily',
-			ico: 'https://assets-global.website-files.com/572cc412e8e48c8223fa0e57/6596b5ee2b5c3b8bbcbf53a6_UIDD-favicon.png',
-			url: 'https://www.uidesigndaily.com/',
-			description: '免费开源 UI 资源',
-			tags: [tags.development, tags.devise]
-		},
-		{
-			name: '即时设计',
-			ico: 'https://img.js.design/assets/webImg/favicon.ico',
-			url: 'https://js.design/',
-			description: '云端编辑的专业级 UI 设计工具',
-			tags: [tags.devise]
-		},
-		{
 			name: 'Color Hunt',
 			ico: 'https://colorhunt.co/img/colorhunt-favicon.svg?2',
 			url: 'https://colorhunt.co/',
 			description: '设计师和艺术家的调色板',
 			tags: [tags.tools]
-		},
-		{
-			name: 'MODAO',
-			ico: 'https://images.modao.cc/images/favicon.ico',
-			url: 'https://modao.cc/',
-			description: '墨刀，让原型设计更简单',
-			tags: [tags.devise]
-		},
-		{
-			name: 'Dribbble',
-			ico: 'https://cdn.dribbble.com/assets/favicon-99944ff731bb44d3a947810ca8728f177f8deac035a3a4342120c385fd7acb9d.svg',
-			url: 'https://dribbble.com/',
-			description: '寻找设计灵感',
-			tags: [tags.development, tags.devise]
-		},
-		{
-			name: 'Mobbin',
-			ico: 'https://mobbin.com/favicon.svg?v=2.1',
-			url: 'https://mobbin.com/',
-			description: '全球最大的移动和网页设计库',
-			tags: [tags.development, tags.devise]
-		},
-		{
-			name: 'Awwwards',
-			ico: 'https://assets.awwwards.com/assets/images/favicon.svg',
-			url: 'https://www.awwwards.com/',
-			description: '为一些优秀的网站颁发奖项，可以找找设计灵感',
-			tags: [tags.development, tags.devise]
 		},
 		{
 			name: '站酷',
@@ -1291,13 +1242,6 @@ function generateData(baseURL) {
 			url: 'https://www.logosc.cn/',
 			description: '智能LOGO设计生成器',
 			tags: [tags.tools]
-		},
-		{
-			name: 'Canva可画',
-			ico: 'https://static.canva.cn/static/images/favicon-1.ico',
-			url: 'https://www.canva.cn/',
-			description: '今天你想设计什么?',
-			tags: [tags.devise]
 		},
 		{
 			name: '易转换',
