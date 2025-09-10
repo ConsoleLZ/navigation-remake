@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'PinMe',
+			ico: 'https://pinme.eth.limo/favicon.ico',
+			url: 'https://pinme.eth.limo/',
+			description: '快速部署静态站点',
+			tags: [tags.cloudPlatform]
+		},
+		{
 			name: 'Figma',
 			ico: 'https://static.figma.com/app/icon/1/favicon.ico',
 			url: 'https://www.figma.com/downloads/',
