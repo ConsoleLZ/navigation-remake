@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '即时设计',
+			ico: 'https://img.js.design/assets/webImg/favicon.ico',
+			url: 'https://js.design/home',
+			description: '同时创造，即时设计',
+			tags: [tags.devise, tags.software]
+		},
+		{
 			name: 'PinMe',
 			ico: 'https://pinme.eth.limo/favicon.ico',
 			url: 'https://pinme.eth.limo/',
