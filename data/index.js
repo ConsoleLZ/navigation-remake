@@ -144,7 +144,7 @@ function generateData(baseURL) {
 			ico: 'https://cms.pixso.cn/images/favicon.ico',
 			url: 'https://pixso.cn/',
 			description: 'Pixso，一站式完成原型、设计、交互与交付，为数字化团队协作提效',
-			tags: [tags.devise]
+			tags: [tags.devise, tags.software]
 		},
 		{
 			name: 'PromptPilot',
