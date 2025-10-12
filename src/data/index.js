@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'Happy Hues',
+			ico: 'https://cdn.prod.website-files.com/5dd40aa8049df8748c72d0ee/5dd9b94105da589ba59c4907_happy-hues-fav.png',
+			url: 'https://www.happyhues.co/',
+			description: 'Happy Hues 是一个调色板灵感网站，可作为如何在您的设计项目中使用颜色的真实示例',
+			tags: [tags.devise]
+		},
+		{
 			name: '即时设计',
 			ico: 'https://img.js.design/assets/webImg/favicon.ico',
 			url: 'https://js.design/home',
