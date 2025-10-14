@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'eythaann / Seelen-UI',
+			ico: 'https://github.com/eythaann/Seelen-UI/raw/master/documentation/images/logo.svg',
+			url: 'https://github.com/eythaann/Seelen-UI',
+			description: '适用于 Windows 10/11 的完全可定制的桌面环境。',
+			tags: [tags.software]
+		},
+		{
 			name: 'Happy Hues',
 			ico: 'https://cdn.prod.website-files.com/5dd40aa8049df8748c72d0ee/5dd9b94105da589ba59c4907_happy-hues-fav.png',
 			url: 'https://www.happyhues.co/',
