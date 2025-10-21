@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'Pixelium Design',
+			ico: 'https://shika-works.github.io/pixelium-design/logo.png',
+			url: 'https://shika-works.github.io/pixelium-design/zh/',
+			description: '怀旧像素美学、可树摇组件、深浅主题，开箱即用，类型安全',
+			tags: [tags.componentLibrary]
+		},
+		{
 			name: 'eythaann / Seelen-UI',
 			ico: 'https://github.com/eythaann/Seelen-UI/raw/master/documentation/images/logo.svg',
 			url: 'https://github.com/eythaann/Seelen-UI',
