@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'Gridsome',
+			ico: 'https://gridsome.org/assets/static/favicon.ac8d93a.c6d52b979318cc0b0524324281174df2.png',
+			url: 'https://gridsome.org/',
+			description: '使用Vue.js, 使开发人员可以轻松构建静态生成的网站和应用程序',
+			tags: [tags.scaffolding]
+		},
+		{
 			name: 'Pixelium Design',
 			ico: 'https://shika-works.github.io/pixelium-design/logo.png',
 			url: 'https://shika-works.github.io/pixelium-design/zh/',
