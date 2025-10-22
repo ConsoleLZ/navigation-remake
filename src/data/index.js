@@ -35,6 +35,20 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: 'Buefy',
+			ico: 'https://buefy.org/static/img/icons/favicon.ico',
+			url: 'https://buefy.org/',
+			description: '基于轻量级 CSS 框架 Bulma 构建，因此非常轻量，没有 JavaScript 依赖（除了 Vue 本身）。组件风格简约、清新，易于定制',
+			tags: [tags.componentLibrary]
+		},
+		{
+			name: 'Vuetify',
+			ico: 'https://vuetifyjs.com/favicon.ico',
+			url: 'https://vuetifyjs.com/zh-Hans/',
+			description: '遵循 Google 的 Material Design 设计规范，组件极其丰富，功能强大。它提供了大量的预设样式和布局工具，可以快速构建出具有 Material Design 风格的应用',
+			tags: [tags.componentLibrary]
+		},
+		{
 			name: 'Gridsome',
 			ico: 'https://gridsome.org/assets/static/favicon.ac8d93a.c6d52b979318cc0b0524324281174df2.png',
 			url: 'https://gridsome.org/',
