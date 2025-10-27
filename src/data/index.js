@@ -35,6 +35,13 @@ function generateData(baseURL) {
 
 	const dataList = [
 		{
+			name: '无水印下载鸭',
+			ico: 'https://download.linglan01.cn/favicon.ico',
+			url: 'https://download.linglan01.cn/',
+			description: '支持抖音、B站、小红书、微信公众号等平台视频图片无水印下载，免费快速去水印。',
+			tags: [tags.tools]
+		},
+		{
 			name: 'Buefy',
 			ico: 'https://buefy.org/static/img/icons/favicon.ico',
 			url: 'https://buefy.org/',
